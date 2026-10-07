@@ -45,7 +45,7 @@ scripts/make-placeholders.mjs regenerates placeholder SVGs from photos.json
 4. **Never invent facts, testimonials, reviews, episode titles or stats.** If a section needs content we do not have, leave its data empty (components that support it render nothing) and add it to "Open items" below.
 5. **Verify every change**: `npm run check` then `npm run build` must both pass. For visual changes, look at the page at desktop (1440) and phone (390) widths before reporting done.
 6. Andy reviews before anything goes live. Do not deploy, push or change DNS without being asked.
-7. Don't commit. Andy commits after he reviews, unless he asks Claude to.
+7. Don't commit or push. When work is ready, give Andy one copy-paste block for Terminal: `cd ~/Documents/GitHub/drlentau1`, `git add -A`, `git commit -m "<subject>` + blank line + a plain-English body explaining what changed and why`"`, `git push`. No em dashes in the message.
 8. **Never run `npm install` or `npm run build` inside Andy's repo from a Linux shell** (cloud workspace or the Cowork VM). It installs Linux-only native packages that break `npm run dev` on his Mac. `node_modules/` and `package-lock.json` belong to the Mac: Andy runs `npm install` there. To test a build, copy the source to your own workspace and build it there.
 
 ## Brand rules (Dr. Len Tau design system)
@@ -134,7 +134,7 @@ Edit `favorites.json > companies`. Fields: `slug`, `name`, `category`, `descript
 
 - **Development preview:** GitHub Pages at https://aklepner.github.io/drlentau1/ . Every push to `main` rebuilds and publishes it (`.github/workflows/deploy.yml`). The preview is marked noindex so search engines skip it.
 - **Sub-folder handling:** the preview lives under `/drlentau1/`. Keep writing root-relative URLs (`/meet/`, `/images/x.jpg`) in components and data; `integrations/base-path.mjs` adds the `/drlentau1` prefix at build time when `SITE_BASE` is set. Local dev and the final drlentau.com launch need no prefix.
-- **Git:** Andy works directly on `main` (solo project). Claude commits to `main` when asked; Andy runs `git push` from his Mac (Claude has no push access).
+- **Git:** Andy works directly on `main` (solo project). He runs the commit and push himself from the copy-paste block (rule 7); Claude has no push access.
 
 ## Supabase plan (not built yet)
 
