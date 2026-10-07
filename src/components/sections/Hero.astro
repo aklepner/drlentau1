@@ -27,7 +27,7 @@ const cutout = !!(photos.hero as { cutout?: boolean }).cutout; // cutouts stand 
           <Button label={d.cta.label} href={d.cta.href} variant="mist" class="wow fadeInUp" delay=".5s" />
           <div class="hero-info wow fadeInUp" data-wow-delay=".7s">
             <div class="info-content">
-              <h3><span class="count">{d.proof.count}</span>{d.proof.suffix}</h3>
+              <h3><span class="count">{d.proof.count}</span><span class="dlt-suffix">{d.proof.suffix}</span></h3>
               <p>{d.proof.label}</p>
             </div>
           </div>

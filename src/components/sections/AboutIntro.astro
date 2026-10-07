@@ -21,7 +21,7 @@ const img = photo('about');
             {d.counters.map((c, i) => (
               <div class="counter-box wow fadeInUp" data-wow-delay={`.${3 + i * 2}s`}>
                 <h6>{c.label}</h6>
-                <h2><span class="count">{c.count}</span>{c.suffix}</h2>
+                <h2><span class="count">{c.count}</span><span class="dlt-suffix">{c.suffix}</span></h2>
                 <p>{c.text}</p>
               </div>
             ))}
