@@ -10,7 +10,9 @@ import Footer from '../components/site/Footer.astro';
 interface Props { title?: string; description?: string; image?: string }
 const { title, description = site.description } = Astro.props;
 const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | The Reviews Doctor`;
-const canonical = new URL(Astro.url.pathname, site.url).toString();
+const canonical = new URL(Astro.url.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, ''), '') || '/', site.url).toString();
+// Preview builds (GitHub Pages) set PUBLIC_NOINDEX=true so search engines skip the dev copy.
+const noindex = import.meta.env.PUBLIC_NOINDEX === 'true';
 const css = ['bootstrap.min', 'all.min', 'animate', 'magnific-popup', 'meanmenu', 'swiper-bundle.min', 'nice-select', 'main'];
 const js = ['jquery-3.7.1.min', 'viewport.jquery', 'bootstrap.bundle.min', 'gsap.min', 'ScrollTrigger.min', 'ScrollSmoother.min', 'ScrollToPlugin.min', 'SplitText.min', 'TextPlugin', 'chroma.min', 'jquery.nice-select.min', 'jquery.waypoints', 'jquery.counterup.min', 'swiper-bundle.min', 'jquery.meanmenu.min', 'parallaxie', 'jquery.magnific-popup.min', 'wow.min', 'main'];
 ---
@@ -22,6 +24,7 @@ const js = ['jquery-3.7.1.min', 'viewport.jquery', 'bootstrap.bundle.min', 'gsap
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />

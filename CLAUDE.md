@@ -130,6 +130,12 @@ Create `src/content/news/<slug>.md` with frontmatter `title`, `category: News` (
 ### Add or change a Favorite company
 Edit `favorites.json > companies`. Fields: `slug`, `name`, `category`, `description`, `website` (partner/affiliate URL), `featured`. Each company gets /favorites/<slug>/ automatically. Favorites is a revenue driver for Len: never drop companies without asking.
 
+## Hosting and preview
+
+- **Development preview:** GitHub Pages at https://aklepner.github.io/drlentau1/ . Every push to `main` rebuilds and publishes it (`.github/workflows/deploy.yml`). The preview is marked noindex so search engines skip it.
+- **Sub-folder handling:** the preview lives under `/drlentau1/`. Keep writing root-relative URLs (`/meet/`, `/images/x.jpg`) in components and data; `integrations/base-path.mjs` adds the `/drlentau1` prefix at build time when `SITE_BASE` is set. Local dev and the final drlentau.com launch need no prefix.
+- **Git:** Andy works directly on `main` (solo project). Claude commits to `main` when asked; Andy runs `git push` from his Mac (Claude has no push access).
+
 ## Supabase plan (not built yet)
 
 When Andy is ready:
@@ -157,5 +163,5 @@ When Andy is ready:
 - [ ] Public email/phone for the footer and contact page, if Len wants them shown.
 - [ ] Real testimonials (with permission) for the quote slider, or keep Len's own quotes.
 - [ ] Privacy and Terms pages (footer links point to /privacy/ and /terms/, which do not exist yet).
-- [ ] Hosting choice (Netlify, Vercel, or other) and domain cutover plan.
+- [ ] Production hosting and drlentau.com cutover plan (preview runs on GitHub Pages).
 - [ ] Confirm Birdeye GM title should appear in the credential strip.
