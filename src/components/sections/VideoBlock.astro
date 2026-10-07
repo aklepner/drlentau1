@@ -1,0 +1,21 @@
+---
+/**
+ * Responsive video embed with heading. Set `youtube` (video id) or `vimeo` (video id).
+ * With neither, shows the `photo` slot as a labeled placeholder.
+ */
+import SectionTitle from '../site/SectionTitle.astro';
+import { photo } from '../../lib/photo';
+interface Props { data: { kicker?: string; title: string; text?: string; youtube?: string; vimeo?: string; photo?: any }; navy?: boolean }
+const { data: d, navy = false } = Astro.props;
+const src = d.youtube ? `https://www.youtube-nocookie.com/embed/${d.youtube}?rel=0` : d.vimeo ? `https://player.vimeo.com/video/${d.vimeo}` : '';
+const img = d.photo ? photo(d.photo) : null;
+---
+<section class:list={['section-padding dlt-video', navy && 'dlt-video--navy']}>
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} intro={d.text} align="center" />
+    <div class="dlt-video__frame mt-4">
+      {src ? <iframe src={src} title={d.title} loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+           : img && <img src={img.src} alt={img.alt} width={img.width} height={img.height} />}
+    </div>
+  </div>
+</section>

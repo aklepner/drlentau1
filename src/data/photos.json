@@ -1,0 +1,119 @@
+{
+  "_readme": "Every photo slot on the site. To use a real photo: put the file in public/images/ and set `src` to '/images/<file>'. While `src` is empty the site shows the labeled placeholder. Real photography of Dr. Tau only, never stock dentists.",
+  "hero": {
+    "src": "/images/dr-len-tau-hero-cutout.png",
+    "w": 800,
+    "h": 962,
+    "alt": "Dr. Len Tau",
+    "dark": true,
+    "brief": "Cutout PNG (transparent background) of Dr. Tau with a microphone, bottom edge cropped flat. Sits on the bottom edge of the hero.",
+    "cutout": true
+  },
+  "hero-bg": {
+    "src": "https://vibe.filesafe.space/1791309188593774851/attachments/e1d7890e-d080-436a-a7c1-f214f82c67f7.png",
+    "w": 1920,
+    "h": 860,
+    "alt": "",
+    "dark": true,
+    "brief": "Hero background (hosted on filesafe.space)"
+  },
+  "about": {
+    "src": "/images/dr-len-tau-hero.jpg",
+    "w": 862,
+    "h": 1024,
+    "alt": "Dr. Len Tau",
+    "brief": "Portrait of Dr. Tau (homepage, Why listen to me)"
+  },
+  "panel-book": {
+    "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6ac542f8195f9172edb3dbbf.jpg",
+    "w": 645,
+    "h": 620,
+    "alt": "Raving Patients Supercharged book cover",
+    "brief": "Cover or styled shot of Raving Patients Supercharged (second edition)"
+  },
+  "panel-podcast": {
+    "src": "/images/dr-len-tau-podcast.png",
+    "w": 437,
+    "h": 665,
+    "alt": "Dr. Len Tau recording the Raving Patients Podcast",
+    "brief": "Dr. Tau seated at the mic recording the podcast"
+  },
+  "process": {
+    "src": "",
+    "w": 715,
+    "h": 839,
+    "alt": "Dr. Len Tau with his team",
+    "brief": "Dr. Tau with his front-desk team at checkout (the review ask in action)"
+  },
+  "about-page": {
+    "src": "",
+    "w": 1290,
+    "h": 600,
+    "alt": "Dr. Len Tau",
+    "brief": "Wide landscape: Dr. Tau speaking to a room of dentists (Meet Len page)"
+  },
+  "contact": {
+    "src": "",
+    "w": 636,
+    "h": 560,
+    "alt": "Dr. Len Tau",
+    "brief": "Friendly headshot or seated portrait, approachable"
+  },
+  "breadcrumb": {
+    "src": "",
+    "w": 1920,
+    "h": 420,
+    "alt": "",
+    "brief": "Wide, soft background for inner-page headers (stage, office or abstract navy)"
+  },
+  "speaking": {
+    "src": "",
+    "w": 640,
+    "h": 720,
+    "alt": "Dr. Len Tau speaking to a room of dentists",
+    "brief": "Dr. Tau on stage mid-talk, audience visible, warm event light"
+  },
+  "speaker-reel": {
+    "src": "",
+    "w": 1290,
+    "h": 726,
+    "alt": "Dr. Len Tau speaker reel",
+    "brief": "Thumbnail frame for the speaker reel video (16:9)",
+    "dark": true
+  },
+  "consulting": {
+    "src": "",
+    "w": 640,
+    "h": 720,
+    "alt": "Dr. Len Tau working with a dental team",
+    "brief": "Dr. Tau with a practice team at a whiteboard or front desk"
+  },
+  "book-supercharged": {
+    "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6ac542f8195f9172edb3dbbf.jpg",
+    "w": 420,
+    "h": 600,
+    "alt": "Raving Patients Supercharged book cover",
+    "brief": "Cover, Raving Patients Supercharged (hosted in Len's HighLevel media library)"
+  },
+  "book-practice-playbook": {
+    "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6ac542f8c062e4fb052b88c0.jpg",
+    "w": 420,
+    "h": 600,
+    "alt": "Practice Playbook book cover",
+    "brief": "Cover, Practice Playbook (hosted in Len's HighLevel media library)"
+  },
+  "book-100-tips": {
+    "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6ac542f87d735ea2a166f2a4.jpg",
+    "w": 420,
+    "h": 600,
+    "alt": "100+ Tips for Getting Five-Star Reviews book cover",
+    "brief": "Cover, 100+ Tips for Getting Five-Star Reviews (hosted in Len's HighLevel media library)"
+  },
+  "podcast-cover": {
+    "src": "",
+    "w": 600,
+    "h": 600,
+    "alt": "Raving Patients Podcast",
+    "brief": "Raving Patients Podcast show artwork (square)"
+  }
+}

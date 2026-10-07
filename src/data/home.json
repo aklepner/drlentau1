@@ -1,0 +1,256 @@
+{
+  "_readme": "Homepage copy, top to bottom. Each key feeds one section component in src/components/sections. Voice: Dr. Tau, first person, short sentences, no em dashes. Headings are uppercased by CSS, so write them in sentence case. `|` in a title forces a line break.",
+  "seo": {
+    "title": "",
+    "description": "Dr. Len Tau is a dentist, author and speaker known as The Reviews Doctor. Be seen, be trusted, be chosen."
+  },
+  "hero": {
+    "kicker": "Dentist. Author. Speaker.",
+    "title_before": "The",
+    "title_bold": "Reviews",
+    "title_after": "Doctor",
+    "text": "Patients choose a dentist before they ever call. I help you become the practice they trust online.",
+    "cta": {
+      "label": "Book a Call",
+      "href": "https://drlentau.as.me"
+    },
+    "proof": {
+      "count": "1,600",
+      "suffix": "+",
+      "label": "Patient reviews earned in the practice I built."
+    }
+  },
+  "credentials": [
+    "The Reviews Doctor",
+    "Author, Raving Patients",
+    "Host, Raving Patients Podcast",
+    "Host, Supercharge Your Dental Practice",
+    "GM, Birdeye Dental Division",
+    "100+ Tips for Getting Five-Star Reviews"
+  ],
+  "problem": {
+    "kicker": "Why good practices fall behind",
+    "title": "Patients compare trust, | not clinical skill.",
+    "intro": "Good dentistry matters. But online, patients often make decisions before they ever meet you.",
+    "cards": [
+      {
+        "title": "Visibility",
+        "text": "If patients cannot find you in the map pack, they choose a practice they can find."
+      },
+      {
+        "title": "Credibility",
+        "text": "Fresh, steady reviews tell patients your practice is active and trusted."
+      },
+      {
+        "title": "Listings",
+        "text": "Outdated hours and phone numbers on directories cost you calls you never see."
+      },
+      {
+        "title": "Your team",
+        "text": "The review ask cannot depend on someone remembering. It needs a system."
+      }
+    ]
+  },
+  "about": {
+    "kicker": "Why listen to me",
+    "title": "I am a dentist first. | I built this system in my own | practice before I ever taught it.",
+    "cta": {
+      "label": "Meet Len",
+      "href": "/meet/"
+    },
+    "counters": [
+      {
+        "label": "Reviews",
+        "count": "1,600",
+        "suffix": "+",
+        "text": "Patient reviews earned in the practice I built."
+      },
+      {
+        "label": "New patients",
+        "count": 40,
+        "suffix": "+",
+        "text": "New patients a month from visibility and trust."
+      }
+    ]
+  },
+  "pillars": {
+    "kicker": "Be Seen, Be Trusted, Be Chosen",
+    "title": "The six pillars | of my system.",
+    "items": [
+      {
+        "title": "Own Your | Reputation",
+        "text": "Take control of how your practice shows up on every platform patients use.",
+        "tags": [
+          "Google",
+          "Listings",
+          "Profiles"
+        ]
+      },
+      {
+        "title": "Simplify Review | Management",
+        "text": "Collect and answer reviews in one place, without adding work to your day.",
+        "tags": [
+          "Collect",
+          "Respond",
+          "Monitor"
+        ]
+      },
+      {
+        "title": "Boost Your Google | Rankings",
+        "text": "Understand why your practice is not ranking in the map pack. Then fix it.",
+        "tags": [
+          "Map pack",
+          "Local",
+          "AI search"
+        ]
+      },
+      {
+        "title": "Handle Negative | Reviews",
+        "text": "What to say, what not to say, and how to turn criticism into credibility.",
+        "tags": [
+          "Calm",
+          "Professional",
+          "Fast"
+        ]
+      },
+      {
+        "title": "Turn Reviews | Into Growth",
+        "text": "Build a steady system that keeps fresh five-star reviews coming in.",
+        "tags": [
+          "System",
+          "Consistency",
+          "Proof"
+        ]
+      },
+      {
+        "title": "Train Your Team | for Success",
+        "text": "Give your team the words and the confidence to ask every patient.",
+        "tags": [
+          "Scripts",
+          "Checkout",
+          "Ownership"
+        ]
+      }
+    ]
+  },
+  "panels": {
+    "items": [
+      {
+        "id": "supercharge",
+        "label": "Annual conference",
+        "title": "Supercharge Your Dental Practice.",
+        "text": "My conference for practice owners and teams. Practical systems, new connections and clarity for the year ahead.",
+        "href": "https://superchargeyourdentalpractice.com",
+        "video": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6ac54566c478ac55350cf056.mp4"
+      },
+      {
+        "id": "books",
+        "label": "New book",
+        "title": "Raving Patients Supercharged. The second edition.",
+        "text": "Everything I have learned about reviews, reputation and visibility, updated for how patients search today.",
+        "photo": "panel-book",
+        "href": "/books/",
+        "fit": "contain"
+      },
+      {
+        "id": "podcast",
+        "label": "Every Friday",
+        "title": "The Raving Patients Podcast.",
+        "text": "Conversations with doctors and teams about growing a practice and its revenue. Nearly 350 episodes and counting, new every Friday.",
+        "photo": "panel-podcast",
+        "href": "/podcast/",
+        "fit": "contain"
+      }
+    ]
+  },
+  "quotes": {
+    "kicker": "In my words",
+    "title": "What I tell | every dentist.",
+    "items": [
+      {
+        "quote": "Patients are not comparing clinical skill online. They are comparing visibility, credibility and trust.",
+        "name": "Dr. Len Tau",
+        "role": "The Reviews Doctor"
+      },
+      {
+        "quote": "The most trusted-looking practice wins. Not always the best one. The one that looks most trusted.",
+        "name": "Dr. Len Tau",
+        "role": "The Reviews Doctor"
+      },
+      {
+        "quote": "Reviews are the difference between a thriving practice and a shrinking practice.",
+        "name": "Dr. Len Tau",
+        "role": "The Reviews Doctor"
+      }
+    ]
+  },
+  "process": {
+    "kicker": "How the system works",
+    "title": "Four steps to | a trusted practice.",
+    "photo": "process",
+    "card": {
+      "label": "My track record",
+      "value": "4.9",
+      "text": "Star average rating"
+    },
+    "steps": [
+      {
+        "title": "Get found",
+        "text": "Fix your Google profile and listings so patients see accurate, complete information wherever they search."
+      },
+      {
+        "title": "Ask every patient",
+        "text": "Make the review request part of checkout. Every patient, every day, without anyone having to remember."
+      },
+      {
+        "title": "Respond like a pro",
+        "text": "Answer every review, good and bad, in a calm and professional voice. The next patient is reading."
+      },
+      {
+        "title": "Train your team",
+        "text": "Give your team the words and the ownership. The system only works when they run it."
+      }
+    ]
+  },
+  "marquee": [
+    "Be Seen",
+    "Be Trusted",
+    "Be Chosen"
+  ],
+  "episodes": {
+    "kicker": "Raving Patients Podcast",
+    "title": "Latest | episodes.",
+    "items": [
+      {
+        "title": "People + AI: The New Dental Team Advantage",
+        "href": "/podcast/",
+        "date": "October 2, 2026",
+        "tag": "Episode 344"
+      },
+      {
+        "title": "Get Found by Patients and AI: The New Rules of Dental Visibility",
+        "href": "/podcast/",
+        "date": "September 25, 2026",
+        "tag": "Episode 343"
+      },
+      {
+        "title": "The Associate Trap: Why Waiting Too Long to Own Can Cost Dentists a Fortune",
+        "href": "/podcast/",
+        "date": "September 18, 2026",
+        "tag": "Episode 342"
+      }
+    ],
+    "cta": {
+      "label": "All Episodes",
+      "href": "/podcast/"
+    }
+  },
+  "cta": {
+    "title": "Is your online | reputation helping you?",
+    "text": "Let's look at where your practice stands today. One call. No pressure.",
+    "button": {
+      "label": "Book a Call",
+      "href": "https://drlentau.as.me"
+    }
+  }
+}

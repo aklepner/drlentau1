@@ -1,0 +1,16 @@
+---
+/** Big centered statement with one button (template: about-text-inner). */
+import Button from '../site/Button.astro';
+interface Props { data: { kicker?: string; title: string; cta?: { label: string; href: string } } }
+const { data: d } = Astro.props;
+const parts = d.title.split('|').map((s) => s.trim());
+---
+<section class="about-text-inner fix actually-area section-bg dlt-statement">
+  <div class="container">
+    <div class="section-title text-center">
+      {d.kicker && <h6 class="sub-title wow fadeInUp">{d.kicker}</h6>}
+      <h2>{parts.map((p, i) => <>{i > 0 && <> <br /></>}{p}</>)}</h2>
+      {d.cta && <Button label={d.cta.label} href={d.cta.href} class="mt-5 wow fadeInUp" delay=".5s" />}
+    </div>
+  </div>
+</section>

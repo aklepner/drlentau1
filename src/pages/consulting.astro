@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/site/PageHeader.astro';
+import QuestionBand from '../components/sections/QuestionBand.astro';
+import IntroSplit from '../components/sections/IntroSplit.astro';
+import Pricing from '../components/sections/Pricing.astro';
+import VideoBlock from '../components/sections/VideoBlock.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import d from '../data/consulting.json';
+---
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <PageHeader title="Consulting" />
+  <QuestionBand data={d.questions} />
+  <IntroSplit data={d.intro} reverse />
+  <Pricing data={d.pricing} />
+  <VideoBlock data={d.birdeye} />
+  <CtaBand data={d.cta} />
+</BaseLayout>

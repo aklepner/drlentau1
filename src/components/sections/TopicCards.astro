@@ -1,0 +1,29 @@
+---
+/** Two-up cards, each with a title, description and a short objectives list. Used for speaking topics. */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Props { data: { kicker?: string; title: string; intro?: string; items: { title: string; text: string; objectives?: string[]; length?: string }[] } }
+const { data: d } = Astro.props;
+---
+<section class="section-padding dlt-topics">
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} intro={d.intro} align="center" />
+    <div class="row g-4 mt-2">
+      {d.items.map((t, i) => (
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay={`.${(i % 2) * 2 + 1}s`}>
+          <article class="dlt-topic">
+            <span class="dlt-topic__num">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{t.title}</h3>
+            {t.length && <p class="dlt-topic__meta">{t.length}</p>}
+            <p>{t.text}</p>
+            {t.objectives && (
+              <>
+                <h4>You will</h4>
+                <ul>{t.objectives.map((o) => <li>{o}</li>)}</ul>
+              </>
+            )}
+          </article>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

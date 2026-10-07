@@ -1,0 +1,12 @@
+---
+/** Big scrolling words band (template: marquee-section2). */
+interface Props { words: string[] }
+const { words } = Astro.props;
+---
+<div class="marquee-section2 dlt-marquee">
+  <div class="marquee style-2 mb-0">
+    {[0, 1, 2, 3, 4].map(() => (
+      <div class="marquee-group">{words.map((w) => <div class="text"><span class="dlt-sep">/</span>{w}</div>)}</div>
+    ))}
+  </div>
+</div>

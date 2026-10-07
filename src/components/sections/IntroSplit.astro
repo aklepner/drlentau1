@@ -1,0 +1,35 @@
+---
+/**
+ * Two-column intro: copy + buttons on one side, a photo slot on the other. Optional pull quote.
+ * Custom section (styled in tau-theme.css under "IntroSplit"). `reverse` puts the photo on the left.
+ */
+import SectionTitle from '../site/SectionTitle.astro';
+import Button from '../site/Button.astro';
+import { photo } from '../../lib/photo';
+interface Btn { label: string; href: string; variant?: 'solid' | 'outline' | 'mist' | 'on-navy' }
+interface Props { data: { kicker?: string; title: string; paragraphs: string[]; buttons?: Btn[]; photo: any; quote?: { text: string; name: string; role?: string } }; reverse?: boolean; tint?: boolean }
+const { data: d, reverse = false, tint = false } = Astro.props;
+const img = photo(d.photo);
+---
+<section class:list={['section-padding dlt-intro', tint && 'dlt-tint']}>
+  <div class="container">
+    <div class:list={['row g-5 align-items-center', reverse && 'flex-row-reverse']}>
+      <div class="col-lg-7">
+        <SectionTitle kicker={d.kicker} title={d.title} />
+        <div class="dlt-intro__body">
+          {d.paragraphs.map((p) => <p class="wow fadeInUp">{p}</p>)}
+        </div>
+        {d.buttons && <div class="dlt-btn-row">{d.buttons.map((b) => <Button label={b.label} href={b.href} variant={b.variant ?? 'solid'} />)}</div>}
+        {d.quote && (
+          <blockquote class="dlt-pullquote wow fadeInUp">
+            <p>{d.quote.text}</p>
+            <cite>{d.quote.name}{d.quote.role && <span>, {d.quote.role}</span>}</cite>
+          </blockquote>
+        )}
+      </div>
+      <div class="col-lg-5">
+        <div class="dlt-intro__photo"><img src={img.src} alt={img.alt} width={img.width} height={img.height} /></div>
+      </div>
+    </div>
+  </div>
+</section>

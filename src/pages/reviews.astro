@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/site/PageHeader.astro';
+import QuoteBand from '../components/sections/QuoteBand.astro';
+import TestimonialGrid from '../components/sections/TestimonialGrid.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import d from '../data/reviews.json';
+---
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <PageHeader title="Raving Fans" />
+  <QuoteBand data={d.feature} />
+  <TestimonialGrid data={d.grid} />
+  <CtaBand data={d.cta} />
+</BaseLayout>

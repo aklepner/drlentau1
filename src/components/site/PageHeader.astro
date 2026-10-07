@@ -1,0 +1,18 @@
+---
+/** Inner-page banner (template "breadcrumb-wrapper"). */
+import { photo } from '../../lib/photo';
+interface Props { title: string }
+const { title } = Astro.props;
+import photos from '../../data/photos.json';
+const bg = photos.breadcrumb.src ? photo('breadcrumb').src : '';
+---
+<div class="breadcrumb-wrapper bg-cover dlt-page-header" style={bg ? `background-image: url('${bg}');` : undefined}>
+  <div class="container">
+    <div class="page-heading">
+      <div class="breadcrumb-sub-title"><h1 class="wow fadeInUp" data-wow-delay=".3s">{title}</h1></div>
+      <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+        <li><a href="/">Home</a></li><li>/</li><li>{title}</li>
+      </ul>
+    </div>
+  </div>
+</div>

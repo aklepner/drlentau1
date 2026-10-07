@@ -1,0 +1,32 @@
+---
+/** Package cards (template: pricing-section, monthly/yearly toggle removed). `featured` gets the navy card. */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Pkg { name: string; label: string; price: string; note?: string; summary?: string; features: string[]; cta: { label: string; href: string }; featured?: boolean }
+interface Props { data: { kicker?: string; title: string; intro?: string; packages: Pkg[]; footnote?: string } }
+const { data: d } = Astro.props;
+---
+<section class="pricing-section fix section-padding dlt-pricing">
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} intro={d.intro} align="center" />
+    <div class="row pricing-row g-4">
+      {d.packages.map((p) => (
+        <div class="col-xl-4 col-lg-6 col-md-6">
+          <div class:list={['pricing-box-items', p.featured && 'active']}>
+            <div class="pricing-header">
+              <span>{p.label}</span>
+              <h4 class="dlt-pkg-name">{p.name}</h4>
+              <h3 class="dlt-pkg-price">{p.price}{p.note && <sub> {p.note}</sub>}</h3>
+              {p.summary && <p>{p.summary}</p>}
+            </div>
+            <a href={p.cta.href} class:list={['dlt-btn w-100 text-center', p.featured ? 'dlt-btn--on-navy' : 'dlt-btn--outline']}>{p.cta.label}</a>
+            <div class="pricing-list">
+              <h5>Includes</h5>
+              <ul>{p.features.map((f) => <li><i class="fa-solid fa-check"></i> {f}</li>)}</ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    {d.footnote && <p class="dlt-footnote text-center mt-4">{d.footnote}</p>}
+  </div>
+</section>

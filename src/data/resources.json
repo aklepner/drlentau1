@@ -1,0 +1,140 @@
+{
+  "_readme": "Free Resources page. Links copied from the current drlentau.com/resources. Watch links point at old-site video pages; migrate before cutover. The eBook link is old and may be dead.",
+  "seo": {
+    "title": "Free Resources",
+    "description": "Free tools, videos, podcast interviews and articles from Dr. Len Tau on reviews and online reputation for dental practices."
+  },
+  "tools": {
+    "intro": {
+      "kicker": "Free resources",
+      "title": "Tools you can | use today."
+    },
+    "cards": [
+      {
+        "title": "Google Review Calculator",
+        "text": "See how many reviews your practice needs to compete in your market.",
+        "link": {
+          "label": "Open the calculator",
+          "href": "https://reviewcalculator.drlentau.com"
+        }
+      },
+      {
+        "title": "Practice Assessment",
+        "text": "Grade your online presence in a few minutes and see where to focus first.",
+        "link": null
+      },
+      {
+        "title": "The Reputable Dentist",
+        "text": "My free eBook on the rules of online reputation.",
+        "link": {
+          "label": "Download the eBook",
+          "href": "http://tau.identitywebsites.net/wp-content/uploads/2017/10/The-Reputation-Dr-Lens-Rule-for-Reputation.pdf"
+        }
+      }
+    ]
+  },
+  "library": {
+    "kicker": "Watch, listen, read",
+    "title": "Interviews and | presentations.",
+    "intro": "Share these with your team and colleagues.",
+    "groups": [
+      {
+        "id": "watch",
+        "title": "Watch",
+        "items": [
+          {
+            "title": "Citation Inconsistency: Keys to moving up the rankings",
+            "href": "https://www.drlentau.com/videos/citation-inconsistency"
+          },
+          {
+            "title": "Importance of Reviews: Credibility and trust",
+            "href": "https://www.drlentau.com/videos/importance-of-reviews"
+          },
+          {
+            "title": "Overwhelming Negative Reviews: The best defense is more positive reviews",
+            "href": "https://www.drlentau.com/videos/overwhelming-negative-reviews"
+          },
+          {
+            "title": "Responding to Negative Reviews: Strategies for removal",
+            "href": "https://www.drlentau.com/videos/responding-to-negative-reviews"
+          },
+          {
+            "title": "Online Reputation Tips for Your Dental Office",
+            "href": "https://www.drlentau.com/videos/online-reputation-tips-for-your-dental-office-with-dr-len-tau"
+          },
+          {
+            "title": "Internet Marketing, Reviews and Reputation",
+            "source": "Dental Insiders Podcast 34",
+            "href": "https://www.drlentau.com/videos/dr-len-tau-talks-about-internet-marketing-reviews-and-reputation"
+          },
+          {
+            "title": "Online Reviews vs. Marketing",
+            "href": "https://www.drlentau.com/videos/online-reviews-vs-marketing-with-dr-len-tau"
+          },
+          {
+            "title": "Dr. Len on Birdeye",
+            "source": "Dental Marketing Guy Show",
+            "href": "https://www.drlentau.com/videos/dr-len-on-birdeye"
+          },
+          {
+            "title": "The Power of Reputation Management",
+            "source": "Webinar",
+            "href": "https://www.drlentau.com/videos/the-power-of-reputation-management"
+          }
+        ]
+      },
+      {
+        "id": "listen",
+        "title": "Listen",
+        "items": [
+          {
+            "title": "The Reviews Dentist",
+            "source": "Dental Coaching Institute",
+            "href": "https://growingyourdentalbusiness.com/episode-22-the-reviews-dentist"
+          },
+          {
+            "title": "Review Management with Len Tau",
+            "source": "Navigating Dental Insurance",
+            "href": "http://saynotoppos.com/2019/04/30/127-review-management-with-lenard-tau/"
+          },
+          {
+            "title": "Reputation Management and Reviews",
+            "source": "Orange Couch Discussion",
+            "href": "https://mysocialpractice.com/2012/05/reputation-management-and-reviews-podcast-with-dr-leonard-tau/"
+          },
+          {
+            "title": "Online Reviews with Dr. Len Tau",
+            "source": "The Delivering WOW Dental Podcast",
+            "href": "http://deliveringwow.libsyn.com/057-online-reviews-with-dr-len-tau"
+          },
+          {
+            "title": "Birdeye with Dr. Len Tau",
+            "source": "Smile Source Radio",
+            "href": "https://www.stitcher.com/podcast/smile-source-radio-2/e/48527538"
+          }
+        ]
+      },
+      {
+        "id": "read",
+        "title": "Read",
+        "items": [
+          {
+            "title": "The 5 R's of Marketing with Software",
+            "source": "Inside Dentistry",
+            "href": "https://cdn.prod.website-files.com/5ca2662925af2863a93d7a9a/5cd5b543247e9d37cf1b5591_5R%27s%20Dental%20Article%20Len.pdf"
+          },
+          {
+            "title": "Why Dentists Need to Pay Attention to Google and Social Media",
+            "source": "The Journal",
+            "href": "https://cdn.prod.website-files.com/5ca2662925af2863a93d7a9a/5cd5b6206e271340d9edf7c0_Google%20%26%20Social%20Media_1.pdf"
+          },
+          {
+            "title": "Reputation Marketing: Getting the Visibility and Credibility Needed to Be Found Online",
+            "source": "The Journal",
+            "href": "https://cdn.prod.website-files.com/5ca2662925af2863a93d7a9a/5cd5b6c16e27137dc8edfa8b_Social%20Media%20%26%20Technology_1.pdf"
+          }
+        ]
+      }
+    ]
+  }
+}

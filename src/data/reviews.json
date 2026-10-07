@@ -1,0 +1,62 @@
+{
+  "_readme": "Raving Fans page. Every quote is real, copied from the current drlentau.com/reviews page. Add new ones only with the person's name and permission.",
+  "seo": {
+    "title": "Raving Fans",
+    "description": "What dentists and teams say about Dr. Len Tau's talks and consulting."
+  },
+  "feature": {
+    "kicker": "Raving fans",
+    "quote": "He is the guy that gave me the missing piece to go from 10 cases a year to 40 cases a quarter. Now, I do 30 a month.",
+    "name": "Dr. Wollock"
+  },
+  "grid": {
+    "kicker": "In their words",
+    "title": "What dentists | and teams say.",
+    "items": [
+      {
+        "quote": "Every time I hear him speak at one of his seminars I have something new. His knowledge base for online reputation marketing for the dental practice is impressive.",
+        "name": "Patti Williamson"
+      },
+      {
+        "quote": "Highly authoritative; Dr. Tau is a great communicator. His material is always current and extremely relevant to his audiences.",
+        "name": "Jim Richardson"
+      },
+      {
+        "quote": "Thanks for all the great ideas. I had thought about social networking but wasn't sure how to do it professionally. You gave us a lot of ideas on how to get started.",
+        "name": "Dr. Dorothy Rooney"
+      },
+      {
+        "quote": "Wow! You are now my Marketing Guru! Thank you for sharing all this information!",
+        "name": "Dr. Zadik"
+      },
+      {
+        "quote": "Your program is awesome. Meat and potatoes with information I can use right away.",
+        "name": "Dr. Internoscia"
+      },
+      {
+        "quote": "Your lecture was so inspiring that I am called to action. I am going to learn this stuff.",
+        "name": "Dr. Rosenberg"
+      },
+      {
+        "quote": "I thought your presentation in Las Vegas was 11 on a scale of 1-10.",
+        "name": "Dr. Schwab"
+      },
+      {
+        "quote": "You showed a part of yourself. You gave from your spirit, showed us the vulnerable side.",
+        "name": "Jim Rhode, DDS"
+      },
+      {
+        "quote": "When it comes to 21st century dental practice marketing, Dr. Len Tau is fast becoming the industry standard.",
+        "name": "Arun K. Garg, DMD"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Want results | like these?",
+    "text": "Bring me to your meeting, or let's look at your practice together.",
+    "button": {
+      "label": "Book a Call",
+      "href": "https://drlentau.as.me"
+    }
+  }
+}

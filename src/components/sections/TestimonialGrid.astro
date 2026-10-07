@@ -1,0 +1,19 @@
+---
+/** Grid of real testimonials. Never invent one; every quote needs a real name and permission. */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Props { data: { kicker?: string; title: string; intro?: string; items: { quote: string; name: string; role?: string }[] } }
+const { data: d } = Astro.props;
+---
+<section class="section-padding dlt-testimonials">
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} intro={d.intro} align="center" />
+    <div class="dlt-masonry mt-4">
+      {d.items.map((t) => (
+        <figure class="dlt-tcard wow fadeInUp">
+          <blockquote>{t.quote}</blockquote>
+          <figcaption>{t.name}{t.role && <span>{t.role}</span>}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

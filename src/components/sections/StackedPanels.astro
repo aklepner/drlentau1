@@ -1,0 +1,65 @@
+---
+/** Navy band of stacked panels under a static title (template: project-section, scrolling marquee removed at Andy's request). Each panel can carry an anchor id. */
+import { photo } from '../../lib/photo';
+interface Props { data: { kicker?: string; title?: string; items: { id?: string; label: string; title: string; text?: string; photo?: any; video?: string; poster?: string; href?: string; fit?: 'cover' | 'contain' }[] } }
+const { data: d } = Astro.props;
+const ext = (h: string) => (/^https?:/.test(h) ? { target: '_blank', rel: 'noopener' } : {});
+---
+<section class="project-section tp-project-5-2-area fix section-padding section-bg-2 dlt-panels">
+  <div class="container">
+    {d.title && (
+      <div class="section-title dlt-panels__head">
+        {d.kicker && <h6 class="sub-title">{d.kicker}</h6>}
+        <h2>{d.title}</h2>
+      </div>
+    )}
+    <div class="project-box-area des-portfolio-wrap">
+      {d.items.map((it, i) => {
+        const last = i === d.items.length - 1;
+        if (it.video) {
+          // Video panel: the clip fills the whole panel (muted loop), navy fade on the left for the text.
+          return (
+            <div id={it.id} class:list={['project-box-items des-portfolio-panel dlt-panel--video', last && 'mb-0']}>
+              <video class="dlt-panel__video" src={it.video} poster={it.poster} autoplay muted loop playsinline preload="metadata" aria-label={it.title}></video>
+              <div class="dlt-panel__shade" aria-hidden="true"></div>
+              <div class="content">
+                <span>[{it.label}]</span>
+                <h3>{it.href ? <a href={it.href} {...ext(it.href)}>{it.title}</a> : it.title}</h3>
+                {it.text && <p class="dlt-panel-text">{it.text}</p>}
+                <div class="dlt-panel__actions">
+                  {it.href && <a href={it.href} class="icon" aria-label={it.title} {...ext(it.href)}><i class="fa-solid fa-arrow-up-right"></i></a>}
+                  <button type="button" class="dlt-panel__sound" aria-pressed="false"><i class="fa-solid fa-volume-xmark"></i> <span>Sound on</span></button>
+                </div>
+              </div>
+            </div>
+          );
+        }
+        const img = photo(it.photo);
+        return (
+          <div id={it.id} class:list={['project-box-items des-portfolio-panel', i === d.items.length - 1 && 'mb-0']}>
+            <div class="content">
+              <span>[{it.label}]</span>
+              <h3>{it.href ? <a href={it.href} {...ext(it.href)}>{it.title}</a> : it.title}</h3>
+              {it.text && <p class="dlt-panel-text">{it.text}</p>}
+              {it.href && <a href={it.href} class="icon" aria-label={it.title} {...ext(it.href)}><i class="fa-solid fa-arrow-up-right"></i></a>}
+            </div>
+            <div class:list={['thumb', it.fit === 'contain' && 'dlt-thumb--contain']}><img src={img.src} alt={img.alt} width={img.width} height={img.height} /></div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+<script is:inline>
+  document.querySelectorAll('.dlt-panel--video').forEach(function (panel) {
+    var v = panel.querySelector('video'), b = panel.querySelector('.dlt-panel__sound');
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); }
+    if (!b) return;
+    b.addEventListener('click', function () {
+      v.muted = !v.muted; if (!v.muted) v.play();
+      b.setAttribute('aria-pressed', String(!v.muted));
+      b.querySelector('i').className = v.muted ? 'fa-solid fa-volume-xmark' : 'fa-solid fa-volume-high';
+      b.querySelector('span').textContent = v.muted ? 'Sound on' : 'Sound off';
+    });
+  });
+</script>

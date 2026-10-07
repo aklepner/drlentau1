@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/site/PageHeader.astro';
+import IntroSplit from '../components/sections/IntroSplit.astro';
+import EpisodeList from '../components/sections/EpisodeList.astro';
+import InfoCards from '../components/sections/InfoCards.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import d from '../data/podcast.json';
+---
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <PageHeader title="Podcast" />
+  <IntroSplit data={d.intro} />
+  <EpisodeList data={d.episodes} />
+  <InfoCards intro={d.sponsors.intro} cards={d.sponsors.cards} />
+  <CtaBand data={d.guest} />
+</BaseLayout>

@@ -1,0 +1,32 @@
+---
+/** Pinned title + accordion of questions (template: faq-section-3). */
+import Button from '../site/Button.astro';
+interface Props { data: { kicker: string; title: string; cta?: { label: string; href: string }; items: { q: string; a: string }[] } }
+const { data: d } = Astro.props;
+const parts = d.title.split('|').map((s) => s.trim());
+---
+<section class="faq-section-3 faq-about fix section-padding tp-panel-pin-area">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="section-title tp-panel-pin">
+          <h6 class="sub-title wow fadeInUp">{d.kicker}</h6>
+          <h2 class="text-anim">{parts.map((p, i) => <>{i > 0 && <> <br /></>}{p}</>)}</h2>
+          {d.cta && <Button label={d.cta.label} href={d.cta.href} variant="outline" class="mt-4 wow fadeInUp" delay=".5s" />}
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="faq-items-2 style-faq-2">
+          <ul class="accordion-box">
+            {d.items.map((it, i) => (
+              <li class:list={['accordion block wow fadeInUp', i === 0 && 'active-block', i === d.items.length - 1 && 'mb-0']} data-wow-delay={`.${(i % 5) * 2}s`}>
+                <div class:list={['acc-btn', i === 0 && 'active']}>{it.q}<div class="icon fa-solid fa-plus"></div></div>
+                <div class:list={['acc-content', i === 0 && 'current']}><div class="content"><div class="text">{it.a}</div></div></div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+---
+/** One large quote on a navy band. Real quotes only, with the person's name. */
+interface Props { data: { kicker?: string; quote: string; name: string; role?: string } }
+const { data: d } = Astro.props;
+---
+<section class="section-padding dlt-quoteband">
+  <div class="container">
+    {d.kicker && <h6 class="sub-title">{d.kicker}</h6>}
+    <blockquote>
+      <p>{d.quote}</p>
+      <cite>{d.name}{d.role && <span>, {d.role}</span>}</cite>
+    </blockquote>
+  </div>
+</section>

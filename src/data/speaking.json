@@ -1,0 +1,107 @@
+{
+  "_readme": "Speaking page. Topics come from the current drlentau.com/speaking page, lightly rewritten. Quotes are real, from the live site.",
+  "seo": {
+    "title": "Speaking",
+    "description": "Book Dr. Len Tau, The Reviews Doctor, for your study club, dental meeting or conference. Lively talks on reviews, reputation and online visibility."
+  },
+  "intro": {
+    "kicker": "Speaking",
+    "title": "Lively talks. | Strategies you can | use on Monday.",
+    "paragraphs": [
+      "I speak to dentists and their teams about reviews, reputation and online visibility. Every talk is packed with steps you can put to work right away.",
+      "I travel the country for study clubs, dental meetings and national conferences. My courses change often, because the way patients search keeps changing. Ask me for the latest course list."
+    ],
+    "buttons": [
+      {
+        "label": "Book Len to Speak",
+        "href": "/contact/"
+      },
+      {
+        "label": "Speaker Packet",
+        "href": "https://cdn.prod.website-files.com/5ca2662925af28d3c53d7a73/5d2cc491b1d789e8fa4943d6_Dr.%20Tau_Speaker%20Packet.pdf",
+        "variant": "outline"
+      }
+    ],
+    "photo": "speaking",
+    "quote": {
+      "text": "When it comes to 21st century dental practice marketing, Dr. Len Tau is fast becoming the industry standard. Dr. Len Tau is a fun, engaging lecturer who is happy to take questions and welcomes immediate feedback.",
+      "name": "Arun K. Garg, DMD"
+    }
+  },
+  "reel": {
+    "kicker": "Speaker reel",
+    "title": "See me | on stage.",
+    "text": "",
+    "youtube": "",
+    "photo": "speaker-reel"
+  },
+  "topics": {
+    "kicker": "Speaking topics",
+    "title": "Talks I give | most often.",
+    "intro": "Each talk can run as a keynote, a lecture or a hands-on workshop.",
+    "items": [
+      {
+        "title": "Today's Online Marketing Strategies",
+        "text": "A complete online marketing plan is one of the best ways to raise new patient numbers and case acceptance. Is your practice using today's digital tools? Have you built a full online presence?",
+        "objectives": [
+          "See why strong content matters for online ranking",
+          "Learn how to make your practice stand out online",
+          "Use social media and online listings to promote your practice",
+          "Understand why mobile comes first"
+        ]
+      },
+      {
+        "title": "5-Star Strategies",
+        "text": "Word of mouth in the digital age is online reviews. Is your practice earning five-star reviews every week? Learn how to improve your reputation, manage your online presence and turn your strengths into new patients.",
+        "objectives": [
+          "Understand what each part of your online presence does",
+          "Use the tools available to manage your reputation without extra work",
+          "Engage patients in ways that earn positive reviews",
+          "Handle negative feedback so it reflects well on your practice"
+        ]
+      },
+      {
+        "title": "Help With Yelp!",
+        "text": "When people search for a new dentist, your reviews show up. What does your Yelp reputation say? Learn the three steps to managing your reputation: get found, stand out and protect yourself from negative reviews.",
+        "objectives": [
+          "Understand the platform's rules and policies",
+          "Keep your brand consistent across Yelp and other sites",
+          "Use Yelp to your advantage"
+        ]
+      },
+      {
+        "title": "Evaluate Your Online Score",
+        "text": "In this hands-on course I show you how to grade your own online presence. Is your website holding you back? Is your social media working? We look at the whole picture and find the changes that lead to more revenue.",
+        "objectives": [
+          "Take control of your online presence",
+          "Track and manage your online reputation",
+          "Use every resource available to you",
+          "Build and keep a consistent online brand"
+        ]
+      },
+      {
+        "title": "OMG! Bad Review! What to Do?!",
+        "text": "The perfect practice is not the one with perfect reviews. It is the one with a plan for managing them. A bad review brings up everything from anger to embarrassment. In this 60-minute talk I share how to earn good reviews and handle the bad ones.",
+        "objectives": [
+          "See why your online reputation matters",
+          "Learn how the major review sites work",
+          "Respond to negative feedback the right way",
+          "Help your team earn positive reviews from patients"
+        ]
+      }
+    ]
+  },
+  "proof": {
+    "kicker": "From the audience",
+    "quote": "Highly authoritative; Dr. Tau is a great communicator. His material is always current and extremely relevant to his audiences.",
+    "name": "Jim Richardson"
+  },
+  "cta": {
+    "title": "Bring this talk | to your group.",
+    "text": "Tell me about your meeting, your date and who will be in the room.",
+    "button": {
+      "label": "Inquire About Booking",
+      "href": "/contact/"
+    }
+  }
+}

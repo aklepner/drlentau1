@@ -1,0 +1,44 @@
+---
+/**
+ * Photo + message form (template: contact-section).
+ * BACKEND: none yet. When Supabase is added, point `form.action` at /api/contact
+ * (an Astro endpoint with prerender = false) or post with supabase-js. See CLAUDE.md.
+ */
+import { photo } from '../../lib/photo';
+interface Props { form: { title: string; action: string; topics: string[]; submit: string } }
+const { form } = Astro.props;
+const img = photo('contact');
+---
+<section class="contact-section fix section-padding pt-0">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="dlt-contact-photo"><img src={img.src} alt={img.alt} width={img.width} height={img.height} /></div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-box-items">
+            <h2 class="text-anim">{form.title}</h2>
+            <form action={form.action || undefined} method="post" id="contact-form" class="contact-form-box" data-backend={form.action ? 'live' : 'pending'}>
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6 col-md-6"><div class="form-clt"><input type="text" name="name" placeholder="Full name *" required autocomplete="name" /></div></div>
+                <div class="col-lg-6 col-md-6"><div class="form-clt"><input type="email" name="email" placeholder="Email address *" required autocomplete="email" /></div></div>
+                <div class="col-lg-6 col-md-6"><div class="form-clt"><input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" /></div></div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="form-clt"><div class="form">
+                    <select class="single-select w-100" name="topic">
+                      <option value="">What is this about?</option>
+                      {form.topics.map((t) => <option>{t}</option>)}
+                    </select>
+                  </div></div>
+                </div>
+                <div class="col-lg-12"><div class="form-clt"><textarea name="message" placeholder="Your message" required></textarea></div></div>
+                <div class="col-lg-12"><button type="submit" class="dlt-btn">{form.submit}</button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

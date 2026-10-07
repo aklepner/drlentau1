@@ -1,0 +1,30 @@
+---
+/** About page opener: title + text, wide photo, three counters (template: about-inner-section). */
+import SectionTitle from '../site/SectionTitle.astro';
+import { photo } from '../../lib/photo';
+interface Props { data: { kicker: string; title: string; text: string; counters: { label: string; count: number; suffix: string; text: string }[] } }
+const { data: d } = Astro.props;
+const img = photo('about-page');
+---
+<section class="about-inner-section fix section-padding">
+  <div class="container">
+    <div class="section-title-area align-items-end">
+      <SectionTitle kicker={d.kicker} title={d.title} anim="text" />
+      <div class="about-content"><p>{d.text}</p></div>
+    </div>
+    <div class="about-inner-image"><div class="fix"><img data-speed=".8" src={img.src} alt={img.alt} width={img.width} height={img.height} /></div></div>
+    <div class="about-counter-wrapper">
+      <div class="row g-4">
+        {d.counters.map((c, i) => (
+          <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay={`.${3 + i * 2}s`}>
+            <div class="about-counter-item">
+              <h6>{c.label}</h6>
+              <h2><span class="count">{c.count}</span>{c.suffix}</h2>
+              <p>{c.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

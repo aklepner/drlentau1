@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/site/PageHeader.astro';
+import InfoCards from '../components/sections/InfoCards.astro';
+import ContactForm from '../components/sections/ContactForm.astro';
+import contact from '../data/contact.json';
+---
+<BaseLayout title={contact.seo.title} description={contact.seo.description}>
+  <PageHeader title="Contact" />
+  <InfoCards intro={contact.intro} cards={contact.cards} />
+  <ContactForm form={contact.form} />
+</BaseLayout>

@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/site/PageHeader.astro';
+import BookRows from '../components/sections/BookRows.astro';
+import InfoCards from '../components/sections/InfoCards.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import d from '../data/books.json';
+---
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <PageHeader title="Books" />
+  <BookRows items={d.items} />
+  <InfoCards intro={d.tools.intro} cards={d.tools.cards} />
+  <CtaBand data={d.cta} />
+</BaseLayout>

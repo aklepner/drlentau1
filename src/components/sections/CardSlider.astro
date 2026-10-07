@@ -1,0 +1,40 @@
+---
+/** Numbered card slider (template: feature-section / feature-box-slider). Used for the six pillars. */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Props { data: { kicker: string; title: string; items: { title: string; text: string; tags: string[]; href?: string }[] } }
+const { data: d } = Astro.props;
+---
+<section class="feature-section section-padding fix">
+  <div class="container">
+    <div class="section-title-area">
+      <SectionTitle kicker={d.kicker} title={d.title} />
+      <div class="array-button wow fadeInUp" data-wow-delay=".3s">
+        <button class="array-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="swiper-dot"><div class="dot"></div></div>
+        <button class="array-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+    <div class="feature-wrapper">
+      <div class="swiper feature-box-slider">
+        <div class="swiper-wrapper">
+          {d.items.map((it, i) => {
+            const [a, b] = it.title.split('|').map((s) => s.trim());
+            return (
+              <div class="swiper-slide">
+                <div class="feature-box-items">
+                  <h6>{String(i + 1).padStart(2, '0')}.</h6>
+                  <h3>{a} {b && <span class="d-block">{b}</span>}</h3>
+                  <p>{it.text}</p>
+                  <div class="feature-info-box">
+                    <ul>{it.tags.map((t) => <li>{t}</li>)}</ul>
+                    {it.href && <a href={it.href} class="icon" aria-label={`More about ${a}`}><i class="fa-solid fa-arrow-up-right"></i></a>}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

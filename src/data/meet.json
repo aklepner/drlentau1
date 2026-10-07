@@ -1,0 +1,93 @@
+{
+  "_readme": "Meet Len page copy. Voice: Dr. Tau, first person, short sentences, no em dashes. He no longer sees patients, so practice stats are past tense.",
+  "seo": {
+    "title": "Meet Len",
+    "description": "Dr. Len Tau, The Reviews Doctor, built his Philadelphia dental practice to 4.9 stars and 1,600+ reviews. Now he teaches the system as a speaker, author, consultant and podcast host."
+  },
+  "story": {
+    "kicker": "Meet Dr. Len Tau",
+    "title": "The Reviews | Doctor.",
+    "text": "Reviews are the difference between a thriving practice and a shrinking practice. I help dentists and their teams build the systems that get them seen, trusted and chosen.",
+    "counters": [
+      {
+        "label": "Average rating",
+        "count": 4.9,
+        "suffix": "",
+        "text": "Stars across patient reviews of the Philadelphia practice I built."
+      },
+      {
+        "label": "Reviews",
+        "count": "1,600",
+        "suffix": "+",
+        "text": "Patient reviews, earned one checkout at a time."
+      },
+      {
+        "label": "Case acceptance",
+        "count": 85,
+        "suffix": "%",
+        "text": "Approximate case acceptance. Trust carries into the chair."
+      }
+    ]
+  },
+  "statement": {
+    "kicker": "A note from Len",
+    "title": "I only teach what I know works. | No theories. | Real-world results.",
+    "cta": {
+      "label": "Book a Call",
+      "href": "https://drlentau.as.me"
+    }
+  },
+  "prose": {
+    "kicker": "My story",
+    "title": "How I got here.",
+    "paragraphs": [
+      "I followed my father into dentistry. I graduated from Tufts University School of Dental Medicine and spent two decades caring for patients in Philadelphia, where Philadelphia Magazine named me one of the city's Top Dentists.",
+      "Like most dentists, I built my practice on clinical excellence and word of mouth. Then I noticed the practices growing fastest were not always the best clinically. They were the most visible and the most trusted.",
+      "So I got serious about fixing that. I built systems for collecting reviews every day, responding professionally, keeping our listings accurate and staying visible on every platform patients use. The result was 4.9 stars, more than 1,600 reviews, 40+ new patients a month and roughly 85% case acceptance.",
+      "Once the system worked, I started teaching it. From the stage at dental meetings across the country. In my books, Raving Patients, 100+ Tips for Getting Five-Star Reviews and now Raving Patients Supercharged. And on the Raving Patients Podcast, nearly 350 episodes in.",
+      "Today I serve as General Manager of the dental division at Birdeye, helping practices across the country put the same system in place. Every year I host Supercharge Your Dental Practice, where owners and teams come to learn what is working now.",
+      "If you want to be the go-to practice in your area, let's talk. That is fixable."
+    ]
+  },
+  "faq": {
+    "kicker": "Answers for you",
+    "title": "Common | questions.",
+    "cta": {
+      "label": "Contact Me",
+      "href": "/contact/"
+    },
+    "items": [
+      {
+        "q": "Why listen to a dentist about marketing?",
+        "a": "Because I did it myself first. I built my own practice to 4.9 stars and more than 1,600 reviews before I ever taught the system."
+      },
+      {
+        "q": "Who do you work with?",
+        "a": "Practice owners and their teams. General and specialty practices, usually one to five dentists, who know they do great work and want their online presence to show it."
+      },
+      {
+        "q": "Where should I start?",
+        "a": "Search your own practice on Google the way a new patient would. Then book a call with me and we will look at it together."
+      },
+      {
+        "q": "Can I be a guest on the Raving Patients Podcast?",
+        "a": "I am always looking for doctors and team members with something useful to share. Apply at podcastguest.drlentau.com."
+      },
+      {
+        "q": "Do you speak at meetings and study clubs?",
+        "a": "Yes. I speak nationally on reviews, reputation and online visibility. See my topics on the Speaking page, then send me your date and group."
+      },
+      {
+        "q": "What is Supercharge Your Dental Practice?",
+        "a": "My annual conference for practice owners and teams. Practical systems, new connections and clarity for the year ahead."
+      }
+    ]
+  },
+  "video": {
+    "kicker": "Hear from Len",
+    "title": "Why reviews | matter so much.",
+    "text": "",
+    "vimeo": "",
+    "photo": "speaker-reel"
+  }
+}

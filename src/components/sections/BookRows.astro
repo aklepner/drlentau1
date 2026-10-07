@@ -1,0 +1,27 @@
+---
+/** Alternating cover + description rows. Used on the Books page. */
+import Button from '../site/Button.astro';
+import { photo } from '../../lib/photo';
+interface Book { id: string; badge?: string; title: string; subtitle?: string; paragraphs: string[]; photo: any; buttons?: { label: string; href: string; variant?: 'solid' | 'outline' }[] }
+interface Props { items: Book[] }
+const { items } = Astro.props;
+---
+<section class="section-padding dlt-books">
+  <div class="container">
+    {items.map((b, i) => {
+      const img = photo(b.photo);
+      return (
+        <div id={b.id} class:list={['row g-5 align-items-center dlt-book', i % 2 === 1 && 'flex-row-reverse']}>
+          <div class="col-lg-4 col-md-5"><div class="dlt-book__cover"><img src={img.src} alt={img.alt} width={img.width} height={img.height} /></div></div>
+          <div class="col-lg-8 col-md-7">
+            {b.badge && <span class="dlt-tag">{b.badge}</span>}
+            <h2>{b.title}</h2>
+            {b.subtitle && <p class="dlt-book__sub">{b.subtitle}</p>}
+            {b.paragraphs.map((p) => <p>{p}</p>)}
+            {b.buttons && <div class="dlt-btn-row">{b.buttons.filter((x) => x.href).map((x) => <Button label={x.label} href={x.href} variant={x.variant ?? 'solid'} />)}</div>}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>

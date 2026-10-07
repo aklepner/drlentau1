@@ -1,0 +1,41 @@
+---
+/** Photo + numbered accordion (template: faq-section on home 1). */
+import SectionTitle from '../site/SectionTitle.astro';
+import { photo } from '../../lib/photo';
+interface Props { data: { kicker: string; title: string; photo: any; card?: { label: string; value: string; text: string }; steps: { title: string; text: string }[] } }
+const { data: d } = Astro.props;
+const img = photo(d.photo);
+---
+<section class="faq-section fix">
+  <div class="row g-4">
+    <div class="col-lg-6">
+      <div class="faq-image-1 fix wow fadeInUp" data-wow-delay=".3s">
+        <img data-speed=".8" src={img.src} alt={img.alt} width={img.width} height={img.height} />
+        {d.card && (
+          <div class="incrase-box float-bob-y">
+            <h6>{d.card.label}</h6><h3>{d.card.value}</h3><p class="dlt-card-text">{d.card.text}</p>
+          </div>
+        )}
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="faq-content-1 section-padding">
+        <SectionTitle kicker={d.kicker} title={d.title} class="mb-0" />
+        <ul class="accordion-box">
+          {d.steps.map((s, i) => (
+            <li class:list={['accordion block wow fadeInUp', i === 0 && 'active-block']} data-wow-delay={`.${i * 2}s`}>
+              <div class:list={['acc-btn', i === 0 && 'active']}>
+                <span class="number">{String(i + 1).padStart(2, '0')}.</span>
+                {s.title}
+                <div class="icon fa-solid fa-arrow-down"></div>
+              </div>
+              <div class:list={['acc-content', i === 0 && 'current']}>
+                <div class="content"><div class="text">{s.text}</div></div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

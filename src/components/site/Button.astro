@@ -1,0 +1,11 @@
+---
+/**
+ * Dr. Len Tau button (design system "TauButton"). Square, uppercase, navy.
+ * variant: solid (default) | outline | mist (large hero CTA) | on-navy (inside navy bands)
+ */
+interface Props { label: string; href: string; variant?: 'solid' | 'outline' | 'mist' | 'on-navy'; class?: string; delay?: string }
+const { label, href, variant = 'solid', class: extra = '', delay } = Astro.props;
+const external = /^https?:\/\//.test(href);
+const cls = ['dlt-btn', variant !== 'solid' && `dlt-btn--${variant}`, extra].filter(Boolean).join(' ');
+---
+<a class={cls} href={href} data-wow-delay={delay} {...(external ? { target: '_blank', rel: 'noopener' } : {})}>{label}</a>

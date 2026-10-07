@@ -1,0 +1,18 @@
+---
+/** Closing call-to-action band (template: cta-newsletter-section, newsletter form replaced by one button). */
+import Button from '../site/Button.astro';
+interface Props { data: { title: string; text?: string; button: { label: string; href: string } } }
+const { data: d } = Astro.props;
+const parts = d.title.split('|').map((s) => s.trim());
+---
+<section class="cta-newsletter-section dlt-cta">
+  <div class="container">
+    <div class="cta-newsletter-wrapper">
+      <h2 class="tx-title sec_title tz-itm-title tz-itm-anim">{parts.map((p, i) => <>{i > 0 && <> <br /></>}{p}</>)}</h2>
+      <div class="newsletter-form wow fadeInUp" data-wow-delay=".3s">
+        {d.text && <p>{d.text}</p>}
+        <Button label={d.button.label} href={d.button.href} variant="on-navy" />
+      </div>
+    </div>
+  </div>
+</section>

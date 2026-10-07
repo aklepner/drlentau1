@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import CredentialStrip from '../components/sections/CredentialStrip.astro';
+import NumberedCards from '../components/sections/NumberedCards.astro';
+import AboutIntro from '../components/sections/AboutIntro.astro';
+import CardSlider from '../components/sections/CardSlider.astro';
+import StackedPanels from '../components/sections/StackedPanels.astro';
+import Quotes from '../components/sections/Quotes.astro';
+import ProcessAccordion from '../components/sections/ProcessAccordion.astro';
+import WordMarquee from '../components/sections/WordMarquee.astro';
+import CardGrid from '../components/sections/CardGrid.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import home from '../data/home.json';
+---
+<BaseLayout title={home.seo.title} description={home.seo.description}>
+  <Hero data={home.hero} />
+  <CredentialStrip items={home.credentials} />
+  <NumberedCards data={home.problem} />
+  <AboutIntro data={home.about} />
+  <CardSlider data={home.pillars} />
+  <StackedPanels data={home.panels} />
+  <Quotes data={home.quotes} />
+  <ProcessAccordion data={home.process} />
+  <WordMarquee words={home.marquee} />
+  <CardGrid data={home.episodes} id="episodes" />
+  <CtaBand data={home.cta} />
+</BaseLayout>

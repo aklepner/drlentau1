@@ -1,0 +1,250 @@
+{
+  "_readme": "Podcast page. Episodes are copied from the current site (newest first). Plan: pull these from the podcast RSS feed at build time so they update automatically. Episode links point at the old site until episode pages are migrated.",
+  "seo": {
+    "title": "Raving Patients Podcast",
+    "description": "The Raving Patients Podcast with Dr. Len Tau. New episodes every Friday on marketing, reviews, AI, team training and practice growth."
+  },
+  "intro": {
+    "kicker": "The Raving Patients Podcast",
+    "title": "Helping doctors and teams | grow their practice | and revenue.",
+    "paragraphs": [
+      "Every Friday I sit down with doctors, team members and industry leaders to talk about what is working in dentistry right now. Marketing, reviews, AI, team training and practice growth.",
+      "Nearly 350 episodes in, the show is now in season nine. Listen wherever you get your podcasts."
+    ],
+    "buttons": [
+      {
+        "label": "Apple Podcasts",
+        "href": "https://podcasts.apple.com/us/podcast/the-raving-patients-podcast/id1368978316"
+      },
+      {
+        "label": "Spotify",
+        "href": "https://open.spotify.com/show/1RDCn77A9Bmoy7e9ffbtgd",
+        "variant": "outline"
+      },
+      {
+        "label": "YouTube",
+        "href": "https://www.youtube.com/channel/UCrrpZcuJAXcWErmB-DNiveg",
+        "variant": "outline"
+      }
+    ],
+    "photo": "panel-podcast"
+  },
+  "episodes": {
+    "kicker": "Latest episodes",
+    "title": "New every | Friday.",
+    "episodes": [
+      {
+        "number": 344,
+        "season": 9,
+        "title": "People + AI: The New Dental Team Advantage",
+        "date": "October 2, 2026",
+        "href": "https://www.drlentau.com/podcast/people-ai-the-new-dental-team-advantage"
+      },
+      {
+        "number": 343,
+        "season": 9,
+        "title": "Get Found by Patients and AI: The New Rules of Dental Visibility",
+        "date": "September 25, 2026",
+        "href": "https://www.drlentau.com/podcast/get-found-by-patients-and-ai-the-new-rules-of-dental-visibility"
+      },
+      {
+        "number": 342,
+        "season": 9,
+        "title": "The Associate Trap: Why Waiting Too Long to Own Can Cost Dentists a Fortune",
+        "date": "September 18, 2026",
+        "href": "https://www.drlentau.com/podcast/the-associate-trap-why-waiting-too-long-to-own-can-cost-dentists-a-fortune"
+      },
+      {
+        "number": 341,
+        "season": 9,
+        "title": "Beyond Keywords and Bids: What Really Drives PPC Results",
+        "date": "September 11, 2026",
+        "href": "https://www.drlentau.com/podcast/beyond-keywords-and-bids-what-really-drives-ppc-results"
+      },
+      {
+        "number": 340,
+        "season": 9,
+        "title": "Your Front Desk Is Not Your Biller: The Hidden Revenue Leak Killing Independent Practices",
+        "date": "September 4, 2026",
+        "href": "https://www.drlentau.com/podcast/your-front-desk-is-not-your-biller-the-hidden-revenue-leak-killing-independent-practices"
+      },
+      {
+        "number": 339,
+        "season": 9,
+        "title": "Your Vendors Have the Keys: The Cyber Risk Dental Practices Ignore",
+        "date": "August 28, 2026",
+        "href": "https://www.drlentau.com/podcast/your-vendors-have-the-keys-the-cyber-risk-dental-practices-ignore"
+      },
+      {
+        "number": 338,
+        "season": 9,
+        "title": "The Hidden Revenue Sitting in Your Recall List",
+        "date": "August 21, 2026",
+        "href": "https://www.drlentau.com/podcast/the-hidden-revenue-sitting-in-your-recall-list"
+      },
+      {
+        "number": 337,
+        "season": 9,
+        "title": "From Practice Owner to Enterprise Builder: How Dentists Build Profit, Freedom, and Long-Term Value",
+        "date": "August 14, 2026",
+        "href": "https://www.drlentau.com/podcast/from-practice-owner-to-enterprise-builder-how-dentists-build-profit-freedom-and-long-term-value"
+      },
+      {
+        "number": 336,
+        "season": 9,
+        "title": "Beyond the PMS: What Dentists Need to Know About Data, Benchmarks, and Profit",
+        "date": "August 7, 2026",
+        "href": "https://www.drlentau.com/podcast/beyond-the-pms-what-dentists-need-to-know-about-data-benchmarks-and-profit"
+      },
+      {
+        "number": 335,
+        "season": 9,
+        "title": "Stop Blaming the Leads: How Dental Practices Can Convert More Big Cases",
+        "date": "July 31, 2026",
+        "href": "https://www.drlentau.com/podcast/stop-blaming-the-leads-how-dental-practices-can-convert-more-big-cases"
+      },
+      {
+        "number": 334,
+        "season": 9,
+        "title": "Stop Blaming the Software: Fixing the Workflows That Shape Patient Experience",
+        "date": "July 24, 2026",
+        "href": "https://www.drlentau.com/podcast/stop-blaming-the-software-fixing-the-workflows-that-shape-patient-experience"
+      },
+      {
+        "number": 333,
+        "season": 9,
+        "title": "From Burnout to Better Dentistry: Systems, Technology, and Sanity",
+        "date": "July 17, 2026",
+        "href": "https://www.drlentau.com/podcast/from-burnout-to-better-dentistry-systems-technology-and-sanity"
+      },
+      {
+        "number": 332,
+        "season": 9,
+        "title": "The Smarter Way to Market Your Dental Practice in 2026",
+        "date": "July 10, 2026",
+        "href": "https://www.drlentau.com/podcast/the-smarter-way-to-market-your-dental-practice-in-2026"
+      },
+      {
+        "number": 331,
+        "season": 9,
+        "title": "How AI is Reshaping Dental Practice Growth",
+        "date": "July 3, 2026",
+        "href": "https://www.drlentau.com/podcast/how-ai-is-reshaping-dental-practice-growth"
+      },
+      {
+        "number": 330,
+        "season": 9,
+        "title": "$300K Is Hiding in Your Inactive Patient List. Here's How AI Finds It.",
+        "date": "June 26, 2026",
+        "href": "https://www.drlentau.com/podcast/300k-is-hiding-in-your-inactive-patient-list-heres-how-ai-finds-it"
+      },
+      {
+        "number": 329,
+        "season": 9,
+        "title": "Driving a Championship Culture",
+        "date": "June 19, 2026",
+        "href": "https://www.drlentau.com/podcast/driving-a-championship-culture"
+      },
+      {
+        "number": 328,
+        "season": 9,
+        "title": "Set It and Collect It: How Smart Practices Are Building Recurring Revenue After Aligner Treatments",
+        "date": "June 12, 2026",
+        "href": "https://www.drlentau.com/podcast/set-it-and-collect-it-how-smart-practices-are-building-recurring-revenue-after-aligner-treatments"
+      },
+      {
+        "number": 327,
+        "season": 9,
+        "title": "Seeing What Your Eye Can't",
+        "date": "June 5, 2026",
+        "href": "https://www.drlentau.com/podcast/seeing-what-your-eye-cant"
+      },
+      {
+        "number": 326,
+        "season": 9,
+        "title": "What Dentists Get Wrong About Marketing (And How to Fix It)",
+        "date": "May 29, 2026",
+        "href": "https://www.drlentau.com/podcast/what-dentists-get-wrong-about-marketing-and-how-to-fix-it"
+      },
+      {
+        "number": 325,
+        "season": 9,
+        "title": "The Death of Manual RCM & Billing Agents",
+        "date": "May 22, 2026",
+        "href": "https://www.drlentau.com/podcast/the-death-of-manual-rcm-billing-agents"
+      },
+      {
+        "number": 324,
+        "season": 9,
+        "title": "Local Search Is Changing Fast But Not How You Think",
+        "date": "May 15, 2026",
+        "href": "https://www.drlentau.com/podcast/local-search-is-changing-fast-but-not-how-you-think"
+      },
+      {
+        "number": 323,
+        "season": 9,
+        "title": "The Human Side of Practice Growth: Building Trust Before the Treatment Plan",
+        "date": "May 8, 2026",
+        "href": "https://www.drlentau.com/podcast/the-human-side-of-practice-growth-building-trust-before-the-treatment-plan"
+      },
+      {
+        "number": 322,
+        "season": 9,
+        "title": "From Owner to CEO: The Systems, Data, and Leadership Behind Scalable Practices",
+        "date": "May 1, 2026",
+        "href": "https://www.drlentau.com/podcast/from-owner-to-ceo-the-systems-data-and-leadership-behind-scalable-practices"
+      },
+      {
+        "number": 321,
+        "season": 9,
+        "title": "Why Your Membership Plans Sucks",
+        "date": "April 24, 2026",
+        "href": "https://www.drlentau.com/podcast/why-your-membership-plans-sucks"
+      }
+    ],
+    "more": {
+      "label": "All episodes on Apple Podcasts",
+      "href": "https://podcasts.apple.com/us/podcast/the-raving-patients-podcast/id1368978316"
+    }
+  },
+  "sponsors": {
+    "intro": {
+      "kicker": "Sponsors",
+      "title": "Thanks to our | sponsors."
+    },
+    "cards": [
+      {
+        "title": "CloudDentistry",
+        "text": "Dental staffing and hiring.",
+        "link": {
+          "label": "Visit CloudDentistry",
+          "href": "https://www.clouddentistry.com/?referer_code=len"
+        }
+      },
+      {
+        "title": "DocSites",
+        "text": "Websites and online marketing for dentists.",
+        "link": {
+          "label": "Visit DocSites",
+          "href": "https://www.docsites.com/"
+        }
+      },
+      {
+        "title": "Dental Intelligence",
+        "text": "Practice analytics and patient engagement.",
+        "link": {
+          "label": "Visit Dental Intel",
+          "href": "https://get.dentalintel.net/Len"
+        }
+      }
+    ]
+  },
+  "guest": {
+    "title": "Have something useful | to share?",
+    "text": "I am always looking for doctors and team members to join me on the show.",
+    "button": {
+      "label": "Apply to Be a Guest",
+      "href": "https://podcastguest.drlentau.com"
+    }
+  }
+}

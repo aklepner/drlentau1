@@ -1,0 +1,58 @@
+{
+  "_readme": "Contact page copy and form settings. The form has no backend yet: `form.action` is empty until we connect Supabase (or GHL).",
+  "seo": {
+    "title": "Contact",
+    "description": "Book a call with Dr. Len Tau, apply to be a podcast guest, or ask about speaking."
+  },
+  "intro": {
+    "kicker": "Connect",
+    "title": "How can I | help you?"
+  },
+  "cards": [
+    {
+      "title": "Book a call",
+      "text": "A short call about where your practice stands online.",
+      "link": {
+        "label": "Pick a time",
+        "href": "https://drlentau.as.me"
+      }
+    },
+    {
+      "title": "Email or call",
+      "text": "len@drlentau.com\nCell: 215‑292‑2100",
+      "link": {
+        "label": "Send an email",
+        "href": "mailto:len@drlentau.com"
+      }
+    },
+    {
+      "title": "Send a text",
+      "text": "Prefer texting? Send me a message and I will reply.",
+      "link": {
+        "label": "Text Len",
+        "href": "https://link.textflows.io/widget/form/pb7Ae9ffWUpeD9E9YDho"
+      }
+    },
+    {
+      "title": "Be a podcast guest",
+      "text": "Apply to join me on the Raving Patients Podcast.",
+      "link": {
+        "label": "Apply now",
+        "href": "https://podcastguest.drlentau.com"
+      }
+    }
+  ],
+  "form": {
+    "title": "Send me a message.",
+    "action": "",
+    "topics": [
+      "Speaking or events",
+      "Consulting",
+      "Raving Patients Podcast",
+      "Books or bulk orders",
+      "Supercharge Your Dental Practice",
+      "Something else"
+    ],
+    "submit": "Send Message"
+  }
+}

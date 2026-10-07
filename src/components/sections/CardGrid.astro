@@ -1,0 +1,33 @@
+---
+/**
+ * Three-up cards with image, meta and title (template: news-section). Used for podcast episodes.
+ * Renders nothing until `items` has entries. Item: { title, href, date, tag, image }
+ */
+import SectionTitle from '../site/SectionTitle.astro';
+import Button from '../site/Button.astro';
+interface Props { data: { kicker: string; title: string; items: { title: string; href: string; date?: string; tag?: string; image?: string }[]; cta?: { label: string; href: string } }; id?: string }
+const { data: d, id } = Astro.props;
+const show = d.items.length > 0;
+---
+{show && (
+<section class="news-section section-padding" id={id}>
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} align="center" />
+    <div class="row">
+      {d.items.slice(0, 3).map((it, i) => (
+        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay={`.${3 + i * 2}s`}>
+          <div class="news-box-items">
+            {it.image && <div class="thumb"><img src={it.image} alt="" /><img src={it.image} alt="" /></div>}
+            <div class="content">
+              <ul>{it.tag && <li><span>{it.tag}</span></li>}{it.date && <li><span>{it.date}</span></li>}</ul>
+              <h3><a href={it.href}>{it.title}</a></h3>
+              <div class="news-bottom"><a href={it.href} class="dlt-link">Listen</a></div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    {d.cta && <div class="text-center mt-5"><Button label={d.cta.label} href={d.cta.href} variant="outline" /></div>}
+  </div>
+</section>
+)}

@@ -1,0 +1,37 @@
+---
+/** One page per favorite company, generated from src/data/favorites.json. */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/site/PageHeader.astro';
+import Button from '../../components/site/Button.astro';
+import d from '../../data/favorites.json';
+export function getStaticPaths() {
+  return d.companies.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+const { c } = Astro.props;
+const related = d.companies.filter((x) => x.category === c.category && x.slug !== c.slug).slice(0, 3);
+---
+<BaseLayout title={`${c.name} | Len's Favorites`} description={c.description}>
+  <PageHeader title={c.name} />
+  <section class="section-padding dlt-company">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <span class="dlt-tag">{c.category}</span>
+          <h2>{c.name}</h2>
+          <p class="dlt-company__lead">{c.description}</p>
+          <p>This is one of the companies I trust most after 20 years in the dental industry. Questions? Email me at len@drlentau.com or call my cell at 215‑292‑2100.</p>
+          <div class="dlt-btn-row">
+            {c.website ? <Button label={`Visit ${c.name}`} href={c.website} /> : <Button label="Ask Len for an Intro" href="/contact/" />}
+            <Button label="All Favorites" href="/favorites/" variant="outline" />
+          </div>
+        </div>
+        {related.length > 0 && (
+          <aside class="col-lg-4">
+            <h3 class="dlt-aside-title">More in {c.category}</h3>
+            <ul class="dlt-aside-list">{related.map((r) => <li><a href={`/favorites/${r.slug}/`}>{r.name}</a><span>{r.description}</span></li>)}</ul>
+          </aside>
+        )}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

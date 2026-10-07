@@ -1,0 +1,63 @@
+---
+import site from '../../data/site.json';
+import Button from './Button.astro';
+const path = Astro.url.pathname;
+const isActive = (href: string) => !!href && (href === '/' ? path === '/' : !href.includes('#') && path.startsWith(href));
+const ext = (item: { external?: boolean }) => (item.external ? { target: '_blank', rel: 'noopener' } : {});
+type NavItem = { label: string; href: string; external?: boolean; children?: NavItem[] };
+const nav = site.nav as NavItem[];
+---
+<!-- Offcanvas (mobile menu). meanmenu.js clones #mobile-menu into .mobile-menu -->
+<div class="fix-area">
+  <div class="offcanvas__info">
+    <div class="offcanvas__wrapper">
+      <div class="offcanvas__content">
+        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+          <div class="offcanvas__logo"><a href="/"><img src="/brand/tau-logo-color.png" alt={site.name} width="250" height="45" /></a></div>
+          <div class="offcanvas__close"><button aria-label="Close menu"><i class="fas fa-times"></i></button></div>
+        </div>
+        <div class="mobile-menu fix mb-3"></div>
+        <div class="offcanvas__contact">
+          <Button label={site.primaryCta.label} href={site.primaryCta.href} class="mt-4" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="offcanvas__overlay"></div>
+
+<header id="header-sticky" class="header-1 dlt-header">
+  <div class="container">
+    <div class="mega-menu-wrapper">
+      <div class="header-main">
+        <a href="/" class="logo"><img class="dlt-logo--light" src="/brand/tau-logo-white.png" alt={site.name} width="250" height="45" /><img class="dlt-logo--dark" src="/brand/tau-logo-color.png" alt="" aria-hidden="true" width="250" height="45" /></a>
+        <div class="mean__menu-wrapper">
+          <div class="main-menu">
+            <nav id="mobile-menu">
+              <ul>
+                {nav.map((item) =>
+                  item.children ? (
+                    <li class:list={['has-dropdown', item.children.some((c) => isActive(c.href)) && 'active']}>
+                      <a href="javascript:void(0)">{item.label} <i class="fa-solid fa-chevron-down"></i></a>
+                      <ul class="submenu">
+                        {item.children.map((c) => <li class:list={[isActive(c.href) && 'active']}><a href={c.href} {...ext(c)}>{c.label}</a></li>)}
+                      </ul>
+                    </li>
+                  ) : (
+                    <li class:list={[isActive(item.href) && 'active']}><a href={item.href} {...ext(item)}>{item.label}</a></li>
+                  )
+                )}
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header-right d-flex justify-content-end align-items-center">
+          <Button label={site.primaryCta.label} href={site.primaryCta.href} class="d-none d-xl-inline-block" />
+          <div class="header__hamburger d-xl-none my-auto">
+            <div class="sidebar__toggle" aria-label="Open menu"><i class="fa-regular fa-bars"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

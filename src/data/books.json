@@ -1,0 +1,102 @@
+{
+  "_readme": "Books page. Covers load from Len's HighLevel media library (see photos.json). Descriptions are MOCK COPY for review with Len, especially Practice Playbook. Buy links are empty until we have them (empty buttons are hidden).",
+  "seo": {
+    "title": "Books",
+    "description": "Books by Dr. Len Tau: Raving Patients Supercharged, 100+ Tips for Getting Five-Star Reviews, and Practice Playbook."
+  },
+  "items": [
+    {
+      "id": "raving-patients-supercharged",
+      "badge": "New · Second edition",
+      "title": "Raving Patients Supercharged",
+      "subtitle": "The updated guide to reviews, reputation and online visibility for dental practices.",
+      "photo": "book-supercharged",
+      "paragraphs": [
+        "Raving Patients Supercharged is the second edition of my first book, rebuilt for how patients search today.",
+        "Inside are the systems I used to build a 4.9-star, 1,600+ review practice. QR codes throughout take you straight to free tools, like my Google Review Calculator.",
+        "It launched at Supercharge Your Dental Practice in September 2026. Updates since publication live on my News page."
+      ],
+      "buttons": [
+        {
+          "label": "Get the Book",
+          "href": ""
+        },
+        {
+          "label": "Book Updates",
+          "href": "/news/",
+          "variant": "outline"
+        }
+      ]
+    },
+    {
+      "id": "100-tips",
+      "badge": "Quick read",
+      "title": "100+ Tips for Getting Five-Star Reviews",
+      "subtitle": "Short, practical ideas your team can use tomorrow.",
+      "photo": "book-100-tips",
+      "paragraphs": [
+        "A collection of tips for asking for, earning and answering reviews.",
+        "It makes a good gift for your team leaders and your front desk."
+      ],
+      "buttons": [
+        {
+          "label": "Get the Book",
+          "href": ""
+        }
+      ]
+    },
+    {
+      "id": "practice-playbook",
+      "badge": "Playbook",
+      "title": "Practice Playbook",
+      "subtitle": "Placeholder subtitle. Confirm with Len.",
+      "photo": "book-practice-playbook",
+      "paragraphs": [
+        "Placeholder description for Practice Playbook. Send me the back-cover copy or a few lines from Len and I will write this section."
+      ],
+      "buttons": [
+        {
+          "label": "Get the Book",
+          "href": ""
+        }
+      ]
+    }
+  ],
+  "tools": {
+    "intro": {
+      "kicker": "From the book",
+      "title": "Free tools | for readers."
+    },
+    "cards": [
+      {
+        "title": "Google Review Calculator",
+        "text": "See how many reviews your practice needs to compete in your market.",
+        "link": {
+          "label": "Open the calculator",
+          "href": "https://reviewcalculator.drlentau.com"
+        }
+      },
+      {
+        "title": "Practice Assessment",
+        "text": "Grade your online presence in a few minutes and see where to focus first.",
+        "link": null
+      },
+      {
+        "title": "Book updates",
+        "text": "Platforms change. I post what is new since the book went to print.",
+        "link": {
+          "label": "Read updates",
+          "href": "/news/"
+        }
+      }
+    ]
+  },
+  "cta": {
+    "title": "Copies for your | team or study club?",
+    "text": "Ask me about bulk orders and signed copies.",
+    "button": {
+      "label": "Contact Me",
+      "href": "/contact/"
+    }
+  }
+}

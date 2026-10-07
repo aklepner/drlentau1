@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/site/PageHeader.astro';
+import InfoCards from '../components/sections/InfoCards.astro';
+import ResourceList from '../components/sections/ResourceList.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import d from '../data/resources.json';
+import home from '../data/home.json';
+---
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <PageHeader title="Free Resources" />
+  <InfoCards intro={d.tools.intro} cards={d.tools.cards} />
+  <ResourceList data={d.library} />
+  <CtaBand data={home.cta} />
+</BaseLayout>

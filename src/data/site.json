@@ -1,0 +1,193 @@
+{
+  "_readme": "Site-wide settings: name, links, navigation and footer. Every page reads from here.",
+  "name": "Dr. Len Tau",
+  "tagline": "Be Seen, Be Trusted, Be Chosen.",
+  "description": "Dr. Len Tau is a dentist, author and speaker known as The Reviews Doctor. He built his Philadelphia practice to 4.9 stars and 1,600+ reviews, and now helps dentists build more visible, more trusted practices.",
+  "url": "https://drlentau.com",
+  "links": {
+    "book_call": "https://drlentau.as.me",
+    "podcast": "/podcast/",
+    "podcast_guest": "https://podcastguest.drlentau.com",
+    "supercharge": "https://superchargeyourdentalpractice.com",
+    "book": "/books/",
+    "podcast_apple": "https://podcasts.apple.com/us/podcast/the-raving-patients-podcast/id1368978316",
+    "podcast_spotify": "https://open.spotify.com/show/1RDCn77A9Bmoy7e9ffbtgd",
+    "podcast_youtube": "https://www.youtube.com/channel/UCrrpZcuJAXcWErmB-DNiveg",
+    "review_calculator": "https://reviewcalculator.drlentau.com",
+    "practice_assessment": "",
+    "text_len": "https://link.textflows.io/widget/form/pb7Ae9ffWUpeD9E9YDho",
+    "speaker_packet": "https://cdn.prod.website-files.com/5ca2662925af28d3c53d7a73/5d2cc491b1d789e8fa4943d6_Dr.%20Tau_Speaker%20Packet.pdf"
+  },
+  "contact": {
+    "email": "len@drlentau.com",
+    "phone": "215-292-2100",
+    "location": "Philadelphia, PA",
+    "phone_href": "tel:+12152922100"
+  },
+  "social": [
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/drlentau",
+      "icon": "fa-brands fa-instagram"
+    },
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/drlentau",
+      "icon": "fa-brands fa-facebook-f"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/drlentau",
+      "icon": "fa-brands fa-linkedin-in"
+    },
+    {
+      "label": "X (Twitter)",
+      "href": "https://twitter.com/drlentau",
+      "icon": "fa-brands fa-twitter"
+    },
+    {
+      "label": "YouTube",
+      "href": "https://www.youtube.com/channel/UCrrpZcuJAXcWErmB-DNiveg",
+      "icon": "fa-brands fa-youtube"
+    }
+  ],
+  "primaryCta": {
+    "label": "Book a Call",
+    "href": "https://drlentau.as.me"
+  },
+  "nav": [
+    {
+      "label": "Meet Len",
+      "href": "/meet/"
+    },
+    {
+      "label": "Speaking",
+      "href": "/speaking/"
+    },
+    {
+      "label": "Consulting",
+      "href": "/consulting/"
+    },
+    {
+      "label": "Books",
+      "href": "/books/"
+    },
+    {
+      "label": "Podcast",
+      "href": "/podcast/"
+    },
+    {
+      "label": "Favorites",
+      "href": "/favorites/"
+    },
+    {
+      "label": "More",
+      "href": "",
+      "children": [
+        {
+          "label": "Raving Fans",
+          "href": "/reviews/"
+        },
+        {
+          "label": "News",
+          "href": "/news/"
+        },
+        {
+          "label": "Resources",
+          "href": "/resources/"
+        },
+        {
+          "label": "Supercharge",
+          "href": "https://superchargeyourdentalpractice.com",
+          "external": true
+        }
+      ]
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
+    }
+  ],
+  "footer": {
+    "blurb": "I am a dentist who built a 4.9-star, 1,600+ review practice. Now I teach the system to dentists across the country.",
+    "columns": [
+      {
+        "title": "Work with me",
+        "links": [
+          {
+            "label": "Speaking",
+            "href": "/speaking/"
+          },
+          {
+            "label": "Consulting",
+            "href": "/consulting/"
+          },
+          {
+            "label": "Book a call",
+            "href": "https://drlentau.as.me"
+          },
+          {
+            "label": "Supercharge conference",
+            "href": "https://superchargeyourdentalpractice.com"
+          }
+        ]
+      },
+      {
+        "title": "Learn",
+        "links": [
+          {
+            "label": "Books",
+            "href": "/books/"
+          },
+          {
+            "label": "Podcast",
+            "href": "/podcast/"
+          },
+          {
+            "label": "News",
+            "href": "/news/"
+          },
+          {
+            "label": "Free resources",
+            "href": "/resources/"
+          },
+          {
+            "label": "Len's favorites",
+            "href": "/favorites/"
+          }
+        ]
+      },
+      {
+        "title": "About",
+        "links": [
+          {
+            "label": "Meet Len",
+            "href": "/meet/"
+          },
+          {
+            "label": "Raving fans",
+            "href": "/reviews/"
+          },
+          {
+            "label": "Contact",
+            "href": "/contact/"
+          },
+          {
+            "label": "Be a podcast guest",
+            "href": "https://podcastguest.drlentau.com"
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Privacy policy",
+        "href": "/privacy/"
+      },
+      {
+        "label": "Terms",
+        "href": "/terms/"
+      }
+    ]
+  }
+}

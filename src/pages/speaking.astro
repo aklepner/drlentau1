@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/site/PageHeader.astro';
+import IntroSplit from '../components/sections/IntroSplit.astro';
+import VideoBlock from '../components/sections/VideoBlock.astro';
+import TopicCards from '../components/sections/TopicCards.astro';
+import QuoteBand from '../components/sections/QuoteBand.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import d from '../data/speaking.json';
+---
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <PageHeader title="Speaking" />
+  <IntroSplit data={d.intro} />
+  <VideoBlock data={d.reel} navy />
+  <TopicCards data={d.topics} />
+  <QuoteBand data={d.proof} />
+  <CtaBand data={d.cta} />
+</BaseLayout>

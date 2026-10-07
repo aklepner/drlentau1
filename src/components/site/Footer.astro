@@ -1,0 +1,50 @@
+---
+import site from '../../data/site.json';
+const year = new Date().getFullYear();
+const ext = (href: string) => (/^https?:\/\//.test(href) ? { target: '_blank', rel: 'noopener' } : {});
+---
+<footer class="footer-section dlt-footer">
+  <div class="footer-area">
+    <div class="container">
+      <div class="footer-widget-wrapper">
+        <div class="row justify-content-between">
+          <div class="col-xl-3 col-lg-12 col-md-12 wow fadeInUp" data-wow-delay=".2s">
+            <div class="footer-widget-items">
+              <div class="widget-head">
+                <a href="/" class="footer-logo"><img src="/brand/tau-logo-white.png" alt={site.name} width="250" height="45" /></a>
+              </div>
+              <div class="footer-content">
+                <p>{site.footer.blurb}</p>
+                <p class="dlt-footer-contact"><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a><br /><a href={site.contact.phone_href}>{site.contact.phone}</a></p>
+                <a href={site.primaryCta.href} class="dlt-btn dlt-btn--on-navy" target="_blank" rel="noopener">{site.primaryCta.label}</a>
+              </div>
+            </div>
+          </div>
+          {site.footer.columns.map((col, i) => (
+            <div class="col-xl-2 col-lg-4 col-md-4 wow fadeInUp" data-wow-delay={`.${4 + i * 2}s`}>
+              <div class="footer-widget-items">
+                <div class="widget-head"><h3>{col.title}</h3></div>
+                <ul class="gt-list-area">
+                  {col.links.map((l) => <li><a href={l.href} {...ext(l.href)}>{l.label}</a></li>)}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-wrapper">
+          <p>&copy; {year} <b>{site.name}.</b> All rights reserved.</p>
+          <div class="social-icon d-flex align-items-center">
+            {site.social.map((sc) => <a href={sc.href} target="_blank" rel="noopener" aria-label={sc.label}><i class={sc.icon}></i></a>)}
+          </div>
+          <ul class="footer-list">
+            {site.footer.legal.map((l, i) => <>{i > 0 && <li>|</li>}<li><a href={l.href}>{l.label}</a></li></>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

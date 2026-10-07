@@ -1,0 +1,117 @@
+{
+  "_readme": "Consulting page. Packages and prices are copied from the current drlentau.com/consulting page. CONFIRM WITH LEN before launch.",
+  "seo": {
+    "title": "Consulting",
+    "description": "Consulting with Dr. Len Tau: a clear plan for your online reputation, reviews and marketing, and a team that runs it."
+  },
+  "questions": {
+    "kicker": "Consulting",
+    "title": "Do you have a | marketing problem?",
+    "questions": [
+      "Do you have a steady flow of new patients?",
+      "Are you using your online presence strategically?",
+      "Is your online reputation strong and working for you?",
+      "Are your reviews bringing patients to you?",
+      "Is your brand consistent on every social platform?"
+    ]
+  },
+  "intro": {
+    "kicker": "How I help",
+    "title": "Get clear on where you are | and where you need to go.",
+    "paragraphs": [
+      "That is what consulting with me is for. We look at your whole online presence, then build a plan to create a steady flow of new patients.",
+      "Then we get your team on the same page, so the system runs every day without depending on you."
+    ],
+    "buttons": [
+      {
+        "label": "Get Started",
+        "href": "/contact/"
+      }
+    ],
+    "photo": "consulting"
+  },
+  "pricing": {
+    "kicker": "Packages",
+    "title": "Choose how | we work together.",
+    "intro": "Every package starts with a full look at your current marketing.",
+    "packages": [
+      {
+        "label": "Silver",
+        "name": "Online Marketing Audit",
+        "price": "$4,000",
+        "summary": "A full audit and a clear plan you can run with your vendors.",
+        "features": [
+          "Full analysis of your current marketing",
+          "Custom plan with my preferred vendors",
+          "Detailed proposal with monthly consultations",
+          "Campaign follow-up with vendors",
+          "Milestone follow-ups for future changes",
+          "My discounted vendor rates"
+        ],
+        "cta": {
+          "label": "Choose Silver",
+          "href": "/contact/"
+        }
+      },
+      {
+        "label": "Gold",
+        "name": "Employee for a Day",
+        "price": "$7,500",
+        "note": "plus travel",
+        "summary": "Everything in Silver, plus a day in your office with your team.",
+        "features": [
+          "Campaign setup with your team at your office",
+          "In-person answers to your team's questions",
+          "Full analysis of your current marketing",
+          "Custom plan with my preferred vendors",
+          "Detailed proposal with monthly consultations",
+          "Campaign follow-up with vendors",
+          "Milestone follow-ups for future changes",
+          "My discounted vendor rates"
+        ],
+        "cta": {
+          "label": "Choose Gold",
+          "href": "/contact/"
+        },
+        "featured": true
+      },
+      {
+        "label": "Platinum",
+        "name": "The Works",
+        "price": "$12,000",
+        "note": "plus travel",
+        "summary": "Everything in Gold, and every campaign done for you.",
+        "features": [
+          "All marketing campaigns done for you",
+          "Campaign setup with your team at your office",
+          "In-person answers to your team's questions",
+          "Full analysis of your current marketing",
+          "Custom plan with my preferred vendors",
+          "Detailed proposal with monthly consultations",
+          "Campaign follow-up with vendors",
+          "Milestone follow-ups for future changes",
+          "My discounted vendor rates"
+        ],
+        "cta": {
+          "label": "Choose Platinum",
+          "href": "/contact/"
+        }
+      }
+    ],
+    "footnote": "Not sure which fits? Book a call and we will figure it out together."
+  },
+  "birdeye": {
+    "kicker": "Birdeye",
+    "title": "More reviews, more patients, | no extra work.",
+    "text": "I serve as General Manager of the dental division at Birdeye. Watch my presentation on how it helps practices.",
+    "youtube": "BOyocFiiYus"
+  },
+  "cta": {
+    "title": "Get started | today.",
+    "text": "Let's line up your online presence and your reputation so new patients find you and trust you.",
+    "button": {
+      "label": "Get Started",
+      "href": "/contact/"
+    }
+  }
+}

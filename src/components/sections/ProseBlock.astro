@@ -1,0 +1,20 @@
+---
+/** Heading left, paragraphs right. For story and long-form copy. (Custom section, styled in tau-theme.css.) */
+interface Props { data: { kicker?: string; title: string; paragraphs: string[] } }
+const { data: d } = Astro.props;
+---
+<section class="section-padding dlt-prose">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="section-title">
+          {d.kicker && <h6 class="sub-title">{d.kicker}</h6>}
+          <h2>{d.title}</h2>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        {d.paragraphs.map((p) => <p class="wow fadeInUp">{p}</p>)}
+      </div>
+    </div>
+  </div>
+</section>

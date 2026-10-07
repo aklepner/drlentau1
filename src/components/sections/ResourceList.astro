@@ -1,0 +1,25 @@
+---
+/** Grouped link lists (Watch / Listen / Read) with jump links. */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Item { title: string; source?: string; href: string }
+interface Group { id: string; title: string; intro?: string; items: Item[] }
+interface Props { data: { kicker?: string; title: string; intro?: string; groups: Group[] } }
+const { data: d } = Astro.props;
+---
+<section class="section-padding dlt-resources">
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} intro={d.intro} align="center" />
+    <nav class="dlt-chips" aria-label="Resource types">{d.groups.map((g) => <a href={`#${g.id}`}>{g.title}</a>)}</nav>
+    {d.groups.map((g) => (
+      <div class="dlt-resgroup" id={g.id}>
+        <h3>{g.title}</h3>
+        {g.intro && <p>{g.intro}</p>}
+        <ul>
+          {g.items.map((it) => (
+            <li><a href={it.href} target="_blank" rel="noopener">{it.title}</a>{it.source && <span>{it.source}</span>}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>

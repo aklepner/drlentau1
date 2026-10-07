@@ -1,0 +1,45 @@
+---
+/**
+ * Quote slider (template: testimonial-section). Holds Dr. Tau's own quotes today.
+ * When real patient/doctor testimonials arrive, add `photo` (a path) to each item and the
+ * avatar row appears automatically. Never invent testimonials.
+ */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Props { data: { kicker: string; title: string; items: { quote: string; name: string; role: string; photo?: string }[] } }
+const { data: d } = Astro.props;
+const show = d.items.length > 0;
+const hasPhotos = d.items.every((q) => q.photo);
+---
+{show && (
+<section class="testimonial-section section-padding">
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} align="center" />
+    <div class:list={['testimonial-warpper', !hasPhotos && 'dlt-quotes--plain']}>
+      <div class:list={['testi-client', !hasPhotos && 'dlt-hidden']}>
+        <div class="swiper testimonial-thumbs">
+          <div class="swiper-wrapper">
+            {d.items.map((q) => <div class="swiper-slide"><div class="client-img"><img src={q.photo || '/brand/tau-mark-color.png'} alt={q.name} width="80" height="80" /></div></div>)}
+          </div>
+        </div>
+      </div>
+      <div class="swiper testimonial-slider-content">
+        <div class="swiper-wrapper">
+          {d.items.map((q) => (
+            <div class="swiper-slide">
+              <div class="testimonial-content-1">
+                <h3>{q.quote}</h3>
+                <div class="testi-info"><h4>{q.name}</h4><p>{q.role}</p></div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="swiper-dot text-center mt-4"><div class="dot2"></div></div>
+      </div>
+      <div class="array-button">
+        <button class="array-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="array-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+)}

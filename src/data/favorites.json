@@ -1,0 +1,354 @@
+{
+  "_readme": "Len's Favorites (a revenue driver; keep it). Each company gets a page at /favorites/<slug>/. `website` is the partner or affiliate link and is EMPTY until Len's team supplies it; until then the page shows a contact button. Copied from the current drlentau.com/favorites.",
+  "seo": {
+    "title": "Len's Favorites",
+    "description": "The dental companies Dr. Len Tau trusts most, by category: marketing, AI, software, finance, coaching and more."
+  },
+  "intro": {
+    "kicker": "Len's favorites",
+    "title": "The companies | I trust most.",
+    "paragraphs": [
+      "Over the past 20 years I have worked with countless companies in the dental industry. These are the ones I trust most.",
+      "Questions about any of them? Email me at len@drlentau.com or call my cell at 215‑292‑2100."
+    ],
+    "photo": "consulting"
+  },
+  "companies": [
+    {
+      "slug": "simple-impact-media",
+      "name": "Simple Impact Media",
+      "category": "Practice Enhancement",
+      "description": "A growth-focused agency built to help dentists and dental specialists grow.",
+      "website": "",
+      "featured": true
+    },
+    {
+      "slug": "dental-intelligence",
+      "name": "Dental Intelligence",
+      "category": "Software",
+      "description": "Analytics and engagement tools that help practices work smarter.",
+      "website": "",
+      "featured": true
+    },
+    {
+      "slug": "birdeye",
+      "name": "Birdeye",
+      "category": "Reputation Marketing",
+      "description": "All-in-one customer experience platform used by over 10,000 dentists.",
+      "website": "",
+      "featured": true
+    },
+    {
+      "slug": "annie",
+      "name": "Annie",
+      "category": "Practice Enhancement",
+      "description": "AI front desk with 24/7 coverage so no patient call is missed.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "avora",
+      "name": "Avora",
+      "category": "Artificial Intelligence",
+      "description": "AI that records appointments and writes clinical notes in your PMS.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "bern-media-productions",
+      "name": "Bern Media Productions",
+      "category": "Podcast Marketing",
+      "description": "Done-for-you podcast and video production.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "briteline",
+      "name": "Briteline",
+      "category": "Patient Communication",
+      "description": "Real people who connect new leads to consultations.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "callrail",
+      "name": "CallRail",
+      "category": "Call Tracking",
+      "description": "Call tracking and AI tools used by 2,600+ dental providers.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "clear-coaching",
+      "name": "Clear Coaching",
+      "category": "Coaching",
+      "description": "Coaching to systemize aligner treatment in your practice.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "collection-agency-ninja",
+      "name": "Collection Agency Ninja",
+      "category": "Finance",
+      "description": "Revenue cycle and patient collections consulting.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "daydream",
+      "name": "DayDream",
+      "category": "Finance",
+      "description": "End-to-end dental billing and RCM with AI technology.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "day-one",
+      "name": "Day One",
+      "category": "Digital Marketing",
+      "description": "High-converting websites and marketing for dental practices.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "dental-coaches",
+      "name": "Dental Coaches",
+      "category": "Coaching",
+      "description": "Custom coaching to raise productivity and profitability.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "dentalfynd",
+      "name": "DentalFynd",
+      "category": "Digital Marketing",
+      "description": "AI marketplace for dental services with membership plans.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "dental-menu",
+      "name": "Dental Menu",
+      "category": "Membership Plans",
+      "description": "Offer subscription plans directly to your patients.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "dental-protection-group",
+      "name": "Dental Protection Group",
+      "category": "Practice Enhancement",
+      "description": "Five-year procedure warranties that build patient loyalty.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "dental-stores",
+      "name": "Dental Stores",
+      "category": "Practice Enhancement",
+      "description": "Online patient stores and membership plan checkout.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "digital-floss",
+      "name": "Digital Floss",
+      "category": "Digital Marketing",
+      "description": "Full-service marketing, video production and content distribution.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "elevate-compliance",
+      "name": "Elevate Compliance",
+      "category": "Practice Enhancement",
+      "description": "HIPAA, OSHA and infection control training and support.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "elite-payment-group",
+      "name": "Elite Payment Group",
+      "category": "Merchant Services",
+      "description": "Merchant processing for dental practices.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "firstin",
+      "name": "FirstIn",
+      "category": "Practice Enhancement",
+      "description": "Online booking that keeps your schedule accurate.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "groupups",
+      "name": "GroupUps",
+      "category": "Practice Enhancement",
+      "description": "Group purchasing for better prices on dental equipment.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "less-tax-for-dentists",
+      "name": "Less Tax For Dentists",
+      "category": "Finance",
+      "description": "Tax strategy that helps dentists keep more of what they earn.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "mango-voice",
+      "name": "Mango Voice",
+      "category": "Patient Communication",
+      "description": "Cloud-based VoIP phone system built for practices.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "medianv",
+      "name": "MediaNV",
+      "category": "Digital Marketing",
+      "description": "Dental marketing with SEO, websites and call tracking.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "microsite",
+      "name": "Microsite",
+      "category": "Digital Marketing",
+      "description": "Lead generation for big-case dentistry, with tracking.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "my-dental-sop",
+      "name": "My Dental SOP",
+      "category": "Practice Enhancement",
+      "description": "IT and data security protection for dental practices.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "my-social-practice",
+      "name": "My Social Practice",
+      "category": "Artificial Intelligence",
+      "description": "Google Maps SEO to raise your practice's local visibility.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "oryx",
+      "name": "Oryx",
+      "category": "Software",
+      "description": "All-in-one cloud dental software with PMS and engagement tools.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "outreachhub",
+      "name": "OutreachHub",
+      "category": "Artificial Intelligence",
+      "description": "AI patient engagement for scheduling and communication.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "poppe-practice-management",
+      "name": "Poppe Practice Management",
+      "category": "Coaching",
+      "description": "Coaching on new patient conversion and case acceptance.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "preferred-dental-solutions",
+      "name": "Preferred Dental Solutions",
+      "category": "Practice Enhancement",
+      "description": "PPO credentialing and fee negotiation.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "prevu",
+      "name": "PreVu",
+      "category": "Software",
+      "description": "Smile simulation software that helps patients say yes.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "reach",
+      "name": "Reach",
+      "category": "Remote Staffing",
+      "description": "Remote team members and virtual assistants for dental practices.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "revvy",
+      "name": "Revvy",
+      "category": "Software",
+      "description": "Treatment acceptance software for open treatment plans.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "southern-dental-refining",
+      "name": "Southern Dental Refining",
+      "category": "Practice Enhancement",
+      "description": "Precious metals reclamation and recycling.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "studio-eighty-eight",
+      "name": "Studio Eighty-Eight",
+      "category": "Digital Marketing",
+      "description": "Story-driven websites and digital marketing.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "the-dental-app",
+      "name": "The Dental App",
+      "category": "Software",
+      "description": "Cloud PMS with CRM and patient engagement tools.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "the-dental-a-team",
+      "name": "The Dental A Team",
+      "category": "Coaching",
+      "description": "Consulting that blends clinical excellence with business skill.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "the-doc-sites",
+      "name": "The Doc Sites",
+      "category": "Digital Marketing",
+      "description": "Affordable mobile-friendly websites and online marketing.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "the-onhold-experience",
+      "name": "The OnHold Experience",
+      "category": "Software",
+      "description": "Custom on-hold messages that educate patients.",
+      "website": "",
+      "featured": false
+    },
+    {
+      "slug": "true-lark",
+      "name": "True Lark",
+      "category": "Artificial Intelligence",
+      "description": "AI texting and messaging for patient appointments.",
+      "website": "",
+      "featured": false
+    }
+  ]
+}

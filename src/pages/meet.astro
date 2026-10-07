@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/site/PageHeader.astro';
+import AboutStory from '../components/sections/AboutStory.astro';
+import VideoBlock from '../components/sections/VideoBlock.astro';
+import Statement from '../components/sections/Statement.astro';
+import ProseBlock from '../components/sections/ProseBlock.astro';
+import FaqList from '../components/sections/FaqList.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import meet from '../data/meet.json';
+import home from '../data/home.json';
+---
+<BaseLayout title={meet.seo.title} description={meet.seo.description}>
+  <PageHeader title="Meet Len" />
+  <AboutStory data={meet.story} />
+  <Statement data={meet.statement} />
+  <ProseBlock data={meet.prose} />
+  <VideoBlock data={meet.video} />
+  <FaqList data={meet.faq} />
+  <CtaBand data={home.cta} />
+</BaseLayout>

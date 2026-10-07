@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/site/PageHeader.astro';
+import NewsList from '../../components/sections/NewsList.astro';
+---
+<BaseLayout title="News" description="Latest news, book updates and helpful articles from Dr. Len Tau on reviews, reputation and getting found online.">
+  <PageHeader title="News" />
+  <NewsList kicker="Latest news" title="Updates from Len." intro="Book updates, new tools and announcements." category="News" />
+  <NewsList kicker="Helpful articles" title="Reviews, search | and AI for dentists." category="Article" />
+</BaseLayout>

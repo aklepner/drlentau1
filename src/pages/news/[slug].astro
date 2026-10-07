@@ -1,0 +1,25 @@
+---
+/** A single news post rendered from src/content/news/<slug>.md (posts with `external` link out instead). */
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/site/PageHeader.astro';
+import Button from '../../components/site/Button.astro';
+export async function getStaticPaths() {
+  const posts = await getCollection('news', (p) => !p.data.draft && !p.data.external);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+const date = post.data.date?.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+---
+<BaseLayout title={post.data.title} description={post.data.excerpt}>
+  <PageHeader title="News" />
+  <article class="section-padding dlt-article">
+    <div class="container">
+      <span class="dlt-tag">{post.data.category}</span>{date && <time>{date}</time>}
+      <h1>{post.data.title}</h1>
+      <div class="dlt-article__body"><Content /></div>
+      <Button label="All News" href="/news/" variant="outline" />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,33 @@
+---
+/** Photo + statement + counters (template: about-section). */
+import SectionTitle from '../site/SectionTitle.astro';
+import Button from '../site/Button.astro';
+import { photo } from '../../lib/photo';
+interface Props { data: { kicker: string; title: string; cta: { label: string; href: string }; counters: { label: string; count: number; suffix: string; text: string }[]} }
+const { data: d } = Astro.props;
+const img = photo('about');
+---
+<section class="about-section section-bg">
+  <div class="about-wrapper">
+    <div class="row align-items-center">
+      <div class="col-xl-5">
+        <div class="about-image fix"><img data-speed=".8" src={img.src} alt={img.alt} width={img.width} height={img.height} /></div>
+      </div>
+      <div class="col-xl-7 mt-4 mt-xl-0">
+        <div class="about-content">
+          <SectionTitle kicker={d.kicker} title={d.title} class="mb-0" />
+          <Button label={d.cta.label} href={d.cta.href} variant="outline" class="wow fadeInUp" delay=".3s" />
+          <div class="about-conter-items">
+            {d.counters.map((c, i) => (
+              <div class="counter-box wow fadeInUp" data-wow-delay={`.${3 + i * 2}s`}>
+                <h6>{c.label}</h6>
+                <h2><span class="count">{c.count}</span>{c.suffix}</h2>
+                <p>{c.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

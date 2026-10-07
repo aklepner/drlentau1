@@ -1,0 +1,8 @@
+.rtl {
+    direction: rtl;
+}
+
+
+.rtl .swiper {
+    direction: ltr;
+}
