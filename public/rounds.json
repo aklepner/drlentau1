@@ -1,0 +1,10 @@
+{
+  "rounds": [
+    {
+      "name": "first-round",
+      "path": "/first-round/",
+      "created": "2026-10-15",
+      "commit": "6e2fb7c"
+    }
+  ]
+}

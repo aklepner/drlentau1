@@ -1,8 +1,8 @@
 {
-  "_readme": "Books page. Covers load from Len's HighLevel media library (see photos.json). Descriptions are MOCK COPY for review with Len, especially Practice Playbook. Buy links are empty until we have them (empty buttons are hidden).",
+  "_readme": "Books page. Covers load from Len's HighLevel media library (see photos.json). Descriptions are MOCK COPY for review with Len. Buy links are empty until we have them (empty buttons are hidden).",
   "seo": {
     "title": "Books",
-    "description": "Books by Dr. Len Tau: Raving Patients Supercharged, 100+ Tips for Getting Five-Star Reviews, and Practice Playbook."
+    "description": "Books by Dr. Len Tau: Raving Patients Supercharged and 100+ Tips for Getting Five-Star Reviews."
   },
   "items": [
     {
@@ -37,22 +37,6 @@
       "paragraphs": [
         "A collection of tips for asking for, earning and answering reviews.",
         "It makes a good gift for your team leaders and your front desk."
-      ],
-      "buttons": [
-        {
-          "label": "Get the Book",
-          "href": ""
-        }
-      ]
-    },
-    {
-      "id": "practice-playbook",
-      "badge": "Playbook",
-      "title": "Practice Playbook",
-      "subtitle": "Placeholder subtitle. Confirm with Len.",
-      "photo": "book-practice-playbook",
-      "paragraphs": [
-        "Placeholder description for Practice Playbook. Send me the back-cover copy or a few lines from Len and I will write this section."
       ],
       "buttons": [
         {

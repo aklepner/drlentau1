@@ -35,6 +35,8 @@ template/                     the original 19 Brevon pages. Reference library on
 docs/section-catalog.md       every Brevon section, by page and line, and which are ported
 scripts/check-copy.mjs        banned words / em dash / emoji check
 scripts/make-placeholders.mjs regenerates placeholder SVGs from photos.json
+scripts/snapshot-round.mjs    freezes the current site as a review round (see "Review rounds")
+public/<round>/               frozen review rounds, e.g. public/first-round/. NEVER EDIT.
 ```
 
 ## Golden rules
@@ -75,7 +77,7 @@ Full reference: the `dlt-client-skill` skill. The non-negotiables for site copy:
 - **Dr. Tau is no longer a practicing dentist** (confirmed by Andy, Oct 2026). Never say "practicing dentist" or imply he still sees patients. Older sources (the dlt-client-skill, the design system README) still say "practicing"; they are out of date on this point.
 - Approved proof points, always in the past tense as the practice he built: 4.9 stars; 1,600+ reviews; 40+ new patients a month; roughly 85% case acceptance. Plus "The Reviews Doctor".
 - Taglines: "Be Seen, Be Trusted, Be Chosen." and "Reviews are the difference between a thriving practice and a shrinking practice."
-- Books by exact title: *Raving Patients Supercharged* (second edition of *Raving Patients*, 2026), *100+ Tips for Getting Five-Star Reviews*, *Practice Playbook*. The Books page shows these three. Podcast: Raving Patients Podcast (season 9, nearly 350 episodes, new every Friday).
+- Books by exact title: *Raving Patients Supercharged* (second edition of *Raving Patients*, 2026), *100+ Tips for Getting Five-Star Reviews*. The Books page shows these two. Podcast: Raving Patients Podcast (season 9, nearly 350 episodes, new every Friday).
 - Never mention Birdeye pricing or contract terms. Never mix Birdeye sales content with Supercharge content in one section.
 - Use "ideal client", never "audience" or "target audience", when writing about who Len serves.
 
@@ -137,6 +139,15 @@ Edit `favorites.json > companies`. Fields: `slug`, `name`, `category`, `descript
 - **Sub-folder handling:** the preview lives under `/drlentau1/`. Keep writing root-relative URLs (`/meet/`, `/images/x.jpg`) in components and data; `integrations/base-path.mjs` adds the `/drlentau1` prefix at build time when `SITE_BASE` is set. Local dev and the final drlentau.com launch need no prefix.
 - **Git:** Andy works directly on `main` (solo project). He runs the commit and push himself from the copy-paste block (rule 7); Claude has no push access.
 
+## Review rounds (frozen snapshots for the client)
+
+- Each round Len reviews is frozen as plain pages in `public/<round>/`, e.g. `/first-round/` (locally http://localhost:4321/first-round/, preview https://aklepner.github.io/drlentau1/first-round/). Not linked from any menu, marked noindex, links stay inside the round.
+- Registry: `public/rounds.json`. **Never edit files inside a round folder**; they are the record of what Len saw.
+- To freeze the next round: `node scripts/snapshot-round.mjs second-round` (builds the current site under that path and copies it into `public/`). Run it on Andy's Mac (it uses his node_modules), or in Claude's own workspace and copy the folder over.
+- Rounds share the template's vendor files in `/assets/` and the root favicon, so never rename or delete those.
+- `integrations/rounds-dev.mjs` makes `npm run dev` serve round folders; built sites and GitHub Pages serve them natively.
+- first-round = commit 6e2fb7c (Oct 7 2026 build, before Practice Playbook and "Coming soon" were removed).
+
 ## Supabase plan (not built yet)
 
 When Andy is ready:
@@ -150,7 +161,7 @@ When Andy is ready:
 - [ ] Real photos for every slot in `photos.json` (see `docs/photo-shotlist.md`).
 - [ ] Adobe Fonts kit ID for Proxima Nova (currently Montserrat).
 - [ ] Buy links for all three books → `books.json > items[].buttons` (empty buttons are hidden).
-- [ ] Book descriptions and the two News posts are mock copy: Len to review. Practice Playbook needs real subtitle and description.
+- [ ] Book descriptions and the two News posts are mock copy: Len to review.
 - [ ] Book covers load from Len's HighLevel media library (assets.cdn.filesafe.space). Fine for launch; download and self-host later if preferred.
 - [ ] Consulting package prices ($4,000 / $7,500 / $12,000) are copied from the live site: confirm still current.
 - [ ] Partner/affiliate URLs for every Favorite (`favorites.json > website`), currently empty.
