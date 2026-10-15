@@ -56,16 +56,22 @@
       "href": "/meet/"
     },
     {
-      "label": "Speaking",
-      "href": "/speaking/"
-    },
-    {
-      "label": "Consulting",
-      "href": "/consulting/"
-    },
-    {
-      "label": "Review Removal",
-      "href": "/review-removal/"
+      "label": "Services",
+      "href": "",
+      "children": [
+        {
+          "label": "Speaking",
+          "href": "/speaking/"
+        },
+        {
+          "label": "Consulting",
+          "href": "/consulting/"
+        },
+        {
+          "label": "Review Removal",
+          "href": "/review-removal/"
+        }
+      ]
     },
     {
       "label": "Books",

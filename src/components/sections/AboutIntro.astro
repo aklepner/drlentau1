@@ -3,9 +3,11 @@
 import SectionTitle from '../site/SectionTitle.astro';
 import Button from '../site/Button.astro';
 import { photo } from '../../lib/photo';
-interface Props { data: { kicker: string; title: string; cta: { label: string; href: string }; counters: { label: string; count: number; suffix: string; text: string }[]} }
+interface Props { data: { kicker: string; title: string; cta: { label: string; href: string }; counters: { label: string; count: number | string; suffix: string; text: string }[]} }
 const { data: d } = Astro.props;
 const img = photo('about');
+// Two counters sit beside the title (template layout). Three or more become a full-width stats row under the section.
+const band = d.counters.length > 2;
 ---
 <section class="about-section section-bg">
   <div class="about-wrapper">
@@ -17,17 +19,29 @@ const img = photo('about');
         <div class="about-content">
           <SectionTitle kicker={d.kicker} title={d.title} class="mb-0" />
           <Button label={d.cta.label} href={d.cta.href} variant="outline" class="wow fadeInUp" delay=".3s" />
-          <div class="about-conter-items">
-            {d.counters.map((c, i) => (
-              <div class="counter-box wow fadeInUp" data-wow-delay={`.${3 + i * 2}s`}>
-                <h6>{c.label}</h6>
-                <h2><span class="count">{c.count}</span><span class="dlt-suffix">{c.suffix}</span></h2>
-                <p>{c.text}</p>
-              </div>
-            ))}
-          </div>
+          {!band && (
+            <div class="about-conter-items">
+              {d.counters.map((c, i) => (
+                <div class="counter-box wow fadeInUp" data-wow-delay={`.${3 + i * 2}s`}>
+                  <h6>{c.label}</h6>
+                  <h2><span class="count">{c.count}</span><span class="dlt-suffix">{c.suffix}</span></h2>
+                  <p>{c.text}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
   </div>
+  {band && (
+    <div class="container dlt-stats">
+      {d.counters.map((c, i) => (
+        <div class="counter-box wow fadeInUp" data-wow-delay={`.${2 + i}s`}>
+          <h2><span class="count">{c.count}</span><span class="dlt-suffix">{c.suffix}</span></h2>
+          <p>{c.text}</p>
+        </div>
+      ))}
+    </div>
+  )}
 </section>

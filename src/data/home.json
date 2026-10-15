@@ -22,12 +22,49 @@
   },
   "credentials": [
     "The Reviews Doctor",
-    "Author, Raving Patients",
+    "Author, Raving Patients Supercharged",
     "Host, Raving Patients Podcast",
-    "Host, Supercharge Your Dental Practice",
+    "Host, Supercharge",
     "GM, Birdeye Dental Division",
-    "100+ Tips to Generating 100 5-Star Reviews in 100 Days"
+    "600+ presentations worldwide"
   ],
+  "paths": {
+    "title": "What do you need today?",
+    "cards": [
+      {
+        "title": "Fix my reputation",
+        "text": "Get more reviews, rank higher, and win the patients who compare you online.",
+        "button": {
+          "label": "Book a Call",
+          "href": "https://drlentau.as.me"
+        }
+      },
+      {
+        "title": "Remove a bad review",
+        "text": "Fake or policy-violating Google review? Pay only if it comes down.",
+        "button": {
+          "label": "Submit a Review",
+          "href": "/review-removal/"
+        }
+      },
+      {
+        "title": "Book Len to speak",
+        "text": "Bring a CE talk to your study club or meeting. Often at no cost to your group.",
+        "button": {
+          "label": "Speaking Details",
+          "href": "/speaking/"
+        }
+      },
+      {
+        "title": "Get the book",
+        "text": "Raving Patients Supercharged. The system, updated for AI search.",
+        "button": {
+          "label": "Buy the Book",
+          "href": "/books/"
+        }
+      }
+    ]
+  },
   "problem": {
     "kicker": "Why good practices fall behind",
     "title": "Patients compare trust, | not clinical skill.",
@@ -60,17 +97,46 @@
     },
     "counters": [
       {
+        "label": "Rating",
+        "count": "4.9",
+        "suffix": "",
+        "text": "Star average across my practice's reviews."
+      },
+      {
         "label": "Reviews",
-        "count": "1,600",
+        "count": "2,000",
         "suffix": "+",
-        "text": "Patient reviews earned in the practice I built."
+        "text": "Five-star reviews in the practice I built."
       },
       {
         "label": "New patients",
         "count": 40,
         "suffix": "+",
-        "text": "New patients a month from visibility and trust."
+        "text": "New patients a month at the practice I built."
+      },
+      {
+        "label": "Speaking",
+        "count": 600,
+        "suffix": "+",
+        "text": "Presentations worldwide."
+      },
+      {
+        "label": "Podcast",
+        "count": 340,
+        "suffix": "+",
+        "text": "Podcast episodes."
       }
+    ]
+  },
+  "recognition": {
+    "_readme": "Credentials strip (Launch Brief, Part 2). Also planned for Meet.",
+    "kicker": "Recognition",
+    "items": [
+      "Top Leaders in Dental Consulting, Dentistry Today, 2017 to 2025",
+      "USA Dental Report 100, 2026",
+      "Fan Favorite Dental Podcast, Dental Podcast Directory, 2025",
+      "Nominee, Independent Dental Leader of the Year, Tower Leadership, 2026",
+      "50,000+ Instagram followers"
     ]
   },
   "pillars": {
@@ -111,7 +177,11 @@
           "Calm",
           "Professional",
           "Fast"
-        ]
+        ],
+        "link": {
+          "label": "Remove reviews that break Google's rules",
+          "href": "/review-removal/"
+        }
       },
       {
         "title": "Turn Reviews | Into Growth",
@@ -133,15 +203,42 @@
       }
     ]
   },
+  "removal": {
+    "kicker": "New from The Reviews Doctor",
+    "title": "Some bad reviews break | Google's rules.",
+    "text": "Fake patients. Former employees. Competitors. Google removes those reviews when they're reported the right way. My team submits them for you. You pay $450 only if a review comes down.",
+    "stats": [
+      {
+        "value": "226",
+        "label": "Reviews removed last month"
+      },
+      {
+        "value": "200+",
+        "label": "Practices served"
+      },
+      {
+        "value": "About 60%",
+        "label": "Success rate"
+      }
+    ],
+    "button": {
+      "label": "See How It Works",
+      "href": "/review-removal/"
+    }
+  },
   "panels": {
     "items": [
       {
         "id": "supercharge",
         "label": "Annual conference",
-        "title": "Supercharge Your Dental Practice.",
-        "text": "My conference for practice owners and teams. Practical systems, new connections and clarity for the year ahead.",
+        "title": "Supercharge 2027.",
+        "text": "September 24 to 26, 2027. Pier Sixty-Six, Fort Lauderdale. My conference for practice owners and teams: practical systems, new connections and clarity for the year ahead.",
         "href": "https://superchargeyourdentalpractice.com",
-        "video": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6ac54566c478ac55350cf056.mp4"
+        "video": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6ac54566c478ac55350cf056.mp4",
+        "button": {
+          "label": "Register",
+          "href": "https://superchargeyourdentalpractice.com"
+        }
       },
       {
         "id": "books",
@@ -150,7 +247,13 @@
         "text": "Everything I have learned about reviews, reputation and visibility, updated for how patients search today.",
         "photo": "panel-book",
         "href": "/books/",
-        "fit": "contain"
+        "fit": "contain",
+        "buy": {
+          "_readme": "Fill in label/href/price when Len sends the buy link and price. Hidden while href is empty.",
+          "label": "Buy the Book",
+          "href": "",
+          "price": ""
+        }
       },
       {
         "id": "podcast",
@@ -173,9 +276,9 @@
         "role": "The Reviews Doctor"
       },
       {
-        "quote": "The most trusted-looking practice wins. Not always the best one. The one that looks most trusted.",
-        "name": "Dr. Len Tau",
-        "role": "The Reviews Doctor"
+        "quote": "He is the guy that gave me the missing piece to go from 10 cases a year to 40 cases a quarter. Now, I do 30 a month.",
+        "name": "Dr. Wollock",
+        "role": "Raving fan"
       },
       {
         "quote": "Reviews are the difference between a thriving practice and a shrinking practice.",
@@ -188,11 +291,6 @@
     "kicker": "How the system works",
     "title": "Four steps to | a trusted practice.",
     "photo": "process",
-    "card": {
-      "label": "My track record",
-      "value": "4.9",
-      "text": "Star average rating"
-    },
     "steps": [
       {
         "title": "Get found",
@@ -220,30 +318,12 @@
   "episodes": {
     "kicker": "Raving Patients Podcast",
     "title": "Latest | episodes.",
-    "items": [
-      {
-        "title": "People + AI: The New Dental Team Advantage",
-        "href": "/podcast/",
-        "date": "October 2, 2026",
-        "tag": "Episode 344"
-      },
-      {
-        "title": "Get Found by Patients and AI: The New Rules of Dental Visibility",
-        "href": "/podcast/",
-        "date": "September 25, 2026",
-        "tag": "Episode 343"
-      },
-      {
-        "title": "The Associate Trap: Why Waiting Too Long to Own Can Cost Dentists a Fortune",
-        "href": "/podcast/",
-        "date": "September 18, 2026",
-        "tag": "Episode 342"
-      }
-    ],
+    "items": [],
     "cta": {
       "label": "All Episodes",
       "href": "/podcast/"
-    }
+    },
+    "_readme": "Items come from podcast.json (latest three) in src/pages/index.astro, so the home page and Podcast page stay in sync."
   },
   "cta": {
     "title": "Is your online | reputation helping you?",

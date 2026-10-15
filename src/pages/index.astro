@@ -11,18 +11,27 @@ import ProcessAccordion from '../components/sections/ProcessAccordion.astro';
 import WordMarquee from '../components/sections/WordMarquee.astro';
 import CardGrid from '../components/sections/CardGrid.astro';
 import CtaBand from '../components/sections/CtaBand.astro';
+import PathCards from '../components/sections/PathCards.astro';
+import Recognition from '../components/sections/Recognition.astro';
+import PromoSplit from '../components/sections/PromoSplit.astro';
 import home from '../data/home.json';
+import podcast from '../data/podcast.json';
+// Latest three episodes, each linking to its own episode page (from podcast.json).
+const episodes = { ...home.episodes, items: podcast.episodes.episodes.slice(0, 3).map((e: any) => ({ title: e.title, href: e.href, date: e.date, tag: `Episode ${e.number}` })) };
 ---
 <BaseLayout title={home.seo.title} description={home.seo.description} bookReview>
   <Hero data={home.hero} />
   <CredentialStrip items={home.credentials} />
+  <PathCards data={home.paths} />
   <NumberedCards data={home.problem} />
   <AboutIntro data={home.about} />
+  <Recognition data={home.recognition} />
   <CardSlider data={home.pillars} />
+  <PromoSplit data={home.removal} id="review-removal" />
   <StackedPanels data={home.panels} />
   <Quotes data={home.quotes} />
   <ProcessAccordion data={home.process} />
   <WordMarquee words={home.marquee} />
-  <CardGrid data={home.episodes} id="episodes" />
+  <CardGrid data={episodes} id="episodes" />
   <CtaBand data={home.cta} />
 </BaseLayout>

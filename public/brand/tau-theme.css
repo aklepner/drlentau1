@@ -408,22 +408,12 @@ body.dlt p { color: var(--ink); }
 
 /* Header: extra 30px breathing room on the left (logo) and right (button / menu toggle) */
 .dlt .header-1 .header-main { padding-left: 30px; padding-right: 30px; }
-/* Keep the menu on one line at laptop widths (1200-1599px); nine items since Review Removal was added */
-@media (max-width: 1599px) {
-  .dlt .header-1 .header-main .main-menu ul li { margin-inline-end: 20px; }
-  .dlt .header-1 .header-main .main-menu ul li .submenu li { margin-inline-end: 0; }
-}
-.dlt .header-1 .dlt-btn { white-space: nowrap; }
+/* Keep the menu on one line at laptop widths (1200-1399px) */
 @media (max-width: 1399px) {
-  .dlt .header-1 .header-main .main-menu ul li { margin-inline-end: 14px; }
+  .dlt .header-1 .header-main .main-menu ul li { margin-inline-end: 18px; }
   .dlt .header-1 .header-main .main-menu ul li .submenu li { margin-inline-end: 0; }
   .dlt .header-1 .logo img { height: 34px; }
   .dlt .header-1 .dlt-btn { padding: 10px 18px; }
-}
-@media (max-width: 1299px) {
-  .dlt .header-1 .header-main { padding-left: 15px; padding-right: 15px; }
-  .dlt .header-1 .header-main .main-menu ul li { margin-inline-end: 11px; }
-  .dlt .header-1 .main-menu ul li a { letter-spacing: .2px; }
 }
 
 /* =====================================================================
@@ -539,3 +529,48 @@ body.dlt p { color: var(--ink); }
 .dlt .dlt-book-review__inner p { color: var(--white); font-size: 20px; font-weight: 600; margin: 0; }
 .dlt .dlt-footer .dlt-social { gap: 8px 10px; flex-wrap: wrap; justify-content: center; }
 .dlt .dlt-footer .dlt-followers { font-size: 14px; white-space: nowrap; }
+
+/* ---------- PathCards: "What do you need today?" (Home, under the hero) ---------- */
+.dlt .dlt-paths { background: var(--white); }
+.dlt .dlt-paths__title { color: var(--navy); font-size: 44px; line-height: 1.1; margin-bottom: 50px; }
+.dlt .dlt-path { background: var(--tau-paper); border-top: 3px solid var(--navy); padding: 34px 30px; height: 100%; display: flex; flex-direction: column; transition: border-color .2s; }
+.dlt .dlt-path:hover { border-top-color: var(--accent); }
+.dlt .dlt-path__num { color: var(--navy); font-weight: 700; font-size: 13px; letter-spacing: 1.5px; margin-bottom: 18px; }
+.dlt .dlt-path h3 { color: var(--navy); font-size: 22px; line-height: 1.25; margin-bottom: 12px; }
+.dlt .dlt-path p { color: var(--ink); margin-bottom: 26px; flex: 1; }
+.dlt .dlt-path .dlt-btn { align-self: flex-start; }
+@media (max-width: 767px) { .dlt .dlt-paths__title { font-size: 32px; margin-bottom: 32px; } }
+
+/* ---------- Stats band: full-width row of counters under "Why listen to me" (Home) ---------- */
+.dlt .dlt-stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; padding-top: 50px; padding-bottom: 80px; }
+.dlt .dlt-stats .counter-box { max-width: none; padding: 26px 24px; margin: 0; border-top: 3px solid var(--navy); }
+.dlt .dlt-stats .counter-box h2 { font-size: 44px; line-height: 1.1; margin-bottom: 10px; }
+.dlt .dlt-stats .counter-box p { font-size: 14px; line-height: 22px; margin: 0; }
+@media (max-width: 1199px) { .dlt .dlt-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 767px) { .dlt .dlt-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding-top: 30px; padding-bottom: 50px; } .dlt .dlt-stats .counter-box { padding: 18px 16px; } .dlt .dlt-stats .counter-box h2 { font-size: 32px; } }
+
+/* ---------- Recognition: awards strip (Home, after the stats band) ---------- */
+.dlt .dlt-recognition { background: var(--white); border-top: 1px solid var(--tau-mist); border-bottom: 1px solid var(--tau-mist); padding: 34px 0; }
+.dlt .dlt-recognition__kicker { color: var(--navy); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-bottom: 18px; }
+.dlt .dlt-recognition__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 0; }
+.dlt .dlt-recognition__list li { color: var(--navy); font-size: 14px; font-weight: 600; line-height: 20px; padding: 0 22px; border-left: 1px solid var(--tau-mist); text-align: center; }
+.dlt .dlt-recognition__list li:first-child { border-left: 0; }
+@media (max-width: 767px) { .dlt .dlt-recognition__list { flex-direction: column; } .dlt .dlt-recognition__list li { border-left: 0; padding: 0; } }
+
+/* ---------- PromoSplit: Review Removal band (Home, after the pillars) ---------- */
+.dlt .dlt-promo { background: var(--navy); }
+.dlt .dlt-promo .section-title { margin-bottom: 0; }
+.dlt .dlt-promo .section-title .sub-title { color: var(--tau-mist); }
+.dlt .dlt-promo h2 { color: var(--white); font-size: 48px; line-height: 1.1; margin-bottom: 20px; }
+.dlt .dlt-promo__text { color: var(--tau-mist); font-size: 17px; line-height: 28px; max-width: 560px; margin-bottom: 30px; }
+.dlt .dlt-promo__stats { list-style: none; margin: 0; padding: 0; }
+.dlt .dlt-promo__stats li { display: flex; align-items: baseline; gap: 18px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.15); }
+.dlt .dlt-promo__stats li:first-child { border-top: 1px solid rgba(255,255,255,.15); }
+.dlt .dlt-promo__stats strong { color: var(--white); font-size: 36px; line-height: 1; font-weight: 700; min-width: 220px; }
+.dlt .dlt-promo__stats span { color: var(--tau-mist); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+@media (max-width: 767px) { .dlt .dlt-promo h2 { font-size: 34px; } .dlt .dlt-promo__stats strong { font-size: 28px; min-width: 150px; } }
+
+/* ---------- Pillar link (pillar 04) and panel buttons ---------- */
+.dlt .feature-box-items .dlt-pillar-link { display: inline-block; margin: -6px 0 20px; }
+.dlt .dlt-panels .dlt-panel__cta { display: flex; align-items: center; gap: 18px; margin-top: 24px; }
+.dlt .dlt-panels .dlt-panel__price { color: var(--white); font-weight: 700; font-size: 18px; }

@@ -1,0 +1,26 @@
+---
+/** Navy promo band: copy and one button on the left, two or three proof numbers on the right. Used for Review Removal on Home. */
+import Button from '../site/Button.astro';
+interface Props { data: { kicker?: string; title: string; text: string; stats: { value: string; label: string }[]; button: { label: string; href: string } }; id?: string }
+const { data: d, id } = Astro.props;
+const parts = d.title.split('|').map((s) => s.trim());
+---
+<section class="dlt-promo section-padding" id={id}>
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-7">
+        <div class="section-title">
+          {d.kicker && <h6 class="sub-title">{d.kicker}</h6>}
+          <h2>{parts.map((p, i) => <>{i > 0 && <> <br /></>}{p}</>)}</h2>
+        </div>
+        <p class="dlt-promo__text">{d.text}</p>
+        <Button label={d.button.label} href={d.button.href} variant="on-navy" />
+      </div>
+      <div class="col-lg-5">
+        <ul class="dlt-promo__stats">
+          {d.stats.map((s) => <li><strong>{s.value}</strong><span>{s.label}</span></li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

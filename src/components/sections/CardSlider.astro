@@ -1,7 +1,7 @@
 ---
 /** Numbered card slider (template: feature-section / feature-box-slider). Used for the six pillars. */
 import SectionTitle from '../site/SectionTitle.astro';
-interface Props { data: { kicker: string; title: string; items: { title: string; text: string; tags: string[]; href?: string }[] } }
+interface Props { data: { kicker: string; title: string; items: { title: string; text: string; tags: string[]; href?: string; link?: { label: string; href: string } }[] } }
 const { data: d } = Astro.props;
 ---
 <section class="feature-section section-padding fix">
@@ -25,6 +25,7 @@ const { data: d } = Astro.props;
                   <h6>{String(i + 1).padStart(2, '0')}.</h6>
                   <h3>{a} {b && <span class="d-block">{b}</span>}</h3>
                   <p>{it.text}</p>
+                  {it.link && <a class="dlt-link dlt-pillar-link" href={it.link.href}>{it.link.label}</a>}
                   <div class="feature-info-box">
                     <ul>{it.tags.map((t) => <li>{t}</li>)}</ul>
                     {it.href && <a href={it.href} class="icon" aria-label={`More about ${a}`}><i class="fa-solid fa-arrow-up-right"></i></a>}

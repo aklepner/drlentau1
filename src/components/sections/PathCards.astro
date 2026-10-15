@@ -1,0 +1,23 @@
+---
+/** "What do you need today?" Four cards, each with one button. Custom section, styled under "PathCards" in tau-theme.css. */
+import Button from '../site/Button.astro';
+interface Props { data: { title: string; cards: { title: string; text: string; button: { label: string; href: string } }[] } }
+const { data: d } = Astro.props;
+---
+<section class="dlt-paths section-padding">
+  <div class="container">
+    <h2 class="dlt-paths__title text-center wow fadeInUp">{d.title}</h2>
+    <div class="row g-4">
+      {d.cards.map((c, i) => (
+        <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay={`.${2 + i * 2}s`}>
+          <div class="dlt-path">
+            <span class="dlt-path__num">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{c.title}</h3>
+            <p>{c.text}</p>
+            <Button label={c.button.label} href={c.button.href} variant="outline" />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -17,7 +17,7 @@ verifies it, and reports back briefly. Read this whole file before changing anyt
 ```
 CLAUDE.md                     this file
 src/data/                     ALL page copy and settings (edit these for content changes)
-  site.json                   name, nav (with "More" dropdown), footer, links, socials, contact info
+  site.json                   name, nav ("Services" and "More" dropdowns), footer, links, socials, contact info
   home.json                   homepage, one key per section, top to bottom
   meet.json speaking.json consulting.json books.json podcast.json
   favorites.json reviews.json resources.json contact.json   one file per inner page
@@ -163,6 +163,14 @@ When Andy is ready:
 4. Use migrations for schema changes; never change production tables by hand.
 
 ## Open items (update as they close)
+
+Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 2026): Part 1 is the fix list, Part 2 the approved copy. Text in [brackets] there waits on Len.
+
+- [ ] Review count: Home stats band says 2,000+ (bracketed in the Launch Brief, so unconfirmed); the hero, footer, Meet and meta descriptions still say 1,600+. Make them match once Len confirms.
+- [ ] Home book panel buy button: fill `home.json > panels > books > buy` (href, price). Hidden while href is empty. The Amazon link we have (dp/1642797812) is the original Raving Patients, not Supercharged.
+- [ ] Supercharge 2027 Register button points to superchargeyourdentalpractice.com until a 2027 registration link exists. Dates (Sept 24 to 26, 2027, Pier Sixty-Six) come from the 2027 speaker agreement.
+- [ ] Dr. Wollock: first name, practice and city for the Home quote (Launch Brief asks for them).
+- [ ] Home "Catch me live" (next 3 events): waits on the Google Sheet speaking calendar (Launch Brief section 3).
 
 - [ ] Real photos for every slot in `photos.json` (see `docs/photo-shotlist.md`).
 - [ ] Adobe Fonts kit ID for Proxima Nova (currently Montserrat).

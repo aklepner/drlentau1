@@ -1,0 +1,13 @@
+---
+/** Credentials strip: awards and recognition as a static row. Custom section, styled under "Recognition" in tau-theme.css. */
+interface Props { data: { kicker?: string; items: string[] } }
+const { data: d } = Astro.props;
+---
+<section class="dlt-recognition">
+  <div class="container">
+    {d.kicker && <h6 class="dlt-recognition__kicker">{d.kicker}</h6>}
+    <ul class="dlt-recognition__list">
+      {d.items.map((t) => <li>{t}</li>)}
+    </ul>
+  </div>
+</section>
