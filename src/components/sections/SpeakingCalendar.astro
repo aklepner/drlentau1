@@ -1,0 +1,85 @@
+---
+/**
+ * Upcoming speaking dates, read live from Len's published Google Sheet (CSV) in the browser.
+ * Len edits the sheet; the site needs no rebuild. Past dates drop off on their own.
+ * Setup: publish the sheet to the web as CSV and paste the URL into site.json > links.speaking_calendar_csv.
+ * Columns (row 1): date, end date, event, organization, city, state, talk, public, link, ce, show
+ * Everything is inserted with textContent, so nothing typed in the sheet can inject HTML.
+ * `limit` 0 = all upcoming (Speaking page); 3 on Home.
+ */
+import site from '../../data/site.json';
+interface Props { data: { kicker?: string; title: string; text?: string; empty: { text: string; link: { label: string; href: string } }; after?: { text: string; link: { label: string; href: string } }; seeAll?: { label: string; href: string } }; limit?: number; id?: string }
+const { data: d, limit = 0, id = 'calendar' } = Astro.props;
+const csv = (site.links as any).speaking_calendar_csv || '';
+const parts = d.title.split('|').map((s) => s.trim());
+---
+<section class="section-padding dlt-calendar" id={id}>
+  <div class="container">
+    <div class="section-title">
+      {d.kicker && <h6 class="sub-title">{d.kicker}</h6>}
+      <h2>{parts.map((p, i) => <>{i > 0 && <> <br /></>}{p}</>)}</h2>
+    </div>
+    {d.text && <p class="dlt-calendar__intro">{d.text}</p>}
+    <ul class="dlt-events" data-csv={csv} data-limit={limit}></ul>
+    <p class="dlt-events-empty" hidden>{d.empty.text} <a href={d.empty.link.href}>{d.empty.link.label}</a>.</p>
+    {d.after && <p class="dlt-calendar__after">{d.after.text} <a href={d.after.link.href}>{d.after.link.label}</a></p>}
+    {d.seeAll && <p class="dlt-calendar__after"><a class="dlt-link" href={d.seeAll.href}>{d.seeAll.label}</a></p>}
+  </div>
+</section>
+<script is:inline>
+(function () {
+  document.querySelectorAll('.dlt-events').forEach(function (list) {
+    var CSV_URL = list.getAttribute('data-csv');
+    var LIMIT = +list.getAttribute('data-limit') || 0;
+    var empty = list.parentNode.querySelector('.dlt-events-empty');
+    function showEmpty() { empty.hidden = false; }
+    if (!CSV_URL) { showEmpty(); return; }
+    function parseCSV(text) {
+      var rows = [], row = [], f = '', q = false;
+      for (var i = 0; i < text.length; i++) {
+        var c = text[i];
+        if (q) { if (c === '"' && text[i + 1] === '"') { f += '"'; i++; } else if (c === '"') q = false; else f += c; }
+        else if (c === '"') q = true;
+        else if (c === ',') { row.push(f); f = ''; }
+        else if (c === '\n') { row.push(f); rows.push(row); row = []; f = ''; }
+        else if (c !== '\r') f += c;
+      }
+      if (f || row.length) { row.push(f); rows.push(row); }
+      var head = rows.shift().map(function (h) { return h.trim().toLowerCase(); });
+      return rows.map(function (r) { var o = {}; head.forEach(function (h, j) { o[h] = (r[j] || '').trim(); }); return o; });
+    }
+    function toDate(s) { var p = (s || '').split('-'); return p.length === 3 ? new Date(+p[0], +p[1] - 1, +p[2]) : null; }
+    function fmt(d) { return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); }
+    function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    fetch(CSV_URL).then(function (r) { return r.text(); }).then(function (text) {
+      var events = parseCSV(text).filter(function (e) {
+        var start = toDate(e['date']); var end = toDate(e['end date']) || start;
+        return start && end >= today && (e.show || '').toLowerCase() !== 'no';
+      }).sort(function (a, b) { return toDate(a.date) - toDate(b.date); });
+      if (LIMIT) events = events.slice(0, LIMIT);
+      if (!events.length) { showEmpty(); return; }
+      events.forEach(function (e) {
+        var start = toDate(e.date), end = toDate(e['end date']);
+        var li = el('li', 'dlt-event');
+        li.appendChild(el('div', 'dlt-event__date', fmt(start) + (end && end > start ? ' to ' + fmt(end) : '')));
+        var body = el('div', 'dlt-event__body');
+        var name = el('h3', 'dlt-event__name');
+        var isPublic = (e.public || '').toLowerCase() === 'yes';
+        if (isPublic && /^https?:\/\//i.test(e.link)) { var a = el('a', '', e.event); a.href = e.link; a.target = '_blank'; a.rel = 'noopener'; name.appendChild(a); }
+        else { name.textContent = e.event; }
+        body.appendChild(name);
+        var where = [e.organization, [e.city, e.state].filter(Boolean).join(', ')].filter(Boolean).join(' · ');
+        if (where) body.appendChild(el('div', 'dlt-event__where', where));
+        if (e.talk) body.appendChild(el('div', 'dlt-event__talk', e.talk));
+        var tags = el('div', 'dlt-event__tags');
+        if ((e.ce || '').toLowerCase() === 'yes') tags.appendChild(el('span', 'dlt-tag', 'CE available'));
+        if (!isPublic) tags.appendChild(el('span', 'dlt-tag', 'Members only'));
+        if (tags.childNodes.length) body.appendChild(tags);
+        li.appendChild(body);
+        list.appendChild(li);
+      });
+    }).catch(showEmpty);
+  });
+})();
+</script>

@@ -1,0 +1,17 @@
+---
+/** Inner-page hero with a pitch: eyebrow, headline, subhead, one button and a small line under it. Navy, like the page header. */
+interface Props { data: { kicker?: string; title: string; text: string; button: { label: string; href: string }; note?: string } }
+const { data: d } = Astro.props;
+const ext = /^https?:/.test(d.button.href) ? { target: '_blank', rel: 'noopener' } : {};
+---
+<div class="breadcrumb-wrapper dlt-page-header dlt-pagehero">
+  <div class="container">
+    <div class="dlt-pagehero__inner">
+      {d.kicker && <h6 class="dlt-pagehero__kicker wow fadeInUp">{d.kicker}</h6>}
+      <h1 class="wow fadeInUp" data-wow-delay=".2s">{d.title}</h1>
+      <p class="dlt-pagehero__text wow fadeInUp" data-wow-delay=".3s">{d.text}</p>
+      <a href={d.button.href} class="dlt-btn dlt-btn--mist wow fadeInUp" data-wow-delay=".4s" {...ext}>{d.button.label}</a>
+      {d.note && <p class="dlt-pagehero__note">{d.note}</p>}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+---
+/**
+ * Inquiry form built from a field list (Speaking booking, Books bulk orders).
+ * BACKEND: none yet. Like the contact form, `action` stays empty until HighLevel or Supabase is
+ * connected; until then submitting shows the thank-you text and sends nothing.
+ * Field: { name, label, type: text|email|tel|date|number|select|textarea, required?, options?, half? }
+ */
+interface Field { name: string; label: string; type: string; required?: boolean; options?: string[]; half?: boolean }
+interface Props { data: { kicker?: string; title: string; text?: string; action?: string; fields: Field[]; submit: string; done: string }; id?: string; tint?: boolean }
+const { data: d, id = 'inquiry', tint = false } = Astro.props;
+const parts = d.title.split('|').map((s) => s.trim());
+---
+<section class:list={['section-padding dlt-inquiry', tint && 'dlt-tint']} id={id}>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="section-title">
+          {d.kicker && <h6 class="sub-title">{d.kicker}</h6>}
+          <h2>{parts.map((p, i) => <>{i > 0 && <> <br /></>}{p}</>)}</h2>
+        </div>
+        {d.text && <p class="dlt-inquiry__text">{d.text}</p>}
+      </div>
+      <div class="col-lg-8">
+        <form action={d.action || undefined} method="post" class="contact-form-box dlt-inquiry__form" data-backend={d.action ? 'live' : 'pending'}>
+          <div class="row g-3">
+            {d.fields.map((f) => {
+              const fid = `${id}-${f.name}`;
+              const label = f.label + (f.required ? ' *' : '');
+              return (
+                <div class={f.type === 'textarea' || !f.half ? 'col-12' : 'col-md-6'}>
+                  <div class="form-clt">
+                    <label class="dlt-field-label" for={fid}>{label}</label>
+                    {f.type === 'textarea' ? <textarea id={fid} name={f.name} required={f.required}></textarea>
+                      : f.type === 'select' ? (
+                        <div class="form"><select id={fid} class="single-select w-100" name={f.name} required={f.required}>
+                          <option value="">Choose one</option>
+                          {f.options?.map((o) => <option value={o}>{o}</option>)}
+                        </select></div>
+                      ) : <input id={fid} type={f.type} name={f.name} required={f.required} min={f.type === 'number' ? 1 : undefined} />}
+                  </div>
+                </div>
+              );
+            })}
+            <div class="col-12"><button type="submit" class="dlt-btn">{d.submit}</button></div>
+          </div>
+          <p class="dlt-inquiry__done" role="status" hidden>{d.done}</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script is:inline>
+  document.querySelectorAll('.dlt-inquiry__form[data-backend="pending"]').forEach(function (f) {
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      f.querySelector('.row').hidden = true;
+      f.querySelector('.dlt-inquiry__done').hidden = false;
+    });
+  });
+</script>

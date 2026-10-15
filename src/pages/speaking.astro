@@ -5,14 +5,20 @@ import IntroSplit from '../components/sections/IntroSplit.astro';
 import VideoBlock from '../components/sections/VideoBlock.astro';
 import TopicCards from '../components/sections/TopicCards.astro';
 import QuoteBand from '../components/sections/QuoteBand.astro';
+import Lead from '../components/sections/Lead.astro';
+import SpeakingCalendar from '../components/sections/SpeakingCalendar.astro';
+import InquiryForm from '../components/sections/InquiryForm.astro';
 import CtaBand from '../components/sections/CtaBand.astro';
 import d from '../data/speaking.json';
 ---
 <BaseLayout title={d.seo.title} description={d.seo.description}>
   <PageHeader title="Speaking" />
   <IntroSplit data={d.intro} />
+  <Lead data={d.nocost} tint />
   <VideoBlock data={d.reel} navy />
   <TopicCards data={d.topics} />
+  <SpeakingCalendar data={d.calendar} />
+  <InquiryForm data={d.booking} id="book" tint />
   <QuoteBand data={d.proof} />
   <CtaBand data={d.cta} />
 </BaseLayout>

@@ -7,7 +7,7 @@ import SectionTitle from '../site/SectionTitle.astro';
 import Button from '../site/Button.astro';
 import { photo } from '../../lib/photo';
 interface Btn { label: string; href: string; variant?: 'solid' | 'outline' | 'mist' | 'on-navy' }
-interface Props { data: { kicker?: string; title: string; paragraphs: string[]; buttons?: Btn[]; photo: any; quote?: { text: string; name: string; role?: string } }; reverse?: boolean; tint?: boolean }
+interface Props { data: { kicker?: string; title: string; paragraphs: string[]; buttons?: Btn[]; photo: any; badge?: string; note?: { label?: string; text: string }; quote?: { text: string; name: string; role?: string } }; reverse?: boolean; tint?: boolean }
 const { data: d, reverse = false, tint = false } = Astro.props;
 const img = photo(d.photo);
 ---
@@ -19,6 +19,8 @@ const img = photo(d.photo);
         <div class="dlt-intro__body">
           {d.paragraphs.map((p) => <p class="wow fadeInUp">{p}</p>)}
         </div>
+        {d.badge && <p class="dlt-intro__badge wow fadeInUp">{d.badge}</p>}
+        {d.note && <p class="dlt-intro__note wow fadeInUp">{d.note.label && <strong>{d.note.label} </strong>}{d.note.text}</p>}
         {d.buttons && <div class="dlt-btn-row">{d.buttons.map((b) => <Button label={b.label} href={b.href} variant={b.variant ?? 'solid'} />)}</div>}
         {d.quote && (
           <blockquote class="dlt-pullquote wow fadeInUp">

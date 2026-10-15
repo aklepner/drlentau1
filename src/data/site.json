@@ -2,7 +2,7 @@
   "_readme": "Site-wide settings: name, links, navigation and footer. Every page reads from here.",
   "name": "Dr. Len Tau",
   "tagline": "Be Seen, Be Trusted, Be Chosen.",
-  "description": "Dr. Len Tau is a dentist, author and speaker known as The Reviews Doctor. He built his Philadelphia practice to 4.9 stars and 1,600+ reviews, and now helps dentists build more visible, more trusted practices.",
+  "description": "Dr. Len Tau is a dentist, author and speaker known as The Reviews Doctor. He built his Philadelphia practice to 4.9 stars and 2,000+ reviews, and now helps dentists build more visible, more trusted practices.",
   "url": "https://drlentau.com",
   "links": {
     "book_call": "https://drlentau.as.me",
@@ -16,7 +16,8 @@
     "review_calculator": "https://reviewcalculator.drlentau.com",
     "practice_assessment": "",
     "text_len": "https://link.textflows.io/widget/form/pb7Ae9ffWUpeD9E9YDho",
-    "speaker_packet": "https://cdn.prod.website-files.com/5ca2662925af28d3c53d7a73/5d2cc491b1d789e8fa4943d6_Dr.%20Tau_Speaker%20Packet.pdf"
+    "speaker_packet": "https://cdn.prod.website-files.com/5ca2662925af28d3c53d7a73/5d2cc491b1d789e8fa4943d6_Dr.%20Tau_Speaker%20Packet.pdf",
+    "speaking_calendar_csv": ""
   },
   "contact": {
     "email": "len@drlentau.com",
@@ -114,7 +115,7 @@
     }
   ],
   "footer": {
-    "blurb": "I built a 4.9-star practice with 1,600+ reviews over 23 years. Now I teach the system to dentists and their teams.",
+    "blurb": "I built a 4.9-star practice with 2,000+ reviews over 23 years. Now I teach the system to dentists and their teams.",
     "columns": [
       {
         "title": "Work with me",

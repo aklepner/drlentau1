@@ -1,0 +1,189 @@
+{
+  "_readme": "Review Removal page (/review-removal/). Copy from Len's Launch Brief, Part 2, with Andy's edits (Oct 15, 2026). Every button opens the intake form. Testimonial screenshots are hotlinked from Len's HighLevel media library (same images as thereviewsdoctor.com).",
+  "seo": {
+    "pageTitle": "Google Review Removal for Dentists | Dr. Len Tau, The Reviews Doctor",
+    "description": "Remove fake and policy-violating Google reviews from your dental practice. Pay $450 only if the review comes down. No upfront cost."
+  },
+  "intake": "https://intake.thereviewsdoctor.com",
+  "hero": {
+    "kicker": "The Reviews Doctor",
+    "title": "Bad Google review? You pay only if it comes down.",
+    "text": "Some reviews break Google's rules. Fake patients. Former employees. Competitors. I get those reviews in front of Google the right way. You pay $450 per review, only when it's removed.",
+    "button": {
+      "label": "Submit My Reviews",
+      "href": "https://intake.thereviewsdoctor.com"
+    },
+    "note": "No charge until a review is removed."
+  },
+  "proof": [
+    {
+      "value": "226",
+      "label": "Reviews removed last month"
+    },
+    {
+      "value": "200+",
+      "label": "Dental practices served"
+    },
+    {
+      "value": "About 60%",
+      "label": "Success rate"
+    },
+    {
+      "value": "$0",
+      "label": "Upfront"
+    }
+  ],
+  "problem": {
+    "kicker": "The problem",
+    "title": "Flagging it yourself rarely works.",
+    "paragraphs": [
+      "You reported the review. Weeks passed. Nothing happened.",
+      "You posted a calm reply. The 1-star still sits at the top of your profile.",
+      "You priced reputation agencies. They wanted $2,000 to $5,000 a month with no promise of removal.",
+      "The review is still there. New patients read it before they call."
+    ]
+  },
+  "how": {
+    "kicker": "How it works",
+    "title": "Three steps. | Two minutes of your time.",
+    "steps": [
+      {
+        "title": "Submit your review links.",
+        "text": "The form takes about two minutes."
+      },
+      {
+        "title": "Save a card through Stripe.",
+        "text": "Nothing is charged today."
+      },
+      {
+        "title": "We submit to Google.",
+        "text": "We start within 24 hours. If Google removes the review, you pay $450. If not, you pay nothing."
+      }
+    ]
+  },
+  "qualifies": {
+    "kicker": "What qualifies",
+    "title": "Respond to the real ones. | Remove the ones that break Google's rules.",
+    "yes": {
+      "title": "Reviews Google may remove",
+      "items": [
+        "From someone who was never a patient",
+        "From a competitor",
+        "From a current or former employee",
+        "Posted under a false identity",
+        "Containing hate speech, threats, or personal information",
+        "Off-topic, spam, or posted for the wrong business"
+      ]
+    },
+    "no": {
+      "title": "Reviews Google will not remove",
+      "items": [
+        "An honest negative review from a real patient"
+      ],
+      "text": "For those, reply in a calm, professional voice. The next patient is reading your response."
+    }
+  },
+  "pricing": {
+    "kicker": "Pricing",
+    "title": "One price. | Only if it works.",
+    "highlight": "$450 per removed review.",
+    "paragraphs": [
+      "Your card is stored through Stripe. It is charged only when Google removes a review. About 4 in 10 reviews stay up. You pay nothing for those.",
+      "No retainer. No contract. No monthly fee."
+    ],
+    "button": {
+      "label": "Submit My Reviews",
+      "href": "https://intake.thereviewsdoctor.com"
+    }
+  },
+  "testimonials": {
+    "kicker": "Real dentists. Real results.",
+    "title": "From the Raving | Patients community.",
+    "images": [
+      {
+        "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/69f51f1bdd67e758c08ddc77.png",
+        "alt": "Screenshot of a dentist's message about review removal results (1 of 7)",
+        "width": 1184,
+        "height": 606
+      },
+      {
+        "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/69f51f1bbbacf0a0561ea171.png",
+        "alt": "Screenshot of a dentist's message about review removal results (2 of 7)",
+        "width": 1188,
+        "height": 576
+      },
+      {
+        "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/69f51f1bbbacf0a0561ea172.png",
+        "alt": "Screenshot of a dentist's message about review removal results (3 of 7)",
+        "width": 1192,
+        "height": 720
+      },
+      {
+        "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/69f51f1b8831cb2c6c924d55.png",
+        "alt": "Screenshot of a dentist's message about review removal results (4 of 7)",
+        "width": 1188,
+        "height": 448
+      },
+      {
+        "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/69f51f1b23e63d676c958b45.png",
+        "alt": "Screenshot of a dentist's message about review removal results (5 of 7)",
+        "width": 1176,
+        "height": 1150
+      },
+      {
+        "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/69f51f1be9694b966406114c.png",
+        "alt": "Screenshot of a dentist's message about review removal results (6 of 7)",
+        "width": 1196,
+        "height": 466
+      },
+      {
+        "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/69f51f1b8831cb2c6c924d56.png",
+        "alt": "Screenshot of a dentist's message about review removal results (7 of 7)",
+        "width": 1178,
+        "height": 362
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Questions",
+    "title": "Review removal | FAQ.",
+    "cta": {
+      "label": "Submit My Reviews",
+      "href": "https://intake.thereviewsdoctor.com"
+    },
+    "items": [
+      {
+        "q": "How does the process work?",
+        "a": "You submit your review links through our form. My team prepares each submission and sends it to Google. If Google removes the review, your card is charged $450. If it stays up, you pay nothing."
+      },
+      {
+        "q": "Why do I need a card on file?",
+        "a": "Stripe stores it securely so we can charge you only after a removal. Nothing is charged at submission. If no review comes down, we never charge your card."
+      },
+      {
+        "q": "What is your success rate?",
+        "a": "About 60%. Roughly 4 of every 10 reviews stay up. You pay zero for those."
+      },
+      {
+        "q": "Can you remove any negative review?",
+        "a": "No. Google removes reviews that break its policies. An honest review from a real patient stays up."
+      },
+      {
+        "q": "How long does it take?",
+        "a": "We start within 24 hours. Google sets the timeline. Some reviews come down in days. Others take weeks. You hear from us the moment Google decides."
+      },
+      {
+        "q": "What if new negative reviews show up later?",
+        "a": "Submit them anytime. Same terms. Most practices come back monthly."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Your profile should show | the practice you run.",
+    "text": "Submit your reviews today. You pay only when one comes down.",
+    "button": {
+      "label": "Submit My Reviews",
+      "href": "https://intake.thereviewsdoctor.com"
+    }
+  }
+}

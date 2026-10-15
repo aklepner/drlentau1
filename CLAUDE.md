@@ -75,7 +75,7 @@ Full reference: the `dlt-client-skill` skill. The non-negotiables for site copy:
 - **No em dashes. No emoji.** Banned: leverage, game-changer, journey, passionate, transformative, cutting-edge, revolutionary, hustle, amazing, incredible. (`npm run check` enforces these.)
 - Words to favor: system, visibility, trust, credibility, reviews, listings, social proof.
 - **Dr. Tau is no longer a practicing dentist** (confirmed by Andy, Oct 2026). Never say "practicing dentist" or imply he still sees patients. Older sources (the dlt-client-skill, the design system README) still say "practicing"; they are out of date on this point.
-- Approved proof points, always in the past tense as the practice he built: 4.9 stars; 1,600+ reviews; 40+ new patients a month; roughly 85% case acceptance. Plus "The Reviews Doctor".
+- Approved proof points, always in the past tense as the practice he built: 4.9 stars; 2,000+ five-star reviews (Andy's call, Oct 15, 2026; replaced 1,600+ everywhere); 40+ new patients a month; roughly 85% case acceptance. Plus "The Reviews Doctor".
 - Taglines: "Be Seen, Be Trusted, Be Chosen." and "Reviews are the difference between a thriving practice and a shrinking practice."
 - Books by exact title: *Raving Patients Supercharged* (second edition of *Raving Patients*, 2026), *100+ Tips to Generating 100 5-Star Reviews in 100 Days*. The Books page shows these two. Podcast: Raving Patients Podcast (season 9, nearly 350 episodes, new every Friday).
 - Never mention Birdeye pricing or contract terms. Never mix Birdeye sales content with Supercharge content in one section.
@@ -101,7 +101,8 @@ Full reference: the `dlt-client-skill` skill. The non-negotiables for site copy:
 | /reviews/ (Raving Fans) | reviews.astro | reviews.json |
 | /news/ and /news/<slug>/ | news/index.astro, news/[slug].astro | src/content/news/*.md |
 | /resources/ | resources.astro | resources.json |
-| /contact/ | contact.astro | contact.json |
+| /contact/ | contact.astro | contact.json (`?topic=speaking|books|removal|consulting|podcast|supercharge` preselects the form topic) |
+| /review-removal/ | review-removal.astro | review-removal.json (every button opens intake.thereviewsdoctor.com; FAQPage + Service schema) |
 
 Redirects for old URLs live in `astro.config.mjs` (`/about`→`/meet`, `/connect`→`/contact`, `/helpful-articles` and `/latest-news`→`/news`). Keep the live site's slugs where they exist.
 
@@ -166,11 +167,16 @@ When Andy is ready:
 
 Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 2026): Part 1 is the fix list, Part 2 the approved copy. Text in [brackets] there waits on Len.
 
-- [ ] Review count: Home stats band says 2,000+ (bracketed in the Launch Brief, so unconfirmed); the hero, footer, Meet and meta descriptions still say 1,600+. Make them match once Len confirms.
 - [ ] Home book panel buy button: fill `home.json > panels > books > buy` (href, price). Hidden while href is empty. The Amazon link we have (dp/1642797812) is the original Raving Patients, not Supercharged.
 - [ ] Supercharge 2027 Register button points to superchargeyourdentalpractice.com until a 2027 registration link exists. Dates (Sept 24 to 26, 2027, Pier Sixty-Six) come from the 2027 speaker agreement.
+- [ ] Migrate the /videos/ pages and the podcast episode pages off the old site before cutover; links point there today. (The 21 articles are migrated into src/content/news.)
+- [ ] Guest posts: 20 of the 21 migrated articles were written by vendors (My Social Practice, The DocSites) and carry an `author` byline. They contain vendor pitches and words outside Len's voice rules (the copy check skips src/content). Andy/Len to decide whether they stay.
+- [ ] Article images still load from Webflow's CDN (cdn.prod.website-files.com); copy them into public/ before the Webflow site goes away.
+- [ ] Speaking calendar: create the "Len Speaking Calendar" Google Sheet, publish it as CSV and paste the URL into `site.json > links.speaking_calendar_csv`. Until then the calendar shows its empty state. Then add "Catch me live" (next 3, `limit={3}`) to Home.
+- [ ] Birdeye review widget: paste the embed code into `reviews.json > live.embed` (a dashed placeholder shows until then).
+- [ ] Speaking booking form, Books bulk order form and newsletter signup have no backend yet (thank-you message only). Connect to HighLevel.
+- [ ] Resources "Read" PDFs live in public/docs/ (downloaded from the Webflow CDN on Oct 15).
 - [ ] Dr. Wollock: first name, practice and city for the Home quote (Launch Brief asks for them).
-- [ ] Home "Catch me live" (next 3 events): waits on the Google Sheet speaking calendar (Launch Brief section 3).
 
 - [ ] Real photos for every slot in `photos.json` (see `docs/photo-shotlist.md`).
 - [ ] Adobe Fonts kit ID for Proxima Nova (currently Montserrat).
@@ -179,11 +185,8 @@ Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 20
 - [ ] Book covers load from Len's HighLevel media library (assets.cdn.filesafe.space). Fine for launch; download and self-host later if preferred.
 - [ ] Consulting package prices ($4,000 / $7,500 / $12,000) are copied from the live site: confirm still current.
 - [ ] Partner/affiliate URLs for every Favorite (`favorites.json > website`), currently empty.
-- [ ] Practice Assessment URL (Books + Resources show "Coming soon").
-- [ ] Migrate the 21 helpful articles, the /videos/ pages and the podcast episode pages off the old site before cutover; links point there today.
 - [ ] Speaker reel video and Meet Len intro video IDs (`speaking.json > reel.youtube`, `meet.json > video.vimeo`).
 - [ ] Speaker packet PDF is from 2019; replace with a current one.
-- [ ] Old "The Reputable Dentist" eBook link may be dead.
 - [ ] Confirm current podcast sponsors (CloudDentistry, DocSites, Dental Intel).
 - [ ] Contact form backend (Supabase or GHL). The form does not submit anywhere yet.
 - [ ] Newsletter signup (above the footer, `src/components/site/Signup.astro`, copy in `site.json > signup`): connect to HighLevel by setting `signup.action`. Until then it shows a thank-you message and sends nothing. Fields: first_name, email, role.

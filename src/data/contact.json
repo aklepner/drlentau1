@@ -18,6 +18,14 @@
       }
     },
     {
+      "title": "Remove a bad review",
+      "text": "Fake or policy-violating Google review? Pay $450 only if it comes down.",
+      "link": {
+        "label": "Submit Reviews",
+        "href": "https://intake.thereviewsdoctor.com"
+      }
+    },
+    {
       "title": "Email or call",
       "text": "len@drlentau.com\nCell: 215‑292‑2100",
       "link": {
@@ -47,6 +55,7 @@
     "action": "",
     "topics": [
       "Speaking or events",
+      "Google review removal",
       "Consulting",
       "Raving Patients Podcast",
       "Books or bulk orders",

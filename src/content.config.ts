@@ -5,6 +5,7 @@ import { glob } from 'astro/loaders';
 /**
  * News and articles. One Markdown file per post in src/content/news/.
  * category: "News" (book updates, announcements) or "Article" (helpful articles).
+ * author: byline for guest posts (vendors such as My Social Practice or The DocSites). Omit for Len's own posts.
  * external: set for articles still hosted on the old site; the card links there instead of /news/<slug>/.
  */
 const news = defineCollection({
@@ -14,6 +15,7 @@ const news = defineCollection({
     category: z.enum(['News', 'Article']),
     date: z.coerce.date().optional(),
     excerpt: z.string().optional(),
+    author: z.string().optional(),
     external: z.string().optional(),
     order: z.number().optional(),
     draft: z.boolean().optional(),

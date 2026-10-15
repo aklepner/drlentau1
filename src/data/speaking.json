@@ -28,6 +28,33 @@
       "name": "Arun K. Garg, DMD"
     }
   },
+  "nocost": {
+    "kicker": "For meeting planners",
+    "title": "Bring me to your group | at no cost.",
+    "paragraphs": [
+      "Budget should not decide what your members learn. In most cases, I speak at no cost to your organization. Industry partners like Birdeye cover my travel and honorarium.",
+      "Send me your date, your group, and your audience. I will explain how it works for your meeting."
+    ],
+    "button": {
+      "label": "Check My Date",
+      "href": "/contact/?topic=speaking"
+    },
+    "columns": [
+      {
+        "title": "CE credit",
+        "text": "CE available through AGD or ADA."
+      },
+      {
+        "title": "The whole team",
+        "text": "Talks built for doctors, team members, office managers, and marketing staff."
+      },
+      {
+        "title": "Free books",
+        "text": "Every attendee gets a copy of my book."
+      }
+    ],
+    "note": "600+ presentations. Study clubs, state meetings, and national conferences."
+  },
   "reel": {
     "kicker": "Speaker reel",
     "title": "See me | on stage.",
@@ -36,60 +63,131 @@
     "photo": "speaker-reel"
   },
   "topics": {
-    "kicker": "Speaking topics",
-    "title": "Talks I give | most often.",
+    "kicker": "Current talks",
+    "title": "What I speak | about now.",
     "intro": "Each talk can run as a keynote, a lecture or a hands-on workshop.",
     "items": [
       {
-        "title": "Today's Online Marketing Strategies",
-        "text": "A complete online marketing plan is one of the best ways to raise new patient numbers and case acceptance. Is your practice using today's digital tools? Have you built a full online presence?",
+        "title": "Be Seen, Be Trusted, Be Chosen",
+        "text": "Patients pick a dentist before they call. They compare reviews, listings, and visibility, not clinical skill. This talk walks through the full system I used to build a 4.9-star practice.",
         "objectives": [
-          "See why strong content matters for online ranking",
-          "Learn how to make your practice stand out online",
-          "Use social media and online listings to promote your practice",
-          "Understand why mobile comes first"
+          "Find out how patients compare practices online",
+          "Fix the listings that cost you calls you never see",
+          "Build a review system that runs every day without reminders",
+          "Leave with a 30-day action plan"
         ]
       },
       {
-        "title": "5-Star Strategies",
-        "text": "Word of mouth in the digital age is online reviews. Is your practice earning five-star reviews every week? Learn how to improve your reputation, manage your online presence and turn your strengths into new patients.",
+        "title": "Get Found by Patients and AI",
+        "text": "Patients now ask AI tools which dentist to see. Those tools lean on the same signals Google uses: reviews, listings, and steady content. Learn what changed and what to do Monday.",
         "objectives": [
-          "Understand what each part of your online presence does",
-          "Use the tools available to manage your reputation without extra work",
-          "Engage patients in ways that earn positive reviews",
-          "Handle negative feedback so it reflects well on your practice"
-        ]
-      },
-      {
-        "title": "Help With Yelp!",
-        "text": "When people search for a new dentist, your reviews show up. What does your Yelp reputation say? Learn the three steps to managing your reputation: get found, stand out and protect yourself from negative reviews.",
-        "objectives": [
-          "Understand the platform's rules and policies",
-          "Keep your brand consistent across Yelp and other sites",
-          "Use Yelp to your advantage"
-        ]
-      },
-      {
-        "title": "Evaluate Your Online Score",
-        "text": "In this hands-on course I show you how to grade your own online presence. Is your website holding you back? Is your social media working? We look at the whole picture and find the changes that lead to more revenue.",
-        "objectives": [
-          "Take control of your online presence",
-          "Track and manage your online reputation",
-          "Use every resource available to you",
-          "Build and keep a consistent online brand"
+          "See how AI tools choose which practices to recommend",
+          "Run a simple AI visibility check on your own practice",
+          "Learn which signals matter most in local search now",
+          "Get a checklist for your website and Google profile"
         ]
       },
       {
         "title": "OMG! Bad Review! What to Do?!",
-        "text": "The perfect practice is not the one with perfect reviews. It is the one with a plan for managing them. A bad review brings up everything from anger to embarrassment. In this 60-minute talk I share how to earn good reviews and handle the bad ones.",
+        "text": "The best practice is not the one with perfect reviews. It is the one with a plan. Learn how to answer criticism, protect your profile, and remove reviews that break Google's rules.",
         "objectives": [
-          "See why your online reputation matters",
-          "Learn how the major review sites work",
-          "Respond to negative feedback the right way",
-          "Help your team earn positive reviews from patients"
+          "Respond to negative reviews in a calm, professional voice",
+          "Know which reviews Google will remove and how to report them",
+          "Bury one bad review under steady five-star reviews",
+          "Avoid the replies that make things worse"
+        ]
+      },
+      {
+        "title": "Your Team Runs the System",
+        "text": "The review ask cannot depend on someone remembering. This hands-on workshop gives your team the words, the timing, and the ownership.",
+        "objectives": [
+          "Practice the checkout review ask",
+          "Assign clear ownership for reviews and responses",
+          "Track results weekly",
+          "Turn your front desk into your best marketers"
         ]
       }
     ]
+  },
+  "calendar": {
+    "kicker": "On the road",
+    "title": "Where I'm speaking next.",
+    "text": "Come say hello. Bring your team. I give every attendee a copy of my book.",
+    "empty": {
+      "text": "New dates coming soon. Want me at your meeting?",
+      "link": {
+        "label": "Check my date",
+        "href": "/contact/?topic=speaking"
+      }
+    },
+    "after": {
+      "text": "Don't see your city?",
+      "link": {
+        "label": "Bring me to your group",
+        "href": "/contact/?topic=speaking"
+      }
+    }
+  },
+  "booking": {
+    "kicker": "Book me",
+    "title": "Tell me about | your meeting.",
+    "text": "Send me your date, your group, and your audience. I will get back to you about availability and how it works for your meeting.",
+    "action": "",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Your name",
+        "type": "text",
+        "required": true,
+        "half": true
+      },
+      {
+        "name": "organization",
+        "label": "Organization",
+        "type": "text",
+        "required": true,
+        "half": true
+      },
+      {
+        "name": "event_date",
+        "label": "Event date",
+        "type": "date",
+        "half": true
+      },
+      {
+        "name": "city",
+        "label": "City",
+        "type": "text",
+        "half": true
+      },
+      {
+        "name": "audience_size",
+        "label": "Audience size",
+        "type": "number",
+        "half": true
+      },
+      {
+        "name": "audience_type",
+        "label": "Audience type",
+        "type": "select",
+        "options": [
+          "Dentists",
+          "Dental teams",
+          "Doctors and teams",
+          "Office managers",
+          "Marketing staff",
+          "Other"
+        ],
+        "half": true
+      },
+      {
+        "name": "message",
+        "label": "Message",
+        "type": "textarea"
+      }
+    ],
+    "submit": "Send Booking Request",
+    "done": "Thanks. I will be in touch about your date."
   },
   "proof": {
     "kicker": "From the audience",
@@ -101,7 +199,7 @@
     "text": "Tell me about your meeting, your date and who will be in the room.",
     "button": {
       "label": "Inquire About Booking",
-      "href": "/contact/"
+      "href": "#book"
     }
   }
 }

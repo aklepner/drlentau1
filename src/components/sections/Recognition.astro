@@ -1,13 +1,35 @@
 ---
-/** Credentials strip: awards and recognition as a static row. Custom section, styled under "Recognition" in tau-theme.css. */
-interface Props { data: { kicker?: string; items: string[] } }
+/**
+ * Recognition. Two looks:
+ * - strip (default): one centered row of short credentials between rules (Home, Meet).
+ * - list (`title` set): a titled section with the items in a two-column list (Meet "Recognition.").
+ */
+interface Props { data: { kicker?: string; title?: string; items: string[] } }
 const { data: d } = Astro.props;
 ---
-<section class="dlt-recognition">
-  <div class="container">
-    {d.kicker && <h6 class="dlt-recognition__kicker">{d.kicker}</h6>}
-    <ul class="dlt-recognition__list">
-      {d.items.map((t) => <li>{t}</li>)}
-    </ul>
-  </div>
-</section>
+{d.title ? (
+  <section class="dlt-recognition-list section-padding">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="section-title">
+            {d.kicker && <h6 class="sub-title">{d.kicker}</h6>}
+            <h2>{d.title}</h2>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <ul>{d.items.map((t) => <li class="wow fadeInUp">{t}</li>)}</ul>
+        </div>
+      </div>
+    </div>
+  </section>
+) : (
+  <section class="dlt-recognition">
+    <div class="container">
+      {d.kicker && <h6 class="dlt-recognition__kicker">{d.kicker}</h6>}
+      <ul class="dlt-recognition__list">
+        {d.items.map((t) => <li>{t}</li>)}
+      </ul>
+    </div>
+  </section>
+)}

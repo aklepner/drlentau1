@@ -1,0 +1,15 @@
+---
+/**
+ * Third-party embed (e.g. the Birdeye review widget). Paste the vendor's embed code into `embed`.
+ * While `embed` is empty, a dashed placeholder box shows where it goes (staging only, like photo placeholders).
+ */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Props { data: { kicker?: string; title: string; embed: string; placeholder: string } }
+const { data: d } = Astro.props;
+---
+<section class="section-padding dlt-embed">
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} align="center" />
+    {d.embed ? <div class="dlt-embed__code" set:html={d.embed} /> : <div class="dlt-embed__placeholder">{d.placeholder}</div>}
+  </div>
+</section>

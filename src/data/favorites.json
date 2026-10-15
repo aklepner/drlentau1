@@ -11,7 +11,11 @@
       "Over the past 20 years I have worked with countless companies in the dental industry. These are the ones I trust most.",
       "Questions about any of them? Email me at len@drlentau.com or call my cell at 215‑292‑2100."
     ],
-    "photo": "consulting"
+    "photo": "favorites",
+    "note": {
+      "label": "Full disclosure:",
+      "text": "I serve as General Manager of Birdeye's dental division. Some companies on this page sponsor my podcast or events, pay me a referral fee, or give my contacts a discount. That never decides who makes this list. I only list companies I trust. Ask me about any relationship and I will tell you."
+    }
   },
   "companies": [
     {
@@ -41,7 +45,7 @@
     {
       "slug": "annie",
       "name": "Annie",
-      "category": "Practice Enhancement",
+      "category": "Artificial Intelligence",
       "description": "AI front desk with 24/7 coverage so no patient call is missed.",
       "website": "",
       "featured": false
@@ -233,7 +237,7 @@
     {
       "slug": "my-social-practice",
       "name": "My Social Practice",
-      "category": "Artificial Intelligence",
+      "category": "Digital Marketing",
       "description": "Google Maps SEO to raise your practice's local visibility.",
       "website": "",
       "featured": false
@@ -328,7 +332,7 @@
     },
     {
       "slug": "the-doc-sites",
-      "name": "The Doc Sites",
+      "name": "DocSites",
       "category": "Digital Marketing",
       "description": "Affordable mobile-friendly websites and online marketing.",
       "website": "",

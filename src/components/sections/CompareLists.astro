@@ -1,0 +1,16 @@
+---
+/** Two columns side by side: what qualifies and what does not. */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Col { title: string; items: string[]; text?: string }
+interface Props { data: { kicker?: string; title: string; yes: Col; no: Col } }
+const { data: d } = Astro.props;
+---
+<section class="section-padding dlt-compare dlt-tint">
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} align="center" />
+    <div class="row g-4">
+      <div class="col-lg-6"><div class="dlt-compare__col dlt-compare__col--yes"><h3>{d.yes.title}</h3><ul>{d.yes.items.map((t) => <li>{t}</li>)}</ul>{d.yes.text && <p>{d.yes.text}</p>}</div></div>
+      <div class="col-lg-6"><div class="dlt-compare__col dlt-compare__col--no"><h3>{d.no.title}</h3><ul>{d.no.items.map((t) => <li>{t}</li>)}</ul>{d.no.text && <p>{d.no.text}</p>}</div></div>
+    </div>
+  </div>
+</section>

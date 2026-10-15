@@ -2,15 +2,25 @@
 title: "Raving Patients Supercharged is here"
 category: News
 date: 2026-09-25
-excerpt: "The second edition of Raving Patients launched at Supercharge Your Dental Practice. Here is what changed."
+excerpt: "The second edition of my first book launched at Supercharge 2026 in Fort Lauderdale. Here is what is new."
 ---
 
-<!-- MOCK POST for the redesign. Confirm details with Len before launch. -->
+The second edition of my first book launched at Supercharge 2026 in Fort Lauderdale.
 
-The second edition of my first book, Raving Patients Supercharged, launched at Supercharge Your Dental Practice in Fort Lauderdale.
+I wrote Raving Patients in 2018. Patients read reviews then. They still do. But now they also ask AI tools which dentist to see. Those tools lean on the same signals Google does: reviews, accurate listings, and steady content.
 
-A lot has changed since the first edition. Patients still read reviews. But now they also ask AI tools which dentist to see, and those tools lean on the same signals: reviews, listings and a steady online presence.
+## What's new in this edition
 
-This edition covers all of it. It also includes QR codes that take you straight to free tools, like my Google Review Calculator.
+- How AI tools decide which practices to recommend
+- The Be Seen, Be Trusted, Be Chosen framework
+- Updated scripts for asking every patient at checkout
+- New guidance on responding to and removing negative reviews
+- QR codes that open free tools, including my Google Review Calculator
+- A foreword by Anissa Broussard
 
-When platforms change after print, I will post the updates here.
+Platforms change after a book goes to print. When they do, I post the updates here.
+
+<div class="dlt-btn-row">
+  <a class="dlt-btn" href="/books/#raving-patients-supercharged">Buy the Book</a>
+  <a class="dlt-btn dlt-btn--outline" href="https://reviewcalculator.drlentau.com" target="_blank" rel="noopener">Try the Review Calculator</a>
+</div>

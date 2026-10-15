@@ -4,15 +4,27 @@
     "title": "Consulting",
     "description": "Consulting with Dr. Len Tau: a clear plan for your online reputation, reviews and marketing, and a team that runs it."
   },
-  "questions": {
-    "kicker": "Consulting",
-    "title": "Do you have a | marketing problem?",
+  "opener": {
+    "kicker": "Tau Dental Consulting",
+    "title": "You do great dentistry. | Your online presence | should prove it.",
+    "paragraphs": [
+      "Dr. Wollock went from 10 cases a year to 30 a month. The dentistry did not change. Patients found the practice, trusted it, and chose it.",
+      "That is the work. We audit everything a new patient sees before they call. Then we build a plan your team runs every day without you."
+    ],
+    "button": {
+      "label": "Book a Call",
+      "href": "https://drlentau.as.me"
+    }
+  },
+  "signs": {
+    "kicker": "Quick check",
+    "title": "Five signs | you need help.",
     "questions": [
-      "Do you have a steady flow of new patients?",
-      "Are you using your online presence strategically?",
-      "Is your online reputation strong and working for you?",
-      "Are your reviews bringing patients to you?",
-      "Is your brand consistent on every social platform?"
+      "New patient numbers are flat or falling",
+      "A competitor with weaker clinical skills outranks you on Google",
+      "You get fewer than 10 new reviews a month",
+      "Your hours or phone number are wrong on at least one directory",
+      "Nobody on your team owns the review ask"
     ]
   },
   "intro": {
@@ -98,7 +110,7 @@
         }
       }
     ],
-    "footnote": "Not sure which fits? Book a call and we will figure it out together."
+    "footnote": "I recommend vendors I trust. Some pay me a referral fee or offer my clients a discount. I serve as General Manager of Birdeye's dental division. I tell you about every relationship before you buy."
   },
   "birdeye": {
     "kicker": "Birdeye",

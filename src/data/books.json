@@ -1,29 +1,29 @@
 {
-  "_readme": "Books page. Covers load from Len's HighLevel media library (see photos.json). Descriptions are MOCK COPY for review with Len. Buy links are empty until we have them (empty buttons are hidden).",
+  "_readme": "Books page. Copy from Len's Launch Brief (Part 2). Covers load from Len's HighLevel media library (see photos.json). Buy buttons have empty href until Len sends links and prices (empty buttons are hidden).",
   "seo": {
     "title": "Books",
-    "description": "Books by Dr. Len Tau: Raving Patients Supercharged and 100+ Tips to Generating 100 5-Star Reviews in 100 Days."
+    "description": "Books by Dr. Len Tau: Raving Patients Supercharged, 100+ Tips to Generating 100 5-Star Reviews in 100 Days, and the original Raving Patients."
   },
   "items": [
     {
       "id": "raving-patients-supercharged",
       "badge": "New · Second edition",
       "title": "Raving Patients Supercharged",
-      "subtitle": "The updated guide to reviews, reputation and online visibility for dental practices.",
+      "subtitle": "Be Seen. Be Trusted. Be Chosen.",
       "photo": "book-supercharged",
       "paragraphs": [
-        "Raving Patients Supercharged is the second edition of my first book, rebuilt for how patients search today.",
-        "Inside are the systems I used to build a 4.9-star, 1,600+ review practice. QR codes throughout take you straight to free tools, like my Google Review Calculator.",
-        "It launched at Supercharge Your Dental Practice in September 2026. Updates since publication live on my News page."
+        "Patients now pick a dentist from reviews, listings, and AI answers before they ever call. This second edition rebuilds my first book for how patients search today.",
+        "Inside is the system I used to build a 4.9-star, 2,000+ review practice. QR codes throughout take you to free tools, like my Google Review Calculator. Foreword by Anissa Broussard.",
+        "Launched at Supercharge 2026 in Fort Lauderdale."
       ],
       "buttons": [
         {
-          "label": "Get the Book",
+          "label": "Buy on Amazon",
           "href": ""
         },
         {
-          "label": "Book Updates",
-          "href": "/news/",
+          "label": "Order Signed Copies",
+          "href": "/contact/?topic=books",
           "variant": "outline"
         }
       ]
@@ -35,13 +35,28 @@
       "subtitle": "Short, practical ideas your team can use tomorrow.",
       "photo": "book-100-tips",
       "paragraphs": [
-        "A collection of tips for asking for, earning and answering reviews.",
-        "It makes a good gift for your team leaders and your front desk."
+        "More than 100 tips for asking for, earning, and answering reviews. Hand it to your front desk and your team leaders."
       ],
       "buttons": [
         {
-          "label": "Get the Book",
+          "label": "Buy on Amazon",
           "href": ""
+        }
+      ]
+    },
+    {
+      "id": "raving-patients",
+      "badge": "The original",
+      "title": "Raving Patients (2018)",
+      "photo": "book-raving-patients",
+      "paragraphs": [
+        "The book that started it all. Now updated and replaced by Raving Patients Supercharged."
+      ],
+      "buttons": [
+        {
+          "label": "Get the New Edition",
+          "href": "#raving-patients-supercharged",
+          "variant": "outline"
         }
       ]
     }
@@ -61,11 +76,6 @@
         }
       },
       {
-        "title": "Practice Assessment",
-        "text": "Grade your online presence in a few minutes and see where to focus first.",
-        "link": null
-      },
-      {
         "title": "Book updates",
         "text": "Platforms change. I post what is new since the book went to print.",
         "link": {
@@ -75,12 +85,57 @@
       }
     ]
   },
-  "cta": {
-    "title": "Copies for your | team or study club?",
-    "text": "Ask me about bulk orders and signed copies.",
-    "button": {
-      "label": "Contact Me",
-      "href": "/contact/"
-    }
+  "bulk": {
+    "kicker": "Bulk orders",
+    "title": "Copies for your team | or study club?",
+    "text": "Order 10 or more for bulk pricing. I can sign every copy.",
+    "action": "",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Your name",
+        "type": "text",
+        "required": true,
+        "half": true
+      },
+      {
+        "name": "organization",
+        "label": "Organization",
+        "type": "text",
+        "half": true
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "required": true,
+        "half": true
+      },
+      {
+        "name": "quantity",
+        "label": "Quantity",
+        "type": "number",
+        "required": true,
+        "half": true
+      },
+      {
+        "name": "signed",
+        "label": "Signed copies?",
+        "type": "select",
+        "options": [
+          "Yes",
+          "No"
+        ],
+        "half": true
+      },
+      {
+        "name": "ship_date",
+        "label": "Ship by date",
+        "type": "date",
+        "half": true
+      }
+    ],
+    "submit": "Request Bulk Pricing",
+    "done": "Thanks. I will send bulk pricing to your email."
   }
 }

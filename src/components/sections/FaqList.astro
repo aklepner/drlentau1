@@ -1,7 +1,7 @@
 ---
 /** Pinned title + accordion of questions (template: faq-section-3). */
 import Button from '../site/Button.astro';
-interface Props { data: { kicker: string; title: string; cta?: { label: string; href: string }; items: { q: string; a: string }[] } }
+interface Props { data: { kicker: string; title: string; cta?: { label: string; href: string }; items: { q: string; a: string; link?: { label: string; href: string } }[] } }
 const { data: d } = Astro.props;
 const parts = d.title.split('|').map((s) => s.trim());
 ---
@@ -21,7 +21,7 @@ const parts = d.title.split('|').map((s) => s.trim());
             {d.items.map((it, i) => (
               <li class:list={['accordion block wow fadeInUp', i === 0 && 'active-block', i === d.items.length - 1 && 'mb-0']} data-wow-delay={`.${(i % 5) * 2}s`}>
                 <div class:list={['acc-btn', i === 0 && 'active']}>{it.q}<div class="icon fa-solid fa-plus"></div></div>
-                <div class:list={['acc-content', i === 0 && 'current']}><div class="content"><div class="text">{it.a}</div></div></div>
+                <div class:list={['acc-content', i === 0 && 'current']}><div class="content"><div class="text">{it.a}{it.link && <> <a class="dlt-faq-link" href={it.link.href}>{it.link.label}</a></>}</div></div></div>
               </li>
             ))}
           </ul>

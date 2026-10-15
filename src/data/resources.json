@@ -1,5 +1,5 @@
 {
-  "_readme": "Free Resources page. Links copied from the current drlentau.com/resources. Watch links point at old-site video pages; migrate before cutover. The eBook link is old and may be dead.",
+  "_readme": "Free Resources page. Watch links point at old-site video pages; migrate before cutover. Read PDFs are hosted on this site in public/docs/. The Listen group was removed (Oct 2026): every old interview link was dead.",
   "seo": {
     "title": "Free Resources",
     "description": "Free tools, videos, podcast interviews and articles from Dr. Len Tau on reviews and online reputation for dental practices."
@@ -22,14 +22,6 @@
         "title": "Practice Assessment",
         "text": "Grade your online presence in a few minutes and see where to focus first.",
         "link": null
-      },
-      {
-        "title": "The Reputable Dentist",
-        "text": "My free eBook on the rules of online reputation.",
-        "link": {
-          "label": "Download the eBook",
-          "href": "http://tau.identitywebsites.net/wp-content/uploads/2017/10/The-Reputation-Dr-Lens-Rule-for-Reputation.pdf"
-        }
       }
     ]
   },
@@ -84,54 +76,26 @@
         ]
       },
       {
-        "id": "listen",
-        "title": "Listen",
-        "items": [
-          {
-            "title": "The Reviews Dentist",
-            "source": "Dental Coaching Institute",
-            "href": "https://growingyourdentalbusiness.com/episode-22-the-reviews-dentist"
-          },
-          {
-            "title": "Review Management with Len Tau",
-            "source": "Navigating Dental Insurance",
-            "href": "http://saynotoppos.com/2019/04/30/127-review-management-with-lenard-tau/"
-          },
-          {
-            "title": "Reputation Management and Reviews",
-            "source": "Orange Couch Discussion",
-            "href": "https://mysocialpractice.com/2012/05/reputation-management-and-reviews-podcast-with-dr-leonard-tau/"
-          },
-          {
-            "title": "Online Reviews with Dr. Len Tau",
-            "source": "The Delivering WOW Dental Podcast",
-            "href": "http://deliveringwow.libsyn.com/057-online-reviews-with-dr-len-tau"
-          },
-          {
-            "title": "Birdeye with Dr. Len Tau",
-            "source": "Smile Source Radio",
-            "href": "https://www.stitcher.com/podcast/smile-source-radio-2/e/48527538"
-          }
-        ]
-      },
-      {
         "id": "read",
         "title": "Read",
         "items": [
           {
             "title": "The 5 R's of Marketing with Software",
             "source": "Inside Dentistry",
-            "href": "https://cdn.prod.website-files.com/5ca2662925af2863a93d7a9a/5cd5b543247e9d37cf1b5591_5R%27s%20Dental%20Article%20Len.pdf"
+            "href": "/docs/5-rs-of-marketing-with-software.pdf",
+            "source_url": "https://cdn.prod.website-files.com/5ca2662925af2863a93d7a9a/5cd5b543247e9d37cf1b5591_5R%27s%20Dental%20Article%20Len.pdf"
           },
           {
             "title": "Why Dentists Need to Pay Attention to Google and Social Media",
             "source": "The Journal",
-            "href": "https://cdn.prod.website-files.com/5ca2662925af2863a93d7a9a/5cd5b6206e271340d9edf7c0_Google%20%26%20Social%20Media_1.pdf"
+            "href": "/docs/google-and-social-media.pdf",
+            "source_url": "https://cdn.prod.website-files.com/5ca2662925af2863a93d7a9a/5cd5b6206e271340d9edf7c0_Google%20%26%20Social%20Media_1.pdf"
           },
           {
             "title": "Reputation Marketing: Getting the Visibility and Credibility Needed to Be Found Online",
             "source": "The Journal",
-            "href": "https://cdn.prod.website-files.com/5ca2662925af2863a93d7a9a/5cd5b6c16e27137dc8edfa8b_Social%20Media%20%26%20Technology_1.pdf"
+            "href": "/docs/reputation-marketing.pdf",
+            "source_url": "https://cdn.prod.website-files.com/5ca2662925af2863a93d7a9a/5cd5b6c16e27137dc8edfa8b_Social%20Media%20%26%20Technology_1.pdf"
           }
         ]
       }

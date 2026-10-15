@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/site/PageHeader.astro';
 import QuestionBand from '../components/sections/QuestionBand.astro';
+import Lead from '../components/sections/Lead.astro';
 import IntroSplit from '../components/sections/IntroSplit.astro';
 import Pricing from '../components/sections/Pricing.astro';
 import VideoBlock from '../components/sections/VideoBlock.astro';
@@ -10,7 +11,8 @@ import d from '../data/consulting.json';
 ---
 <BaseLayout title={d.seo.title} description={d.seo.description}>
   <PageHeader title="Consulting" />
-  <QuestionBand data={d.questions} />
+  <Lead data={d.opener} />
+  <QuestionBand data={d.signs} />
   <IntroSplit data={d.intro} reverse />
   <Pricing data={d.pricing} />
   <VideoBlock data={d.birdeye} />

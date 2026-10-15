@@ -26,10 +26,6 @@
         "name": "Dr. Dorothy Rooney"
       },
       {
-        "quote": "Wow! You are now my Marketing Guru! Thank you for sharing all this information!",
-        "name": "Dr. Zadik"
-      },
-      {
         "quote": "Your program is awesome. Meat and potatoes with information I can use right away.",
         "name": "Dr. Internoscia"
       },
@@ -40,10 +36,6 @@
       {
         "quote": "I thought your presentation in Las Vegas was 11 on a scale of 1-10.",
         "name": "Dr. Schwab"
-      },
-      {
-        "quote": "You showed a part of yourself. You gave from your spirit, showed us the vulnerable side.",
-        "name": "Jim Rhode, DDS"
       },
       {
         "quote": "When it comes to 21st century dental practice marketing, Dr. Len Tau is fast becoming the industry standard.",
@@ -58,5 +50,11 @@
       "label": "Book a Call",
       "href": "https://drlentau.as.me"
     }
+  },
+  "live": {
+    "kicker": "Live reviews",
+    "title": "What patients said | about my practice.",
+    "embed": "",
+    "placeholder": "Birdeye review widget goes here. Paste the embed code into reviews.json > live.embed."
   }
 }

@@ -1,0 +1,14 @@
+---
+/** Masonry grid of screenshot images (testimonial screenshots). Real screenshots only. */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Props { data: { kicker?: string; title: string; intro?: string; images: { src: string; alt: string; width: number; height: number }[] } }
+const { data: d } = Astro.props;
+---
+<section class="section-padding dlt-shots">
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} intro={d.intro} align="center" />
+    <div class="dlt-shots__grid">
+      {d.images.map((im) => <figure class="wow fadeInUp"><img src={im.src} alt={im.alt} width={im.width} height={im.height} loading="lazy" /></figure>)}
+    </div>
+  </div>
+</section>

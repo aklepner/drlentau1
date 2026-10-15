@@ -1,0 +1,33 @@
+---
+/**
+ * Lead section: kicker, headline, short paragraphs and one button. Optional row of columns
+ * (title + text) and a closing proof line. `tint` puts it on the paper background.
+ * Used for the Speaking "no cost" section and the Consulting opener.
+ */
+import SectionTitle from '../site/SectionTitle.astro';
+import Button from '../site/Button.astro';
+interface Props { data: { kicker?: string; title: string; highlight?: string; paragraphs: string[]; button?: { label: string; href: string }; columns?: { title: string; text: string }[]; note?: string }; tint?: boolean; id?: string }
+const { data: d, tint = false, id } = Astro.props;
+---
+<section class:list={['section-padding dlt-lead', tint && 'dlt-tint']} id={id}>
+  <div class="container">
+    <div class="row g-5 align-items-end">
+      <div class="col-lg-7"><SectionTitle kicker={d.kicker} title={d.title} class="mb-0" /></div>
+      <div class="col-lg-5">
+        {d.highlight && <p class="dlt-lead__highlight">{d.highlight}</p>}
+        {d.paragraphs.map((p) => <p class="dlt-lead__text wow fadeInUp">{p}</p>)}
+        {d.button && <Button label={d.button.label} href={d.button.href} class="mt-2" />}
+      </div>
+    </div>
+    {d.columns && (
+      <div class="row g-4 dlt-lead__cols">
+        {d.columns.map((c, i) => (
+          <div class="col-md-4 wow fadeInUp" data-wow-delay={`.${2 + i * 2}s`}>
+            <div class="dlt-lead__col"><h3>{c.title}</h3><p>{c.text}</p></div>
+          </div>
+        ))}
+      </div>
+    )}
+    {d.note && <p class="dlt-lead__note">{d.note}</p>}
+  </div>
+</section>

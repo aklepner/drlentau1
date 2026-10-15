@@ -57,7 +57,7 @@
     "w": 636,
     "h": 560,
     "alt": "Dr. Len Tau",
-    "brief": "Friendly headshot or seated portrait, approachable"
+    "brief": "Headshot, friendly and approachable (Contact page)"
   },
   "breadcrumb": {
     "src": "",
@@ -108,5 +108,27 @@
     "h": 600,
     "alt": "Raving Patients Podcast",
     "brief": "Raving Patients Podcast show artwork (square)"
+  },
+  "meet-video": {
+    "src": "",
+    "w": 1290,
+    "h": 726,
+    "alt": "Dr. Len Tau on why reviews matter",
+    "brief": "Thumbnail frame for the Meet Len intro video (16:9)",
+    "dark": true
+  },
+  "favorites": {
+    "src": "",
+    "w": 640,
+    "h": 720,
+    "alt": "Dr. Len Tau",
+    "brief": "Dr. Tau with an industry partner or at an exhibit hall (Favorites page)"
+  },
+  "book-raving-patients": {
+    "src": "",
+    "w": 420,
+    "h": 600,
+    "alt": "Raving Patients (2018) book cover",
+    "brief": "Cover, Raving Patients, first edition (2018)"
   }
 }

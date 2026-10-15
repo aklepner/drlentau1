@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import ProofBar from '../components/sections/ProofBar.astro';
+import ProseBlock from '../components/sections/ProseBlock.astro';
+import Steps from '../components/sections/Steps.astro';
+import CompareLists from '../components/sections/CompareLists.astro';
+import Lead from '../components/sections/Lead.astro';
+import ScreenshotGrid from '../components/sections/ScreenshotGrid.astro';
+import FaqList from '../components/sections/FaqList.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import d from '../data/review-removal.json';
+import site from '../data/site.json';
+// Structured data: FAQPage for the questions, Service with the $450 offer.
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faq.items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+  { '@context': 'https://schema.org', '@type': 'Service', name: 'Google Review Removal for Dentists', serviceType: 'Google review removal', description: d.seo.description,
+    provider: { '@type': 'Person', name: 'Dr. Len Tau', url: site.url }, areaServed: 'US',
+    offers: { '@type': 'Offer', price: '450', priceCurrency: 'USD', description: 'Per removed review. Charged only if Google removes the review.', url: d.intake } },
+];
+---
+<BaseLayout pageTitle={d.seo.pageTitle} description={d.seo.description}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <PageHero data={d.hero} />
+  <ProofBar items={d.proof} />
+  <ProseBlock data={d.problem} />
+  <Steps data={d.how} />
+  <CompareLists data={d.qualifies} />
+  <Lead data={d.pricing} />
+  <ScreenshotGrid data={d.testimonials} />
+  <FaqList data={d.faq} />
+  <CtaBand data={d.cta} />
+</BaseLayout>
