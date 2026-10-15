@@ -2,7 +2,7 @@
   "_readme": "Books page. Covers load from Len's HighLevel media library (see photos.json). Descriptions are MOCK COPY for review with Len. Buy links are empty until we have them (empty buttons are hidden).",
   "seo": {
     "title": "Books",
-    "description": "Books by Dr. Len Tau: Raving Patients Supercharged and 100+ Tips for Getting Five-Star Reviews."
+    "description": "Books by Dr. Len Tau: Raving Patients Supercharged and 100+ Tips to Generating 100 5-Star Reviews in 100 Days."
   },
   "items": [
     {
@@ -31,7 +31,7 @@
     {
       "id": "100-tips",
       "badge": "Quick read",
-      "title": "100+ Tips for Getting Five-Star Reviews",
+      "title": "100+ Tips to Generating 100 5-Star Reviews in 100 Days",
       "subtitle": "Short, practical ideas your team can use tomorrow.",
       "photo": "book-100-tips",
       "paragraphs": [

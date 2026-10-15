@@ -18,7 +18,7 @@ Style: bright natural light, navy suit and glasses, smiling (personal brand). Ev
 | `speaker-reel` | 1290 x 726 | Thumbnail frame for the speaker reel video (16:9) | needed |
 | `consulting` | 640 x 720 | Dr. Tau with a practice team at a whiteboard or front desk | needed |
 | `book-supercharged` | 420 x 600 | Cover, Raving Patients Supercharged | DONE: HighLevel media library |
-| `book-100-tips` | 420 x 600 | Cover, 100+ Tips for Getting Five-Star Reviews | DONE: HighLevel media library |
+| `book-100-tips` | 420 x 600 | Cover, 100+ Tips to Generating 100 5-Star Reviews in 100 Days | DONE: HighLevel media library |
 | `podcast-cover` | 600 x 600 | Raving Patients Podcast show artwork (square) | needed |
 
 When a photo arrives: save it to `public/images/` and set the slot's `src` in `src/data/photos.json`.

@@ -1,10 +1,22 @@
 ---
 import site from '../../data/site.json';
+interface Props { bookReview?: boolean }
+const { bookReview = false } = Astro.props;
 const year = new Date().getFullYear();
 const ext = (href: string) => (/^https?:\/\//.test(href) ? { target: '_blank', rel: 'noopener' } : {});
 ---
 <footer class="footer-section dlt-footer">
   <div class="footer-area">
+    {bookReview && (
+      <div class="dlt-book-review">
+        <div class="container">
+          <div class="dlt-book-review__inner">
+            <p>{site.bookReview.text}</p>
+            <a href={site.bookReview.button.href} class="dlt-btn dlt-btn--on-navy" target="_blank" rel="noopener">{site.bookReview.button.label}</a>
+          </div>
+        </div>
+      </div>
+    )}
     <div class="container">
       <div class="footer-widget-wrapper">
         <div class="row justify-content-between">
@@ -37,8 +49,11 @@ const ext = (href: string) => (/^https?:\/\//.test(href) ? { target: '_blank', r
       <div class="container">
         <div class="footer-bottom-wrapper">
           <p>&copy; {year} <b>{site.name}.</b> All rights reserved.</p>
-          <div class="social-icon d-flex align-items-center">
-            {site.social.map((sc) => <a href={sc.href} target="_blank" rel="noopener" aria-label={sc.label}><i class={sc.icon}></i></a>)}
+          <div class="dlt-social d-flex align-items-center">
+            <div class="social-icon d-flex align-items-center">
+              {site.social.map((sc) => <a href={sc.href} target="_blank" rel="noopener" aria-label={sc.label}><i class={sc.icon}></i></a>)}
+            </div>
+            {site.footer.followers && <a class="dlt-followers" href={site.footer.followers.href} target="_blank" rel="noopener">{site.footer.followers.text}</a>}
           </div>
           <ul class="footer-list">
             {site.footer.legal.map((l, i) => <>{i > 0 && <li>|</li>}<li><a href={l.href}>{l.label}</a></li></>)}

@@ -13,7 +13,7 @@ import CardGrid from '../components/sections/CardGrid.astro';
 import CtaBand from '../components/sections/CtaBand.astro';
 import home from '../data/home.json';
 ---
-<BaseLayout title={home.seo.title} description={home.seo.description}>
+<BaseLayout title={home.seo.title} description={home.seo.description} bookReview>
   <Hero data={home.hero} />
   <CredentialStrip items={home.credentials} />
   <NumberedCards data={home.problem} />

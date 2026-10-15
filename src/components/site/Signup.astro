@@ -1,0 +1,53 @@
+---
+/**
+ * Newsletter signup band, shown above the footer on every page.
+ * BACKEND: none yet. Placeholder until HighLevel is connected: set `site.signup.action`
+ * to the HighLevel form endpoint (or an /api route that forwards to it). Field names
+ * (first_name, email, role) follow HighLevel's contact fields so mapping stays simple.
+ */
+import site from '../../data/site.json';
+const s = site.signup;
+---
+<section class="dlt-signup" id="signup">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-5">
+        <h2 class="dlt-signup__title">{s.title}</h2>
+        <p class="dlt-signup__text">{s.text}</p>
+      </div>
+      <div class="col-lg-7">
+        <form action={s.action || undefined} method="post" class="dlt-signup__form contact-form-box" data-backend={s.action ? 'live' : 'pending'}>
+          <div class="row g-3">
+            <div class="col-md-6"><div class="form-clt">
+              <label class="visually-hidden" for="signup-first">First name</label>
+              <input id="signup-first" type="text" name="first_name" placeholder="First name *" required autocomplete="given-name" />
+            </div></div>
+            <div class="col-md-6"><div class="form-clt">
+              <label class="visually-hidden" for="signup-email">Email</label>
+              <input id="signup-email" type="email" name="email" placeholder="Email *" required autocomplete="email" />
+            </div></div>
+            <div class="col-md-6"><div class="form-clt"><div class="form">
+              <label class="visually-hidden" for="signup-role">I am a</label>
+              <select id="signup-role" class="single-select w-100" name="role" required>
+                <option value="">I am a...</option>
+                {s.roles.map((r) => <option value={r}>{r}</option>)}
+              </select>
+            </div></div></div>
+            <div class="col-md-6"><button type="submit" class="dlt-btn w-100">{s.submit}</button></div>
+          </div>
+          <p class="dlt-signup__done" role="status" hidden>{s.done}</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script is:inline>
+  // Placeholder until HighLevel is connected: keep the visitor on the page and confirm.
+  document.querySelectorAll('.dlt-signup__form[data-backend="pending"]').forEach(function (f) {
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      f.querySelector('.row').hidden = true;
+      f.querySelector('.dlt-signup__done').hidden = false;
+    });
+  });
+</script>

@@ -408,13 +408,22 @@ body.dlt p { color: var(--ink); }
 
 /* Header: extra 30px breathing room on the left (logo) and right (button / menu toggle) */
 .dlt .header-1 .header-main { padding-left: 30px; padding-right: 30px; }
-/* Keep the menu on one line at laptop widths (1200-1399px) */
+/* Keep the menu on one line at laptop widths (1200-1599px); nine items since Review Removal was added */
+@media (max-width: 1599px) {
+  .dlt .header-1 .header-main .main-menu ul li { margin-inline-end: 20px; }
+  .dlt .header-1 .header-main .main-menu ul li .submenu li { margin-inline-end: 0; }
+}
 .dlt .header-1 .dlt-btn { white-space: nowrap; }
 @media (max-width: 1399px) {
-  .dlt .header-1 .header-main .main-menu ul li { margin-inline-end: 18px; }
+  .dlt .header-1 .header-main .main-menu ul li { margin-inline-end: 14px; }
   .dlt .header-1 .header-main .main-menu ul li .submenu li { margin-inline-end: 0; }
   .dlt .header-1 .logo img { height: 34px; }
   .dlt .header-1 .dlt-btn { padding: 10px 18px; }
+}
+@media (max-width: 1299px) {
+  .dlt .header-1 .header-main { padding-left: 15px; padding-right: 15px; }
+  .dlt .header-1 .header-main .main-menu ul li { margin-inline-end: 11px; }
+  .dlt .header-1 .main-menu ul li a { letter-spacing: .2px; }
 }
 
 /* =====================================================================
@@ -511,3 +520,22 @@ body.dlt p { color: var(--ink); }
 /* 8. Text selection */
 .dlt ::selection { background: var(--accent); color: var(--white); }
 .dlt .dlt-hero .hero-info .info-content h3 .dlt-suffix { color: var(--accent) !important; }
+
+/* ---------- Newsletter signup (above the footer, every page) ---------- */
+.dlt .dlt-signup { background: var(--tau-paper); padding: 80px 0; }
+.dlt .dlt-signup__title { color: var(--navy); font-size: 34px; line-height: 1.2; margin-bottom: 14px; }
+.dlt .dlt-signup__title::before { content: ""; display: block; width: 40px; height: 3px; background: var(--accent); margin-bottom: 18px; }
+.dlt .dlt-signup__text { color: var(--ink); margin: 0; max-width: 440px; }
+.dlt .dlt-signup__form .form-clt input, .dlt .dlt-signup__form .nice-select { height: 56px; line-height: 54px; padding: 0 20px; width: 100%; }
+.dlt .dlt-signup__form .nice-select { float: none; }
+.dlt .dlt-signup__form .nice-select .list { width: 100%; }
+.dlt .dlt-signup__form button.dlt-btn { height: 56px; padding: 0 24px; }
+.dlt .dlt-signup__done { color: var(--navy); font-weight: 600; font-size: 18px; margin: 0; }
+@media (max-width: 991px) { .dlt .dlt-signup { padding: 60px 0; } .dlt .dlt-signup__title { font-size: 28px; } }
+
+/* ---------- Footer: book review prompt (Home + Books) and Instagram followers ---------- */
+.dlt .dlt-book-review { border-bottom: 1px solid rgba(255,255,255,.15); padding: 32px 0; margin-bottom: 20px; }
+.dlt .dlt-book-review__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px 32px; flex-wrap: wrap; }
+.dlt .dlt-book-review__inner p { color: var(--white); font-size: 20px; font-weight: 600; margin: 0; }
+.dlt .dlt-footer .dlt-social { gap: 8px 10px; flex-wrap: wrap; justify-content: center; }
+.dlt .dlt-footer .dlt-followers { font-size: 14px; white-space: nowrap; }

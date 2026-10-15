@@ -77,9 +77,15 @@ Full reference: the `dlt-client-skill` skill. The non-negotiables for site copy:
 - **Dr. Tau is no longer a practicing dentist** (confirmed by Andy, Oct 2026). Never say "practicing dentist" or imply he still sees patients. Older sources (the dlt-client-skill, the design system README) still say "practicing"; they are out of date on this point.
 - Approved proof points, always in the past tense as the practice he built: 4.9 stars; 1,600+ reviews; 40+ new patients a month; roughly 85% case acceptance. Plus "The Reviews Doctor".
 - Taglines: "Be Seen, Be Trusted, Be Chosen." and "Reviews are the difference between a thriving practice and a shrinking practice."
-- Books by exact title: *Raving Patients Supercharged* (second edition of *Raving Patients*, 2026), *100+ Tips for Getting Five-Star Reviews*. The Books page shows these two. Podcast: Raving Patients Podcast (season 9, nearly 350 episodes, new every Friday).
+- Books by exact title: *Raving Patients Supercharged* (second edition of *Raving Patients*, 2026), *100+ Tips to Generating 100 5-Star Reviews in 100 Days*. The Books page shows these two. Podcast: Raving Patients Podcast (season 9, nearly 350 episodes, new every Friday).
 - Never mention Birdeye pricing or contract terms. Never mix Birdeye sales content with Supercharge content in one section.
 - Use "ideal client", never "audience" or "target audience", when writing about who Len serves.
+
+## Site-wide pieces
+
+- **Newsletter signup** sits above the footer on every page (`Signup.astro`, `site.json > signup`).
+- **Amazon review prompt** ("Enjoy Raving Patients?") shows at the top of the footer on Home and Books only: pass `bookReview` to `BaseLayout`. Copy and link in `site.json > bookReview`.
+- **Socials:** X/Twitter was removed (Oct 15): the last post was June 2022. The Instagram follower count next to the icons is `site.json > footer.followers`.
 
 ## Page map
 
@@ -172,6 +178,8 @@ When Andy is ready:
 - [ ] Old "The Reputable Dentist" eBook link may be dead.
 - [ ] Confirm current podcast sponsors (CloudDentistry, DocSites, Dental Intel).
 - [ ] Contact form backend (Supabase or GHL). The form does not submit anywhere yet.
+- [ ] Newsletter signup (above the footer, `src/components/site/Signup.astro`, copy in `site.json > signup`): connect to HighLevel by setting `signup.action`. Until then it shows a thank-you message and sends nothing. Fields: first_name, email, role.
+- [ ] /review-removal/ page: linked from the nav and footer (Oct 15) but not built yet, so it 404s. Needs copy from Len.
 - [ ] Public email/phone for the footer and contact page, if Len wants them shown.
 - [ ] Real testimonials (with permission) for the quote slider, or keep Len's own quotes.
 - [ ] Privacy and Terms pages (footer links point to /privacy/ and /terms/, which do not exist yet).

@@ -6,7 +6,7 @@ import InfoCards from '../components/sections/InfoCards.astro';
 import CtaBand from '../components/sections/CtaBand.astro';
 import d from '../data/books.json';
 ---
-<BaseLayout title={d.seo.title} description={d.seo.description}>
+<BaseLayout title={d.seo.title} description={d.seo.description} bookReview>
   <PageHeader title="Books" />
   <BookRows items={d.items} />
   <InfoCards intro={d.tools.intro} cards={d.tools.cards} />

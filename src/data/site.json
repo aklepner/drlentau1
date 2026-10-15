@@ -41,11 +41,6 @@
       "icon": "fa-brands fa-linkedin-in"
     },
     {
-      "label": "X (Twitter)",
-      "href": "https://twitter.com/drlentau",
-      "icon": "fa-brands fa-twitter"
-    },
-    {
       "label": "YouTube",
       "href": "https://www.youtube.com/channel/UCrrpZcuJAXcWErmB-DNiveg",
       "icon": "fa-brands fa-youtube"
@@ -67,6 +62,10 @@
     {
       "label": "Consulting",
       "href": "/consulting/"
+    },
+    {
+      "label": "Review Removal",
+      "href": "/review-removal/"
     },
     {
       "label": "Books",
@@ -109,7 +108,7 @@
     }
   ],
   "footer": {
-    "blurb": "I am a dentist who built a 4.9-star, 1,600+ review practice. Now I teach the system to dentists across the country.",
+    "blurb": "I built a 4.9-star practice with 1,600+ reviews over 23 years. Now I teach the system to dentists and their teams.",
     "columns": [
       {
         "title": "Work with me",
@@ -121,6 +120,10 @@
           {
             "label": "Consulting",
             "href": "/consulting/"
+          },
+          {
+            "label": "Review removal",
+            "href": "/review-removal/"
           },
           {
             "label": "Book a call",
@@ -188,6 +191,31 @@
         "label": "Terms",
         "href": "/terms/"
       }
-    ]
+    ],
+    "followers": {
+      "text": "50,000+ followers on Instagram",
+      "href": "https://www.instagram.com/drlentau"
+    }
+  },
+  "signup": {
+    "_readme": "Newsletter signup above the footer on every page. No backend yet: set `action` to the HighLevel form URL (or an /api endpoint) when it is connected.",
+    "title": "One useful idea a week.",
+    "text": "Reviews, Google, and AI search tips for your practice. Plus new podcast episodes. Unsubscribe anytime.",
+    "action": "",
+    "roles": [
+      "Doctor",
+      "Team member",
+      "Other"
+    ],
+    "submit": "Send Me the Tips",
+    "done": "Thanks. You're on the list."
+  },
+  "bookReview": {
+    "_readme": "Shown in the footer on the Home and Books pages only (BaseLayout prop bookReview).",
+    "text": "Enjoy Raving Patients? Remember, your reputation matters.",
+    "button": {
+      "label": "Leave a Review on Amazon",
+      "href": "https://www.amazon.com/dp/1642797812?lv=shuf&channelId=500&plpRedirect=mhFallback"
+    }
   }
 }

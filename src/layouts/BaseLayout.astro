@@ -7,8 +7,10 @@
 import site from '../data/site.json';
 import Header from '../components/site/Header.astro';
 import Footer from '../components/site/Footer.astro';
-interface Props { title?: string; description?: string; image?: string }
-const { title, description = site.description } = Astro.props;
+import Signup from '../components/site/Signup.astro';
+// bookReview: show the Amazon review prompt in the footer (Home and Books only).
+interface Props { title?: string; description?: string; image?: string; bookReview?: boolean }
+const { title, description = site.description, bookReview = false } = Astro.props;
 const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | The Reviews Doctor`;
 const canonical = new URL(Astro.url.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, ''), '') || '/', site.url).toString();
 // Preview builds (GitHub Pages) set PUBLIC_NOINDEX=true so search engines skip the dev copy.
@@ -44,7 +46,8 @@ const js = ['jquery-3.7.1.min', 'viewport.jquery', 'bootstrap.bundle.min', 'gsap
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main><slot /></main>
-          <Footer />
+          <Signup />
+          <Footer bookReview={bookReview} />
         </div>
       </div>
     </div>
