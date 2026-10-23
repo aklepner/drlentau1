@@ -694,3 +694,12 @@ body.dlt p { color: var(--ink); }
 .dlt .dlt-panels .dlt-panel--video { position: relative; }
 .dlt .dlt-panels .dlt-panel__logo { position: absolute; top: 40px; right: 40px; z-index: 3; width: 200px; height: auto; display: block; }
 @media (max-width: 767px) { .dlt .dlt-panels .dlt-panel__logo { top: 20px; right: 20px; width: 120px; } }
+/* Home hero Book a Call button in gold (Andy, Oct 23). Navy text on gold reads well. */
+.dlt .dlt-hero .dlt-btn--mist { background: var(--accent); border-color: var(--accent); color: var(--navy) !important; font-weight: 600; }
+.dlt .dlt-hero .dlt-btn--mist:hover { background: var(--white); border-color: var(--white); color: var(--navy) !important; }
+/* Hero kicker can wrap to two lines now that it is longer */
+.dlt .dlt-hero .hero-content h6 { line-height: 24px; max-width: 600px; }
+@media (max-width: 767px) { .dlt .dlt-hero .hero-content h6 { font-size: 12px; letter-spacing: 2px; line-height: 21px; } }
+/* Desktop: keep the hero credential line on one line (Andy, Oct 23). Phones can wrap. */
+@media (min-width: 992px) { .dlt .dlt-hero .hero-content h6 { white-space: nowrap; max-width: none; } }
+@media (min-width: 992px) and (max-width: 1299px) { .dlt .dlt-hero .hero-content h6 { font-size: 12px; letter-spacing: 1.5px; } }
