@@ -39,54 +39,54 @@
     "brief": "Dr. Tau seated at the mic recording the podcast"
   },
   "process": {
-    "src": "",
+    "src": "https://jkjuepbjuxpgodfpcdkn.supabase.co/storage/v1/object/public/media/site/process.jpg",
     "w": 715,
     "h": 839,
-    "alt": "Dr. Len Tau with his team",
-    "brief": "Dr. Tau with his front-desk team at checkout (the review ask in action)"
+    "alt": "Dr. Len Tau presenting Be Seen, Be Trusted, Be Chosen on stage",
+    "brief": "Dr. Tau with his front-desk team at checkout (the review ask in action) Filled Oct 23, 2026 from Len's Drive photo folders (cropped copy in Supabase media/site/)."
   },
   "about-page": {
-    "src": "",
+    "src": "https://jkjuepbjuxpgodfpcdkn.supabase.co/storage/v1/object/public/media/site/about-page.jpg",
     "w": 1290,
     "h": 600,
-    "alt": "Dr. Len Tau",
-    "brief": "Wide landscape: Dr. Tau speaking to a room of dentists (Meet Len page)"
+    "alt": "Dr. Len Tau speaking to a full room of dentists and team members",
+    "brief": "Wide landscape: Dr. Tau speaking to a room of dentists (Meet Len page) Filled Oct 23, 2026 from Len's Drive photo folders (cropped copy in Supabase media/site/)."
   },
   "contact": {
-    "src": "",
+    "src": "https://jkjuepbjuxpgodfpcdkn.supabase.co/storage/v1/object/public/media/site/contact.jpg",
     "w": 636,
     "h": 560,
-    "alt": "Dr. Len Tau",
-    "brief": "Headshot, friendly and approachable (Contact page)"
+    "alt": "Dr. Len Tau smiling, in a blue plaid jacket",
+    "brief": "Headshot, friendly and approachable (Contact page) Filled Oct 23, 2026 from Len's Drive photo folders (cropped copy in Supabase media/site/)."
   },
   "breadcrumb": {
-    "src": "",
+    "src": "https://jkjuepbjuxpgodfpcdkn.supabase.co/storage/v1/object/public/media/site/breadcrumb.jpg",
     "w": 1920,
     "h": 420,
-    "alt": "",
-    "brief": "Wide, soft background for inner-page headers (stage, office or abstract navy)"
+    "alt": "Supercharge Your Dental Practice main stage",
+    "brief": "Wide, soft background for inner-page headers (stage, office or abstract navy) Filled Oct 23, 2026 from Len's Drive photo folders (cropped copy in Supabase media/site/)."
   },
   "speaking": {
-    "src": "",
+    "src": "https://jkjuepbjuxpgodfpcdkn.supabase.co/storage/v1/object/public/media/site/speaking.jpg",
     "w": 640,
     "h": 720,
-    "alt": "Dr. Len Tau speaking to a room of dentists",
-    "brief": "Dr. Tau on stage mid-talk, audience visible, warm event light"
+    "alt": "Dr. Len Tau speaking on stage at Supercharge Your Dental Practice",
+    "brief": "Dr. Tau on stage mid-talk, audience visible, warm event light Filled Oct 23, 2026 from Len's Drive photo folders (cropped copy in Supabase media/site/)."
   },
   "speaker-reel": {
-    "src": "",
+    "src": "https://jkjuepbjuxpgodfpcdkn.supabase.co/storage/v1/object/public/media/site/speaker-reel.jpg",
     "w": 1290,
     "h": 726,
-    "alt": "Dr. Len Tau speaker reel",
-    "brief": "Thumbnail frame for the speaker reel video (16:9)",
+    "alt": "Dr. Len Tau on stage at Supercharge Your Dental Practice",
+    "brief": "Thumbnail frame for the speaker reel video (16:9) Filled Oct 23, 2026 from Len's Drive photo folders (cropped copy in Supabase media/site/).",
     "dark": true
   },
   "consulting": {
-    "src": "",
+    "src": "https://jkjuepbjuxpgodfpcdkn.supabase.co/storage/v1/object/public/media/site/consulting.jpg",
     "w": 640,
     "h": 720,
-    "alt": "Dr. Len Tau working with a dental team",
-    "brief": "Dr. Tau with a practice team at a whiteboard or front desk"
+    "alt": "Dr. Len Tau teaching a workshop for dental teams",
+    "brief": "Dr. Tau with a practice team at a whiteboard or front desk Filled Oct 23, 2026 from Len's Drive photo folders (cropped copy in Supabase media/site/)."
   },
   "book-supercharged": {
     "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6ac542f8195f9172edb3dbbf.jpg",
@@ -110,19 +110,19 @@
     "brief": "Raving Patients Podcast logo (Len's SVG, Oct 23, 2026)"
   },
   "meet-video": {
-    "src": "",
+    "src": "https://jkjuepbjuxpgodfpcdkn.supabase.co/storage/v1/object/public/media/site/meet-video.jpg",
     "w": 1290,
     "h": 726,
-    "alt": "Dr. Len Tau on why reviews matter",
-    "brief": "Thumbnail frame for the Meet Len intro video (16:9)",
+    "alt": "Dr. Len Tau presenting to a room of dentists",
+    "brief": "Thumbnail frame for the Meet Len intro video (16:9) Filled Oct 23, 2026 from Len's Drive photo folders (cropped copy in Supabase media/site/).",
     "dark": true
   },
   "favorites": {
-    "src": "",
+    "src": "https://jkjuepbjuxpgodfpcdkn.supabase.co/storage/v1/object/public/media/site/favorites.jpg",
     "w": 640,
     "h": 720,
-    "alt": "Dr. Len Tau",
-    "brief": "Dr. Tau with an industry partner or at an exhibit hall (Favorites page)"
+    "alt": "Dr. Len Tau with an industry partner at Supercharge",
+    "brief": "Dr. Tau with an industry partner or at an exhibit hall (Favorites page) Filled Oct 23, 2026 from Len's Drive photo folders (cropped copy in Supabase media/site/)."
   },
   "book-raving-patients": {
     "src": "",
