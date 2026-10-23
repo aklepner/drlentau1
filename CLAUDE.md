@@ -67,6 +67,7 @@ Source: Andy's "Dr. Len Tau" design system artifact (tokens mirrored at the top 
 - **Logos:** `public/brand/tau-logo-color.png` on light grounds, `tau-logo-white.png` on navy, `tau-mark-color.png` for favicons/avatars. Never recolor or stretch.
 - **Supercharge crossover:** this is the Dr. Len Tau brand. Supercharge (orange, rounded, Barlow) may appear only as a promo inside one navy band: the Supercharge panel on Home. Its white logo sits in the panel's top right corner (Andy, Oct 23, 2026). Never use Supercharge orange as a site color.
 - **Photography:** real photos of Dr. Tau only, never stock dentists.
+- **Inner-page headers:** solid navy, no background photo (Andy, Oct 23, 2026). Photos in the hero belong only on the homepages. Keep `photos.json > breadcrumb.src` empty.
 - **Homepage hero (Andy's direction, Oct 2026):** navy-dominant. Building photo (`hero-bg` slot) under a navy overlay, white copy, Dr. Tau's transparent cutout (`hero` slot, `/images/dr-len-tau-hero-cutout.png`, `cutout: true`) standing on the bottom edge. Set `cutout: false` for a framed photo and it centers with equal space above and below (the earlier framed portrait is still in `/images/dr-len-tau-hero.jpg`). No floating cards over the photo (Andy removed them). This is an approved exception to "no gradients": the overlay and blue glow are navy gradients. To make the building show more or less, change the alpha values in the `linear-gradient(90deg, ...)` line under "Hero" in `tau-theme.css`.
 
 ## Voice rules (Dr. Len Tau)

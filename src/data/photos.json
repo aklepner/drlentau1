@@ -60,11 +60,11 @@
     "brief": "Headshot, friendly and approachable (Contact page) Filled Oct 23, 2026 from Len's Drive photo folders (cropped copy in Supabase media/site/)."
   },
   "breadcrumb": {
-    "src": "https://jkjuepbjuxpgodfpcdkn.supabase.co/storage/v1/object/public/media/site/breadcrumb.jpg",
+    "src": "",
     "w": 1920,
     "h": 420,
     "alt": "Supercharge Your Dental Practice main stage",
-    "brief": "Wide, soft background for inner-page headers (stage, office or abstract navy) Filled Oct 23, 2026 from Len's Drive photo folders (cropped copy in Supabase media/site/)."
+    "brief": "Leave empty. Andy (Oct 23, 2026): no photos in the header of inner pages, only on the homepages. Inner-page headers stay solid navy."
   },
   "speaking": {
     "src": "https://jkjuepbjuxpgodfpcdkn.supabase.co/storage/v1/object/public/media/site/speaking.jpg",
