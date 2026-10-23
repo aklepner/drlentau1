@@ -14,12 +14,13 @@
     "podcast_spotify": "https://open.spotify.com/show/1RDCn77A9Bmoy7e9ffbtgd",
     "podcast_youtube": "https://www.youtube.com/channel/UCrrpZcuJAXcWErmB-DNiveg",
     "review_calculator": "https://reviewcalculator.drlentau.com",
-    "practice_assessment": "",
+    "practice_assessment": "https://assessment.drlentau.com",
     "text_len": "https://link.textflows.io/widget/form/pb7Ae9ffWUpeD9E9YDho",
     "speaker_packet": "/docs/dr-len-tau-speaker-packet-2026.pdf",
     "speaking_calendar_csv": "",
     "supercharge_register": "https://whova.com/portal/registration/APPNqWqhv6TMmr7UeRzb/",
-    "calendar": "https://drlentau.as.me/connectwithlen"
+    "calendar": "https://drlentau.as.me/connectwithlen",
+    "sponsorship_guide": "/docs/dr-len-tau-sponsorship-opportunities.docx"
   },
   "contact": {
     "email": "len@drlentau.com",
@@ -113,6 +114,10 @@
           "href": "/media-kit/"
         },
         {
+          "label": "Sponsorship",
+          "href": "/sponsorship/"
+        },
+        {
           "label": "Supercharge",
           "href": "https://www.superchargeyourdentalpractice.com",
           "external": true
@@ -145,6 +150,10 @@
           {
             "label": "Book a call",
             "href": "/book-a-call/"
+          },
+          {
+            "label": "Sponsorship",
+            "href": "/sponsorship/"
           },
           {
             "label": "Supercharge conference",

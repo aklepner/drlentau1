@@ -1,5 +1,5 @@
 {
-  "_readme": "Podcast page. Episodes are copied from the current site (newest first). Plan: pull these from the podcast RSS feed at build time so they update automatically. Episode links point at the old site until episode pages are migrated. Episodes now live in Supabase (table podcast_episodes); Len adds them at /admin/. Build snapshot: src/data/cms/episodes.json.",
+  "_readme": "Podcast page. Episodes live in Supabase (table podcast_episodes); Len adds them at /admin/. Build snapshot: src/data/cms/episodes.json. Guest scheduling: podcastguest.drlentau.com.",
   "seo": {
     "title": "Raving Patients Podcast",
     "description": "The Raving Patients Podcast with Dr. Len Tau. New episodes every Friday on marketing, reviews, AI, team training and practice growth."
@@ -25,10 +25,16 @@
         "label": "YouTube",
         "href": "https://www.youtube.com/channel/UCrrpZcuJAXcWErmB-DNiveg",
         "variant": "outline"
+      },
+      {
+        "label": "Be a Guest",
+        "href": "https://podcastguest.drlentau.com",
+        "variant": "outline"
       }
     ],
-    "photo": "panel-podcast",
-    "badge": "2025 Fan Favorite Dental Podcast, Dental Podcast Directory"
+    "photo": "podcast-cover",
+    "badge": "2025 Fan Favorite Dental Podcast, Dental Podcast Directory",
+    "logo": true
   },
   "episodes": {
     "kicker": "Latest episodes",
@@ -66,6 +72,14 @@
         "link": {
           "label": "Visit Dental Intel",
           "href": "https://get.dentalintel.net/Len"
+        }
+      },
+      {
+        "title": "Sponsor the show",
+        "text": "Reach about 1,300 dental listeners per episode.",
+        "link": {
+          "label": "See sponsorship options",
+          "href": "/sponsorship/"
         }
       }
     ]

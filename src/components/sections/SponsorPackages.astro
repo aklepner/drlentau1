@@ -1,0 +1,35 @@
+---
+/**
+ * Sponsorship packages (Sponsorship page). Each card: number, name, price, commitment and availability,
+ * a short description, what is included and who it is best for. Data: sponsorship.json > packages.
+ */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Pkg { title: string; price: string; commitment: string; availability: string; text: string; includes: string[]; best?: string }
+interface Props { data: { kicker?: string; title: string; intro?: string; items: Pkg[]; custom?: string } }
+const { data: d } = Astro.props;
+---
+<section class="section-padding dlt-pkgs" id="opportunities">
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} intro={d.intro} />
+    <div class="row g-4 mt-2">
+      {d.items.map((p, i) => (
+        <div class="col-lg-6">
+          <article class="dlt-pkg">
+            <span class="dlt-num">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{p.title}</h3>
+            <p class="dlt-pkg__price">{p.price}</p>
+            <dl class="dlt-pkg__meta">
+              <div><dt>Commitment</dt><dd>{p.commitment}</dd></div>
+              <div><dt>Availability</dt><dd>{p.availability}</dd></div>
+            </dl>
+            <p>{p.text}</p>
+            <h4>Includes</h4>
+            <ul>{p.includes.map((x) => <li>{x}</li>)}</ul>
+            {p.best && <p class="dlt-pkg__best"><strong>Best for</strong> {p.best}</p>}
+          </article>
+        </div>
+      ))}
+    </div>
+    {d.custom && <p class="dlt-pkgs__custom">{d.custom}</p>}
+  </div>
+</section>

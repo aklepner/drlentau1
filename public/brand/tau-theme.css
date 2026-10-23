@@ -121,6 +121,7 @@ body.dlt p { color: var(--ink); }
 .dlt .service-card-item { background: var(--tau-paper); border: 0; }
 .dlt .service-card-item .icon { background: transparent; width: auto; height: auto; }
 .dlt .dlt-num { font-size: 40px; font-weight: 300; color: var(--navy); line-height: 1; }
+.dlt .service-card-item.active .dlt-num { color: #fff; } /* the navy (active/hovered) card: number turns white like its text */
 .dlt .service-card-item h3 { font-size: 20px; }
 
 /* ---------- About intro ---------- */
@@ -255,6 +256,8 @@ body.dlt p { color: var(--ink); }
 /* IntroSplit */
 .dlt .dlt-intro__body p { font-size: 17px; line-height: 30px; max-width: 620px; }
 .dlt .dlt-intro__photo img { width: 100%; height: auto; display: block; }
+.dlt .dlt-intro__photo--logo { background: var(--tau-paper); padding: 56px 48px; }
+.dlt .dlt-intro__photo--logo img { max-width: 380px; margin: 0 auto; }
 .dlt .dlt-pullquote { margin: 36px 0 0; padding: 0 0 0 22px; border-left: 3px solid var(--navy); }
 .dlt .dlt-pullquote p { font-size: 18px; line-height: 30px; color: var(--navy); font-style: italic; margin-bottom: 8px; }
 .dlt .dlt-pullquote cite { font-style: normal; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); }
@@ -772,3 +775,35 @@ body.dlt p { color: var(--ink); }
 .dlt .dlt-episode__player { display: block; width: 100%; margin: 0 0 30px; }
 .dlt .dlt-video__frame video { position: absolute; inset: 0; width: 100%; height: 100%; background: var(--navy); }
 .dlt .dlt-episode__listen { margin: 0 0 30px; }
+
+/* ---------- Sponsorship page: packages + prose bullet list ---------- */
+.dlt .dlt-pkg { height: 100%; background: var(--tau-paper); padding: 36px 34px; border-top: 3px solid transparent; }
+.dlt .dlt-pkg:hover { border-top-color: var(--accent); }
+.dlt .dlt-pkg h3 { font-size: 22px; line-height: 1.25; margin: 14px 0 8px; }
+.dlt .dlt-pkg__price { font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 14px; }
+.dlt .dlt-pkg__meta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 18px; padding: 14px 0; border-top: 1px solid var(--tau-mist); border-bottom: 1px solid var(--tau-mist); }
+.dlt .dlt-pkg__meta dt { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink); font-weight: 600; }
+.dlt .dlt-pkg__meta dd { margin: 2px 0 0; font-size: 14px; color: var(--navy); font-weight: 600; line-height: 1.4; }
+.dlt .dlt-pkg h4 { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; margin: 6px 0 8px; }
+.dlt .dlt-pkg ul { margin: 0 0 16px 20px; padding: 0; }
+.dlt .dlt-pkg li { list-style: disc; font-size: 15px; line-height: 24px; margin-bottom: 4px; }
+.dlt .dlt-pkg__best { font-size: 15px; margin: 0; }
+.dlt .dlt-pkg__best strong { color: var(--navy); margin-right: 4px; }
+.dlt .dlt-pkgs__custom { margin-top: 30px; font-size: 16px; color: var(--navy); }
+.dlt .dlt-prose__list { margin: 0 0 20px 22px; padding: 0; }
+.dlt .dlt-prose__list li { list-style: disc; font-size: 17px; line-height: 28px; margin-bottom: 8px; }
+@media (max-width: 575px) { .dlt .dlt-pkg { padding: 28px 22px; } .dlt .dlt-pkg__meta { grid-template-columns: 1fr; } }
+
+/* ---------- Cards that turn navy on hover (template's .active class from main.js) ----------
+   Links inside them were navy on navy and vanished. Turn them white while the card is navy (Andy, Oct 23). */
+.dlt .contact-info-box.active a,
+.dlt .contact-info-box.active .dlt-link,
+.dlt .service-card-item.active a,
+.dlt .service-card-item.active .dlt-link,
+.dlt .counter-box.active a,
+.dlt .choose-list li.active a,
+.dlt .feature-box-style-3.active a,
+.dlt .service-box-style-5.active a,
+.dlt .work-process-box-style-4.active a { color: #fff; border-color: #fff; }
+.dlt .contact-info-box.active a:hover,
+.dlt .service-card-item.active a:hover { color: var(--accent); border-color: var(--accent); }

@@ -1,0 +1,279 @@
+{
+  "_readme": "Sponsorship and Partnership Opportunities page (/sponsorship/). Summarizes Len's sponsorship guide (Word doc in public/docs/, Oct 23, 2026). Prices and availability come from that guide: update both together.",
+  "seo": {
+    "title": "Sponsorship and Partnership Opportunities",
+    "description": "Sponsor the Raving Patients Podcast, the Reputation Matters newsletter, Instagram campaigns and seminars with Dr. Len Tau. Reach dentists, practice owners and their teams."
+  },
+  "guide": {
+    "label": "Download the Sponsorship Guide",
+    "href": "/docs/dr-len-tau-sponsorship-opportunities.docx"
+  },
+  "intro": {
+    "kicker": "Sponsorship and partnerships",
+    "title": "Reach dentists | who already | trust me.",
+    "paragraphs": [
+      "I connect dental companies with dentists, practice owners, team members, consultants and industry decision-makers through content, education, speaking and trusted relationships.",
+      "Below is a summary of every option. My sponsorship guide has the full details, what is included and the fine print."
+    ],
+    "button": {
+      "label": "Download the Sponsorship Guide",
+      "href": "/docs/dr-len-tau-sponsorship-opportunities.docx"
+    }
+  },
+  "stats": [
+    {
+      "value": "Nearly 50,000",
+      "label": "Instagram followers"
+    },
+    {
+      "value": "Nearly 7,500",
+      "label": "Facebook group members"
+    },
+    {
+      "value": "5,000+",
+      "label": "Newsletter subscribers"
+    },
+    {
+      "value": "11,000+",
+      "label": "Birdeye dental customers"
+    },
+    {
+      "value": "About 1,300",
+      "label": "Podcast downloads per episode"
+    },
+    {
+      "value": "30 to 35",
+      "label": "Speaking appearances a year"
+    }
+  ],
+  "why": {
+    "kicker": "Why partner with me",
+    "title": "Clinical credibility. Business experience. Dental industry reach.",
+    "lead": "I practiced dentistry for 23 years, 15 of them as a practice owner.",
+    "paragraphs": [
+      "I know the clinical, operational, financial and patient-facing side of running a practice because I lived it every day.",
+      "Today my work is helping practices become more visible, build trust, improve case acceptance and grow. I look at your product and your message the way a former owner, consultant and speaker would. I am not a general influencer.",
+      "My reach sits inside dentistry, so you get a focused professional audience, not a broad consumer following. Every company, product, topic and claim is reviewed for fit. Educational integrity comes first."
+    ]
+  },
+  "event": {
+    "kicker": "Annual flagship event",
+    "title": "Supercharge Your | Dental Practice.",
+    "paragraphs": [
+      "My annual business, marketing and leadership conference in Fort Lauderdale, South Florida.",
+      "More than 200 dentists and team members attend, along with more than 50 exhibitors and sponsors."
+    ],
+    "button": {
+      "label": "Learn About Supercharge",
+      "href": "https://www.superchargeyourdentalpractice.com"
+    }
+  },
+  "gains": {
+    "intro": {
+      "kicker": "What sponsors gain",
+      "title": "Six reasons | partners stay."
+    },
+    "cards": [
+      {
+        "title": "Credibility",
+        "text": "Alignment with a trusted dental voice.",
+        "link": null
+      },
+      {
+        "title": "Relevance",
+        "text": "Exposure inside educational content.",
+        "link": null
+      },
+      {
+        "title": "Frequency",
+        "text": "Repeated touchpoints over time.",
+        "link": null
+      },
+      {
+        "title": "Access",
+        "text": "Dental professionals and decision-makers.",
+        "link": null
+      },
+      {
+        "title": "Content",
+        "text": "Reusable podcast and media assets.",
+        "link": null
+      },
+      {
+        "title": "Strategy",
+        "text": "Packages built around clear goals.",
+        "link": null
+      }
+    ]
+  },
+  "packages": {
+    "kicker": "Opportunities",
+    "title": "Ten ways | to partner.",
+    "intro": "Pick one, or I will build a combination around your launch, event or goal.",
+    "items": [
+      {
+        "title": "Featured Podcast Guest or Featured Company",
+        "price": "$500 per episode",
+        "commitment": "One episode",
+        "availability": "Subject to scheduling and topic approval",
+        "text": "Your executive, founder, clinician or expert joins me on the Raving Patients Podcast. It is an educational conversation, not labeled as a sponsored session.",
+        "includes": [
+          "Professionally recorded episode",
+          "Planning and production support",
+          "Promotional assets and reusable content",
+          "About 1,300 downloads per episode"
+        ],
+        "best": "Thought leadership, founder visibility and product education."
+      },
+      {
+        "title": "Overall Podcast Sponsor",
+        "price": "$600 per month",
+        "commitment": "Six-month minimum",
+        "availability": "One final sponsor position remains",
+        "text": "One of four overall sponsors, with mentions and a host-read commercial in every new episode. The final spot must be in a noncompeting category.",
+        "includes": [
+          "One recorded episode featuring your company",
+          "Mention at the start and end of each episode",
+          "One host-read commercial per episode",
+          "Rotating approved messaging"
+        ],
+        "best": "Consistent awareness and category positioning."
+      },
+      {
+        "title": "Reputation Matters Newsletter Sponsor",
+        "price": "$800 per month for 6 months, or $600 per month for 12",
+        "commitment": "Six or twelve months",
+        "availability": "One remaining sponsor position",
+        "text": "My weekly newsletter goes to more than 5,000 subscribers. This adds preferred-resource positioning and a podcast episode.",
+        "includes": [
+          "An ad in every weekly newsletter",
+          "Callout as a preferred resource",
+          "One featured podcast episode",
+          "Approved link to your site or scheduling page"
+        ],
+        "best": "Sustained email visibility with dental decision-makers."
+      },
+      {
+        "title": "Instagram Promotion Package",
+        "price": "$500 per post, $2,000 minimum",
+        "commitment": "One-month minimum",
+        "availability": "Limited monthly availability",
+        "text": "A four-post campaign to nearly 50,000 followers that builds awareness and sends dentists to learn more.",
+        "includes": [
+          "One post a week for four weeks",
+          "You supply the core creative and approved claims",
+          "Video, product highlights, testimonials or education"
+        ],
+        "best": "Launches, promotions, events and new offers."
+      },
+      {
+        "title": "Preferred Resource Partnership",
+        "price": "$2,000 per month",
+        "commitment": "Six-month minimum",
+        "availability": "Category conflicts and capacity apply",
+        "text": "Your company joins my trusted resource network with coordinated visibility across several channels.",
+        "includes": [
+          "Placement on my Favorites page, shared with my seminar attendees",
+          "Verbal recommendations when relevant",
+          "One featured podcast episode, a newsletter callout and a social post",
+          "Social Media Watchdog monitoring"
+        ],
+        "best": "Established companies that want trusted, ongoing positioning."
+      },
+      {
+        "title": "Case Acceptance Seminar Featured Company",
+        "price": "$1,000 per seminar",
+        "commitment": "Per seminar",
+        "availability": "Usually 12 to 13 companies per session",
+        "text": "Be featured in Supercharge Case Acceptance Using Software or Technology, a seminar I present several times a year that walks through every step a patient takes, from first search to scheduled treatment.",
+        "includes": [
+          "Placement at the step of the patient experience your product supports",
+          "Fits software, diagnostics, communication, scheduling, financing and follow-up"
+        ],
+        "best": "Products that help practices increase case acceptance."
+      },
+      {
+        "title": "Dedicated Newsletter Feature",
+        "price": "$1,500 to $2,500 per email",
+        "commitment": "Single email or series",
+        "availability": "Limited availability",
+        "text": "A dedicated email about one company, product, webinar, offer, case study or event.",
+        "includes": [
+          "Sponsor-focused email to the full list",
+          "Your value proposition, links and call to action",
+          "Optional video mention"
+        ],
+        "best": "Launches, webinar registration and limited-time offers."
+      },
+      {
+        "title": "Sponsored Live Interview or Webinar",
+        "price": "$2,500 to $5,000",
+        "commitment": "Single program",
+        "availability": "Based on calendar and topic fit",
+        "text": "A 30 to 60 minute live or recorded educational program with me and your representative.",
+        "includes": [
+          "Promotion through selected channels",
+          "Live or submitted audience questions",
+          "Recording for approved reuse",
+          "Optional registration and lead capture"
+        ],
+        "best": "Companies that need time to educate or demonstrate."
+      },
+      {
+        "title": "Product Launch Campaign",
+        "price": "$4,000 to $7,500",
+        "commitment": "Custom four to six-week campaign",
+        "availability": "Category and calendar availability apply",
+        "text": "A coordinated campaign around a product release, major feature, rebrand or announcement.",
+        "includes": [
+          "Featured podcast episode",
+          "Newsletter placement and Instagram promotion",
+          "Facebook group exposure when appropriate",
+          "Short-form video, campaign planning and optional webinar"
+        ],
+        "best": "Several coordinated touchpoints instead of one promotion."
+      },
+      {
+        "title": "Brand Ambassador Partnership",
+        "price": "Starting at $3,500 per month",
+        "commitment": "Six or twelve months",
+        "availability": "A small number of noncompeting companies",
+        "text": "A deeper partnership for an ongoing, credible presence in the dental industry.",
+        "includes": [
+          "Recurring social content, podcast and newsletter exposure",
+          "Preferred resource placement and Social Media Watchdog",
+          "Periodic strategy calls and feedback from a former practice owner",
+          "Event or speaking visibility when permitted"
+        ],
+        "best": "Sustained category awareness and strategic input."
+      }
+    ],
+    "custom": "Custom combinations are available. Pricing depends on scope, frequency, production, exclusivity and usage rights."
+  },
+  "guidelines": {
+    "kicker": "Partnership guidelines",
+    "title": "How I work with sponsors.",
+    "paragraphs": [],
+    "list": [
+      "All companies, topics, products and claims are reviewed and approved first.",
+      "Category conflicts may limit availability or require exclusivity pricing.",
+      "Products are included only when they are relevant to the audience and the program.",
+      "Using my name, image, voice or endorsement in paid ads needs written approval and may involve licensing fees.",
+      "Speaking-event exposure follows organizer, venue and session rules.",
+      "Exposure does not guarantee leads, sales, downloads or engagement.",
+      "Scope, schedule, payment, cancellation, deliverables and usage rights go into a written agreement."
+    ],
+    "button": {
+      "label": "Download the Sponsorship Guide",
+      "href": "/docs/dr-len-tau-sponsorship-opportunities.docx"
+    }
+  },
+  "cta": {
+    "title": "Let's build the | right partnership.",
+    "text": "Tell me what you want to promote, who you want to reach, your timing and the outcome you want. I will recommend the option that fits.",
+    "button": {
+      "label": "Talk to Me About Sponsorship",
+      "href": "/contact/?topic=sponsorship"
+    }
+  }
+}

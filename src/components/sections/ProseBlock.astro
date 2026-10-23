@@ -1,7 +1,7 @@
 ---
-/** Heading left, paragraphs right. For story and long-form copy. (Custom section, styled in tau-theme.css.) */
+/** Heading left, paragraphs right (optional bullet `list`). For story and long-form copy. (Custom section, styled in tau-theme.css.) */
 import Button from '../site/Button.astro';
-interface Props { data: { kicker?: string; title: string; lead?: string; paragraphs: string[]; button?: { label: string; href: string } } }
+interface Props { data: { kicker?: string; title: string; lead?: string; paragraphs: string[]; list?: string[]; button?: { label: string; href: string } } }
 const { data: d } = Astro.props;
 ---
 <section class="section-padding dlt-prose">
@@ -16,6 +16,7 @@ const { data: d } = Astro.props;
       <div class="col-lg-8">
         {d.lead && <p class="dlt-prose__lead wow fadeInUp">{d.lead}</p>}
         {d.paragraphs.map((p) => <p class="wow fadeInUp">{p}</p>)}
+        {d.list && <ul class="dlt-prose__list wow fadeInUp">{d.list.map((li) => <li>{li}</li>)}</ul>}
         {d.button && <Button label={d.button.label} href={d.button.href} class="mt-3" />}
       </div>
     </div>

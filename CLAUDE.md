@@ -106,7 +106,8 @@ Full reference: the `dlt-client-skill` skill. The non-negotiables for site copy:
 | /news/ and /news/<slug>/ | news/index.astro, news/[slug].astro | Supabase `posts` (News list = category News; Helpful articles = every other category) |
 | /admin/ | public/admin/ | Len's content admin (noindex, not linked) |
 | /resources/ | resources.astro | resources.json |
-| /contact/ | contact.astro | contact.json (`?topic=speaking|books|removal|consulting|podcast|supercharge` preselects the form topic) |
+| /contact/ | contact.astro | contact.json (`?topic=speaking|books|removal|consulting|podcast|supercharge|sponsorship` preselects the form topic) |
+| /sponsorship/ (under More) | sponsorship.astro | sponsorship.json (summary of Len's sponsorship guide, public/docs/dr-len-tau-sponsorship-opportunities.docx; prices come from the guide) |
 | /privacy/ and /terms/ | privacy.astro, terms.astro | src/legal/privacy.md, src/legal/terms.md (Len's approved legal text; edit the Markdown) |
 | /book-a-call/ | book-a-call.astro | book-a-call.json (Len's Acuity calendar, drlentau.as.me/connectwithlen, embedded; every Book a Call button links here) |
 | /media-kit/ (under More) | media-kit.astro | media-kit.json (downloads, bio, stats and programs from the 2026 speaker packet) |
@@ -195,7 +196,7 @@ Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 20
 - [ ] Consulting package prices ($4,000 / $7,500 / $12,000) are copied from the live site: confirm still current.
 - [ ] Partner/affiliate URLs for every Favorite (Supabase `favorites.website_url`, editable in /admin/), currently empty.
 - [ ] Speaker reel video and Meet Len intro video IDs (`speaking.json > reel.youtube`, `meet.json > video.vimeo`).
-- [ ] Confirm current podcast sponsors (CloudDentistry, DocSites, Dental Intel).
+- [ ] Podcast sponsors: the Podcast page shows CloudDentistry, DocSites and Dental Intel, but Len's sponsorship guide (Oct 2026) says the current sponsors are Dental Intelligence, CallRail and Net32. Confirm, then update `podcast.json > sponsors` (need CallRail and Net32 links).
 - [ ] Contact form backend (Supabase or GHL). The form does not submit anywhere yet.
 - [ ] Newsletter signup (above the footer, `src/components/site/Signup.astro`, copy in `site.json > signup`): connect to HighLevel by setting `signup.action`. Until then it shows a thank-you message and sends nothing. Fields: first_name, email, role.
 - [ ] /review-removal/ page: linked from the nav and footer (Oct 15) but not built yet, so it 404s. Needs copy from Len.

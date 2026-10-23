@@ -2,12 +2,13 @@
 /**
  * Two-column intro: copy + buttons on one side, a photo slot on the other. Optional pull quote.
  * Custom section (styled in tau-theme.css under "IntroSplit"). `reverse` puts the photo on the left.
+ * `logo: true` shows the image as a logo on a paper tile instead of a full-bleed photo (Podcast page).
  */
 import SectionTitle from '../site/SectionTitle.astro';
 import Button from '../site/Button.astro';
 import { photo } from '../../lib/photo';
 interface Btn { label: string; href: string; variant?: 'solid' | 'outline' | 'mist' | 'on-navy' }
-interface Props { data: { kicker?: string; title: string; paragraphs: string[]; buttons?: Btn[]; photo: any; badge?: string; note?: { label?: string; text: string }; quote?: { text: string; name: string; role?: string } }; reverse?: boolean; tint?: boolean }
+interface Props { data: { kicker?: string; title: string; paragraphs: string[]; buttons?: Btn[]; photo: any; badge?: string; logo?: boolean; note?: { label?: string; text: string }; quote?: { text: string; name: string; role?: string } }; reverse?: boolean; tint?: boolean }
 const { data: d, reverse = false, tint = false } = Astro.props;
 const img = photo(d.photo);
 ---
@@ -30,7 +31,7 @@ const img = photo(d.photo);
         )}
       </div>
       <div class="col-lg-5">
-        <div class="dlt-intro__photo"><img src={img.src} alt={img.alt} width={img.width} height={img.height} /></div>
+        <div class:list={['dlt-intro__photo', d.logo && 'dlt-intro__photo--logo']}><img src={img.src} alt={img.alt} width={img.width} height={img.height} /></div>
       </div>
     </div>
   </div>

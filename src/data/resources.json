@@ -21,7 +21,10 @@
       {
         "title": "Practice Assessment",
         "text": "Grade your online presence in a few minutes and see where to focus first.",
-        "link": null
+        "link": {
+          "label": "Take the assessment",
+          "href": "https://assessment.drlentau.com"
+        }
       }
     ]
   },

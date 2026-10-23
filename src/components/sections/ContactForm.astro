@@ -45,7 +45,7 @@ const img = photo('contact');
 <script is:inline>
   // Preselect the topic from the link, e.g. /contact/?topic=speaking (used by Speaking and Books buttons).
   (function () {
-    var map = { speaking: 'Speaking or events', removal: 'Google review removal', consulting: 'Consulting', podcast: 'Raving Patients Podcast', books: 'Books or bulk orders', supercharge: 'Supercharge Your Dental Practice' };
+    var map = { speaking: 'Speaking or events', removal: 'Google review removal', consulting: 'Consulting', podcast: 'Raving Patients Podcast', books: 'Books or bulk orders', supercharge: 'Supercharge Your Dental Practice', sponsorship: 'Sponsorship or partnership' };
     var t = new URLSearchParams(location.search).get('topic');
     var sel = document.querySelector('#contact-form select[name="topic"]');
     if (!t || !map[t] || !sel) return;
