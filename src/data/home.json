@@ -153,7 +153,7 @@
         ]
       },
       {
-        "title": "Simplify Review | Management",
+        "title": "Simplified Review | Generation",
         "text": "Collect and answer reviews in one place, without adding work to your day.",
         "tags": [
           "Collect",
@@ -233,11 +233,23 @@
         "label": "Annual conference",
         "title": "Supercharge 2027.",
         "text": "September 24 to 26, 2027. Pier Sixty-Six, Fort Lauderdale. My conference for practice owners and teams: practical systems, new connections and clarity for the year ahead.",
-        "href": "https://superchargeyourdentalpractice.com",
+        "href": "https://www.superchargeyourdentalpractice.com",
         "video": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6ac54566c478ac55350cf056.mp4",
-        "button": {
-          "label": "Register",
-          "href": "https://superchargeyourdentalpractice.com"
+        "buttons": [
+          {
+            "label": "Register Now",
+            "href": "https://whova.com/portal/registration/APPNqWqhv6TMmr7UeRzb/"
+          },
+          {
+            "label": "Learn More",
+            "href": "https://www.superchargeyourdentalpractice.com"
+          }
+        ],
+        "logo": {
+          "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6a3d7443d4f4031f97b6aed0.png",
+          "alt": "Supercharge logo",
+          "width": 573,
+          "height": 287
         }
       },
       {
@@ -250,9 +262,9 @@
         "fit": "contain",
         "buy": {
           "_readme": "Fill in label/href/price when Len sends the buy link and price. Hidden while href is empty.",
-          "label": "Buy the Book",
-          "href": "",
-          "price": ""
+          "label": "Buy on Amazon",
+          "href": "https://www.amazon.com/dp/0998174416",
+          "price": "$29.99"
         }
       },
       {

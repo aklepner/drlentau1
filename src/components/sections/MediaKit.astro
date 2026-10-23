@@ -1,0 +1,29 @@
+---
+/**
+ * Media kit downloads (Speaking page): speaker packet, resume and CV, headshots.
+ * Files live in public/docs/ (or any URL). An item with an empty href shows a "Coming soon" placeholder button.
+ */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Item { title: string; text: string; meta?: string; link: { label: string; href: string } }
+interface Props { data: { kicker?: string; title: string; intro?: string; items: Item[] }; id?: string }
+const { data: d, id = 'media-kit' } = Astro.props;
+---
+<section class="section-padding dlt-mediakit dlt-tint" id={id}>
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} intro={d.intro} align="center" />
+    <div class="row g-4 mt-2">
+      {d.items.map((it, i) => (
+        <div class="col-lg-4 wow fadeInUp" data-wow-delay={`.${2 + i * 2}s`}>
+          <div class="dlt-kit">
+            {it.meta && <span class="dlt-kit__meta">{it.meta}</span>}
+            <h3>{it.title}</h3>
+            <p>{it.text}</p>
+            {it.link.href
+              ? <a class="dlt-btn" href={it.link.href} download target="_blank" rel="noopener">{it.link.label}</a>
+              : <span class="dlt-btn dlt-btn--outline dlt-kit__soon" aria-disabled="true">Coming soon</span>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

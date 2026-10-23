@@ -7,6 +7,7 @@ import TopicCards from '../components/sections/TopicCards.astro';
 import QuoteBand from '../components/sections/QuoteBand.astro';
 import Lead from '../components/sections/Lead.astro';
 import SpeakingCalendar from '../components/sections/SpeakingCalendar.astro';
+import MediaKit from '../components/sections/MediaKit.astro';
 import InquiryForm from '../components/sections/InquiryForm.astro';
 import CtaBand from '../components/sections/CtaBand.astro';
 import d from '../data/speaking.json';
@@ -18,7 +19,8 @@ import d from '../data/speaking.json';
   <VideoBlock data={d.reel} navy />
   <TopicCards data={d.topics} />
   <SpeakingCalendar data={d.calendar} />
-  <InquiryForm data={d.booking} id="book" tint />
+  <MediaKit data={d.mediakit} />
+  <InquiryForm data={d.booking} id="book" />
   <QuoteBand data={d.proof} />
   <CtaBand data={d.cta} />
 </BaseLayout>

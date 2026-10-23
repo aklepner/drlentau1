@@ -58,11 +58,11 @@ Source: Andy's "Dr. Len Tau" design system artifact (tokens mirrored at the top 
 - **Type:** Proxima Nova via Len's Adobe Fonts kit; **Montserrat** (Google Fonts) stands in until the kit ID is added to `BaseLayout.astro`. Headings are UPPERCASE (CSS does this; write copy in sentence case). Body 15/26.
 - **Shape:** square everywhere (`border-radius: 0` is enforced globally in the theme).
 - **Buttons:** `<Button>` component = design system TauButton. Variants: `solid` (default), `outline`, `mist` (the one big hero CTA), `on-navy` (inside navy bands). One solid button per section. No icons in buttons.
-- **Accent color `#F48723` (`--accent`):** Andy's call (Oct 2026). Used only as small marks: the bar before section kickers, counter symbols (+, %), the active menu underline, pull-quote rules, a 3px top edge on featured cards, the open accordion marker, a short segment on the hero divider, text selection, and link hover on navy. Never body text on white (2.5:1 contrast) and never large fills. All rules are in the "Accent color" block of `tau-theme.css`.
-- **Link hover on navy:** text links on navy backgrounds (header at top, footer, navy bands and cards) turn orange `#F48723` on hover, set by `--link-hover-on-navy` in `tau-theme.css`. Andy's call (Oct 2026), an approved exception to "no accent hue". Links on light backgrounds keep navy hovers; buttons keep their own hover styles.
+- **Accent color gold `#EDB21E` (`--accent`):** Andy's call (Oct 2026; was orange `#F48723` until Oct 23, now gold to match Len's 2026 speaker packet). Used only as small marks: the bar before section kickers, counter symbols (+, %), the active menu underline, pull-quote rules, a 3px top edge on featured cards, the open accordion marker, a short segment on the hero divider, text selection, and link hover on navy. Never body text on white (2.5:1 contrast) and never large fills. All rules are in the "Accent color" block of `tau-theme.css`.
+- **Link hover on navy:** text links on navy backgrounds (header at top, footer, navy bands and cards) turn gold `#EDB21E` on hover, set by `--link-hover-on-navy` in `tau-theme.css`. Andy's call (Oct 2026), an approved exception to "no accent hue". Links on light backgrounds keep navy hovers; buttons keep their own hover styles.
 - **Icons:** Len's brand has no icon system. Use numbers (01, 02) or text, not icons.
 - **Logos:** `public/brand/tau-logo-color.png` on light grounds, `tau-logo-white.png` on navy, `tau-mark-color.png` for favicons/avatars. Never recolor or stretch.
-- **Supercharge crossover:** this is the Dr. Len Tau brand. Supercharge (orange, rounded, Barlow) may appear only as a promo inside one navy band. Never use Supercharge orange or its logo on navy here.
+- **Supercharge crossover:** this is the Dr. Len Tau brand. Supercharge (orange, rounded, Barlow) may appear only as a promo inside one navy band: the Supercharge panel on Home. Its white logo sits in the panel's top right corner (Andy, Oct 23, 2026). Never use Supercharge orange as a site color.
 - **Photography:** real photos of Dr. Tau only, never stock dentists.
 - **Homepage hero (Andy's direction, Oct 2026):** navy-dominant. Building photo (`hero-bg` slot) under a navy overlay, white copy, Dr. Tau's transparent cutout (`hero` slot, `/images/dr-len-tau-hero-cutout.png`, `cutout: true`) standing on the bottom edge. Set `cutout: false` for a framed photo and it centers with equal space above and below (the earlier framed portrait is still in `/images/dr-len-tau-hero.jpg`). No floating cards over the photo (Andy removed them). This is an approved exception to "no gradients": the overlay and blue glow are navy gradients. To make the building show more or less, change the alpha values in the `linear-gradient(90deg, ...)` line under "Hero" in `tau-theme.css`.
 
@@ -167,8 +167,6 @@ When Andy is ready:
 
 Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 2026): Part 1 is the fix list, Part 2 the approved copy. Text in [brackets] there waits on Len.
 
-- [ ] Home book panel buy button: fill `home.json > panels > books > buy` (href, price). Hidden while href is empty. The Amazon link we have (dp/1642797812) is the original Raving Patients, not Supercharged.
-- [ ] Supercharge 2027 Register button points to superchargeyourdentalpractice.com until a 2027 registration link exists. Dates (Sept 24 to 26, 2027, Pier Sixty-Six) come from the 2027 speaker agreement.
 - [ ] Migrate the /videos/ pages and the podcast episode pages off the old site before cutover; links point there today. (The 21 articles are migrated into src/content/news.)
 - [ ] Guest posts: 20 of the 21 migrated articles were written by vendors (My Social Practice, The DocSites) and carry an `author` byline. They contain vendor pitches and words outside Len's voice rules (the copy check skips src/content). Andy/Len to decide whether they stay.
 - [ ] Article images still load from Webflow's CDN (cdn.prod.website-files.com); copy them into public/ before the Webflow site goes away.
@@ -176,17 +174,18 @@ Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 20
 - [ ] Birdeye review widget: paste the embed code into `reviews.json > live.embed` (a dashed placeholder shows until then).
 - [ ] Speaking booking form, Books bulk order form and newsletter signup have no backend yet (thank-you message only). Connect to HighLevel.
 - [ ] Resources "Read" PDFs live in public/docs/ (downloaded from the Webflow CDN on Oct 15).
+- [ ] Media kit (Speaking page, `speaking.json > mediakit`): Resume and CV, and Headshots show "Coming soon" until their `link.href` is set. Put files in public/docs/ (or link a Drive/Dropbox folder for headshots). The 2026 speaker packet is live at /docs/dr-len-tau-speaker-packet-2026.pdf.
+- [ ] Amazon lists the second book as "100+ Tips for Getting 100 Five Star Reviews in 100 Days"; the site uses Len's title "100+ Tips to Generating 100 5-Star Reviews in 100 Days". Confirm which Len wants.
+- [ ] Speaker packet (2026) lists six programs (Dental Practice Profits Masterclass, Be Seen Be Trusted Be Chosen, The Connected Practice, OMG! I Got a Bad Review, Future-Ready Dentistry, Don't Sweat the Small Stuff); the Speaking page shows the four talks from the Launch Brief. Align if Len wants.
 - [ ] Dr. Wollock: first name, practice and city for the Home quote (Launch Brief asks for them).
 
 - [ ] Real photos for every slot in `photos.json` (see `docs/photo-shotlist.md`).
 - [ ] Adobe Fonts kit ID for Proxima Nova (currently Montserrat).
-- [ ] Buy links for all three books → `books.json > items[].buttons` (empty buttons are hidden).
 - [ ] Book descriptions and the two News posts are mock copy: Len to review.
 - [ ] Book covers load from Len's HighLevel media library (assets.cdn.filesafe.space). Fine for launch; download and self-host later if preferred.
 - [ ] Consulting package prices ($4,000 / $7,500 / $12,000) are copied from the live site: confirm still current.
 - [ ] Partner/affiliate URLs for every Favorite (`favorites.json > website`), currently empty.
 - [ ] Speaker reel video and Meet Len intro video IDs (`speaking.json > reel.youtube`, `meet.json > video.vimeo`).
-- [ ] Speaker packet PDF is from 2019; replace with a current one.
 - [ ] Confirm current podcast sponsors (CloudDentistry, DocSites, Dental Intel).
 - [ ] Contact form backend (Supabase or GHL). The form does not submit anywhere yet.
 - [ ] Newsletter signup (above the footer, `src/components/site/Signup.astro`, copy in `site.json > signup`): connect to HighLevel by setting `signup.action`. Until then it shows a thank-you message and sends nothing. Fields: first_name, email, role.

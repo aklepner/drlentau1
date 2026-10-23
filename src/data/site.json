@@ -8,7 +8,7 @@
     "book_call": "https://drlentau.as.me",
     "podcast": "/podcast/",
     "podcast_guest": "https://podcastguest.drlentau.com",
-    "supercharge": "https://superchargeyourdentalpractice.com",
+    "supercharge": "https://www.superchargeyourdentalpractice.com",
     "book": "/books/",
     "podcast_apple": "https://podcasts.apple.com/us/podcast/the-raving-patients-podcast/id1368978316",
     "podcast_spotify": "https://open.spotify.com/show/1RDCn77A9Bmoy7e9ffbtgd",
@@ -16,8 +16,9 @@
     "review_calculator": "https://reviewcalculator.drlentau.com",
     "practice_assessment": "",
     "text_len": "https://link.textflows.io/widget/form/pb7Ae9ffWUpeD9E9YDho",
-    "speaker_packet": "https://cdn.prod.website-files.com/5ca2662925af28d3c53d7a73/5d2cc491b1d789e8fa4943d6_Dr.%20Tau_Speaker%20Packet.pdf",
-    "speaking_calendar_csv": ""
+    "speaker_packet": "/docs/dr-len-tau-speaker-packet-2026.pdf",
+    "speaking_calendar_csv": "",
+    "supercharge_register": "https://whova.com/portal/registration/APPNqWqhv6TMmr7UeRzb/"
   },
   "contact": {
     "email": "len@drlentau.com",
@@ -104,7 +105,7 @@
         },
         {
           "label": "Supercharge",
-          "href": "https://superchargeyourdentalpractice.com",
+          "href": "https://www.superchargeyourdentalpractice.com",
           "external": true
         }
       ]
@@ -138,7 +139,7 @@
           },
           {
             "label": "Supercharge conference",
-            "href": "https://superchargeyourdentalpractice.com"
+            "href": "https://www.superchargeyourdentalpractice.com"
           }
         ]
       },

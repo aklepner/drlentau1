@@ -17,8 +17,8 @@
         "href": "/contact/"
       },
       {
-        "label": "Speaker Packet",
-        "href": "https://cdn.prod.website-files.com/5ca2662925af28d3c53d7a73/5d2cc491b1d789e8fa4943d6_Dr.%20Tau_Speaker%20Packet.pdf",
+        "label": "Speaker Packet (PDF)",
+        "href": "/docs/dr-len-tau-speaker-packet-2026.pdf",
         "variant": "outline"
       }
     ],
@@ -127,6 +127,40 @@
         "href": "/contact/?topic=speaking"
       }
     }
+  },
+  "mediakit": {
+    "kicker": "Media kit",
+    "title": "For meeting planners | and press.",
+    "intro": "Everything you need to promote my session and introduce me on stage.",
+    "items": [
+      {
+        "title": "Speaker packet",
+        "text": "My bio, awards, programs at a glance, formats and learning objectives for every talk.",
+        "meta": "PDF, 2026",
+        "link": {
+          "label": "Download",
+          "href": "/docs/dr-len-tau-speaker-packet-2026.pdf"
+        }
+      },
+      {
+        "title": "Resume and CV",
+        "text": "My full professional background, education, speaking history and recognition.",
+        "meta": "PDF",
+        "link": {
+          "label": "Download",
+          "href": ""
+        }
+      },
+      {
+        "title": "Headshots",
+        "text": "High-resolution photos for your program, website and social posts.",
+        "meta": "JPG",
+        "link": {
+          "label": "Download",
+          "href": ""
+        }
+      }
+    ]
   },
   "booking": {
     "kicker": "Book me",

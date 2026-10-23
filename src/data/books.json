@@ -1,5 +1,5 @@
 {
-  "_readme": "Books page. Copy from Len's Launch Brief (Part 2). Covers load from Len's HighLevel media library (see photos.json). Buy buttons have empty href until Len sends links and prices (empty buttons are hidden).",
+  "_readme": "Books page. Copy from Len's Launch Brief (Part 2). Covers load from Len's HighLevel media library (see photos.json). Buy on Amazon links found Oct 23, 2026 (paperback editions).",
   "seo": {
     "title": "Books",
     "description": "Books by Dr. Len Tau: Raving Patients Supercharged, 100+ Tips to Generating 100 5-Star Reviews in 100 Days, and the original Raving Patients."
@@ -19,7 +19,7 @@
       "buttons": [
         {
           "label": "Buy on Amazon",
-          "href": ""
+          "href": "https://www.amazon.com/dp/0998174416"
         },
         {
           "label": "Order Signed Copies",
@@ -40,7 +40,7 @@
       "buttons": [
         {
           "label": "Buy on Amazon",
-          "href": ""
+          "href": "https://www.amazon.com/dp/B09WH599SN"
         }
       ]
     },
@@ -53,6 +53,10 @@
         "The book that started it all. Now updated and replaced by Raving Patients Supercharged."
       ],
       "buttons": [
+        {
+          "label": "Buy on Amazon",
+          "href": "https://www.amazon.com/dp/1642797812"
+        },
         {
           "label": "Get the New Edition",
           "href": "#raving-patients-supercharged",

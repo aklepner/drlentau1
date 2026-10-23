@@ -1,9 +1,10 @@
 ---
 /** Navy band of stacked panels under a static title (template: project-section, scrolling marquee removed at Andy's request). Each panel can carry an anchor id. */
 import { photo } from '../../lib/photo';
-interface Props { data: { kicker?: string; title?: string; items: { id?: string; label: string; title: string; text?: string; photo?: any; video?: string; poster?: string; href?: string; fit?: 'cover' | 'contain'; button?: { label: string; href: string }; buy?: { label: string; href: string; price?: string } }[] } }
+interface Props { data: { kicker?: string; title?: string; items: { id?: string; label: string; title: string; text?: string; photo?: any; video?: string; poster?: string; href?: string; fit?: 'cover' | 'contain'; button?: { label: string; href: string }; buttons?: { label: string; href: string }[]; logo?: { src: string; alt: string; width: number; height: number }; buy?: { label: string; href: string; price?: string } }[] } }
 const { data: d } = Astro.props;
-const cta = (it: any) => (it.buy && it.buy.href ? it.buy : it.button);
+// Panel buttons: `buttons` (several), else `buy` when it has a link, else `button`. The first is solid white, the rest outline.
+const ctas = (it: any): any[] => it.buttons || (it.buy && it.buy.href ? [it.buy] : it.button ? [it.button] : []);
 const ext = (h: string) => (/^https?:/.test(h) ? { target: '_blank', rel: 'noopener' } : {});
 ---
 <section class="project-section tp-project-5-2-area fix section-padding section-bg-2 dlt-panels">
@@ -23,11 +24,12 @@ const ext = (h: string) => (/^https?:/.test(h) ? { target: '_blank', rel: 'noope
             <div id={it.id} class:list={['project-box-items des-portfolio-panel dlt-panel--video', last && 'mb-0']}>
               <video class="dlt-panel__video" src={it.video} poster={it.poster} autoplay muted loop playsinline preload="metadata" aria-label={it.title}></video>
               <div class="dlt-panel__shade" aria-hidden="true"></div>
+              {it.logo && <img class="dlt-panel__logo" src={it.logo.src} alt={it.logo.alt} width={it.logo.width} height={it.logo.height} />}
               <div class="content">
                 <span>[{it.label}]</span>
                 <h3>{it.href ? <a href={it.href} {...ext(it.href)}>{it.title}</a> : it.title}</h3>
                 {it.text && <p class="dlt-panel-text">{it.text}</p>}
-                {cta(it) && <div class="dlt-panel__cta"><a href={cta(it).href} class="dlt-btn dlt-btn--on-navy" {...ext(cta(it).href)}>{cta(it).label}</a>{cta(it).price && <span class="dlt-panel__price">{cta(it).price}</span>}</div>}
+                {ctas(it).length > 0 && <div class="dlt-panel__cta">{ctas(it).map((b, j) => <a href={b.href} class:list={['dlt-btn', j === 0 ? 'dlt-btn--panel' : 'dlt-btn--on-navy']} {...ext(b.href)}>{b.label}</a>)}{ctas(it)[0].price && <span class="dlt-panel__price">{ctas(it)[0].price}</span>}</div>}
                 <div class="dlt-panel__actions">
                   {it.href && <a href={it.href} class="icon" aria-label={it.title} {...ext(it.href)}><i class="fa-solid fa-arrow-up-right"></i></a>}
                   <button type="button" class="dlt-panel__sound" aria-pressed="false"><i class="fa-solid fa-volume-xmark"></i> <span>Sound on</span></button>
@@ -43,7 +45,7 @@ const ext = (h: string) => (/^https?:/.test(h) ? { target: '_blank', rel: 'noope
               <span>[{it.label}]</span>
               <h3>{it.href ? <a href={it.href} {...ext(it.href)}>{it.title}</a> : it.title}</h3>
               {it.text && <p class="dlt-panel-text">{it.text}</p>}
-              {cta(it) && <div class="dlt-panel__cta"><a href={cta(it).href} class="dlt-btn dlt-btn--on-navy" {...ext(cta(it).href)}>{cta(it).label}</a>{cta(it).price && <span class="dlt-panel__price">{cta(it).price}</span>}</div>}
+              {ctas(it).length > 0 && <div class="dlt-panel__cta">{ctas(it).map((b, j) => <a href={b.href} class:list={['dlt-btn', j === 0 ? 'dlt-btn--panel' : 'dlt-btn--on-navy']} {...ext(b.href)}>{b.label}</a>)}{ctas(it)[0].price && <span class="dlt-panel__price">{ctas(it)[0].price}</span>}</div>}
               {it.href && <a href={it.href} class="icon" aria-label={it.title} {...ext(it.href)}><i class="fa-solid fa-arrow-up-right"></i></a>}
             </div>
             <div class:list={['thumb', it.fit === 'contain' && 'dlt-thumb--contain']}><img src={img.src} alt={img.alt} width={img.width} height={img.height} /></div>
