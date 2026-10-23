@@ -1,0 +1,33 @@
+---
+/**
+ * Homepage concept 2, for Len to compare with the current homepage. Not linked anywhere; noindex.
+ * Order (Website Revision Brief): who Len is, what he helps dentists do, the framework, proof,
+ * ways to work with him, results and testimonials, his wider work, final call to action.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import NumberedCards from '../components/sections/NumberedCards.astro';
+import Framework from '../components/sections/Framework.astro';
+import ProseBlock from '../components/sections/ProseBlock.astro';
+import Recognition from '../components/sections/Recognition.astro';
+import PathCards from '../components/sections/PathCards.astro';
+import ProofBar from '../components/sections/ProofBar.astro';
+import TestimonialGrid from '../components/sections/TestimonialGrid.astro';
+import StackedPanels from '../components/sections/StackedPanels.astro';
+import InfoCards from '../components/sections/InfoCards.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import d from '../data/home-2.json';
+---
+<BaseLayout pageTitle="Dr. Len Tau | The Reviews Doctor" description={d.seo.description} noindex bookReview>
+  <Hero data={d.hero} />
+  <NumberedCards data={d.outcomes} />
+  <Framework data={d.framework} />
+  <ProseBlock data={d.proof} />
+  <Recognition data={d.recognition} />
+  <PathCards data={d.ways} />
+  <ProofBar items={d.results} />
+  <TestimonialGrid data={d.testimonials} />
+  <StackedPanels data={d.ecosystem_panels} />
+  <InfoCards intro={d.ecosystem_cards.intro} cards={d.ecosystem_cards.cards} />
+  <CtaBand data={d.cta} />
+</BaseLayout>

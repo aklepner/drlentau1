@@ -104,6 +104,7 @@ Full reference: the `dlt-client-skill` skill. The non-negotiables for site copy:
 | /favorites/ and /favorites/<slug>/ | favorites/index.astro, favorites/[slug].astro | favorites.json (intro) + Supabase `favorites` |
 | /reviews/ (Raving Fans) | reviews.astro | reviews.json |
 | /news/ and /news/<slug>/ | news/index.astro, news/[slug].astro | Supabase `posts` (News list = category News; Helpful articles = every other category) |
+| /home-2/ (unlinked, noindex) | home-2.astro | home-2.json: homepage concept 2 for Len (Revision Brief order: who, outcomes, Be Seen Be Trusted Be Chosen framework, proof, ways to work, results and testimonials, ecosystem, CTA). If Len picks it, move it to index.astro and delete home-2. |
 | /admin/ | public/admin/ | Len's content admin (noindex, not linked) |
 | /resources/ | resources.astro | resources.json |
 | /contact/ | contact.astro | contact.json (`?topic=speaking|books|removal|consulting|podcast|supercharge|sponsorship` preselects the form topic) |

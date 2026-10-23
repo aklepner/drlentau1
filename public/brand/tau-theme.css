@@ -807,3 +807,17 @@ body.dlt p { color: var(--ink); }
 .dlt .work-process-box-style-4.active a { color: #fff; border-color: #fff; }
 .dlt .contact-info-box.active a:hover,
 .dlt .service-card-item.active a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ---------- Framework (Be Seen, Be Trusted, Be Chosen), homepage concept 2 ---------- */
+.dlt .dlt-framework { background: var(--navy); }
+.dlt .dlt-framework .section-title h2, .dlt .dlt-framework .section-title h6, .dlt .dlt-framework .section-title p { color: var(--white); }
+.dlt .dlt-framework__steps { list-style: none; margin: 50px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.dlt .dlt-framework__steps > li { border-top: 3px solid var(--accent); background: rgba(255,255,255,.06); padding: 34px 32px 30px; }
+.dlt .dlt-framework .dlt-num { color: var(--white); }
+.dlt .dlt-framework h3 { color: var(--white); font-size: 26px; margin: 16px 0 12px; }
+.dlt .dlt-framework p { color: rgba(255,255,255,.88); }
+.dlt .dlt-framework__steps ul { margin: 16px 0 0; padding: 14px 0 0; border-top: 1px solid rgba(255,255,255,.2); }
+.dlt .dlt-framework__steps ul li { list-style: none; color: var(--white); font-weight: 600; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; padding: 4px 0; }
+.dlt .dlt-framework__book { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 44px; text-align: center; }
+.dlt .dlt-framework__book p { color: var(--white); font-size: 18px; margin: 0; }
+@media (max-width: 991px) { .dlt .dlt-framework__steps { grid-template-columns: 1fr; } }

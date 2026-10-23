@@ -1,0 +1,31 @@
+---
+/**
+ * Be Seen, Be Trusted, Be Chosen: three numbered steps, each with two of the six pillars,
+ * plus an optional line tying it to the book. Navy band. (Homepage concept 2.)
+ */
+import SectionTitle from '../site/SectionTitle.astro';
+import Button from '../site/Button.astro';
+interface Props { data: { kicker?: string; title: string; intro?: string; steps: { title: string; text: string; items?: string[] }[]; book?: { text: string; button: { label: string; href: string } } } }
+const { data: d } = Astro.props;
+---
+<section class="section-padding dlt-framework" id="framework">
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} intro={d.intro} align="center" />
+    <ol class="dlt-framework__steps">
+      {d.steps.map((s, i) => (
+        <li class="wow fadeInUp" data-wow-delay={`.${2 + i * 2}s`}>
+          <span class="dlt-num">{String(i + 1).padStart(2, '0')}</span>
+          <h3>{s.title}</h3>
+          <p>{s.text}</p>
+          {s.items && <ul>{s.items.map((x) => <li>{x}</li>)}</ul>}
+        </li>
+      ))}
+    </ol>
+    {d.book && (
+      <div class="dlt-framework__book">
+        <p>{d.book.text}</p>
+        <Button label={d.book.button.label} href={d.book.button.href} variant="on-navy" />
+      </div>
+    )}
+  </div>
+</section>

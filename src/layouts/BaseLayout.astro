@@ -10,12 +10,13 @@ import Footer from '../components/site/Footer.astro';
 import Signup from '../components/site/Signup.astro';
 // bookReview: show the Amazon review prompt in the footer (Home and Books only).
 // pageTitle: the full <title> as written, without the " | Dr. Len Tau" suffix (e.g. Review Removal).
-interface Props { title?: string; pageTitle?: string; description?: string; image?: string; bookReview?: boolean }
+interface Props { title?: string; pageTitle?: string; description?: string; image?: string; bookReview?: boolean; noindex?: boolean }
 const { title, pageTitle, description = site.description, image, bookReview = false } = Astro.props;
 const fullTitle = pageTitle || (title ? `${title} | ${site.name}` : `${site.name} | The Reviews Doctor`);
 const canonical = new URL(Astro.url.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, ''), '') || '/', site.url).toString();
 // Preview builds (GitHub Pages) set PUBLIC_NOINDEX=true so search engines skip the dev copy.
-const noindex = import.meta.env.PUBLIC_NOINDEX === 'true';
+// `noindex` on a page (concepts, drafts) keeps that one page out of search engines everywhere.
+const noindex = import.meta.env.PUBLIC_NOINDEX === 'true' || Astro.props.noindex === true;
 const css = ['bootstrap.min', 'all.min', 'animate', 'magnific-popup', 'meanmenu', 'swiper-bundle.min', 'nice-select', 'main'];
 const js = ['jquery-3.7.1.min', 'viewport.jquery', 'bootstrap.bundle.min', 'gsap.min', 'ScrollTrigger.min', 'ScrollSmoother.min', 'ScrollToPlugin.min', 'SplitText.min', 'TextPlugin', 'chroma.min', 'jquery.nice-select.min', 'jquery.waypoints', 'jquery.counterup.min', 'swiper-bundle.min', 'jquery.meanmenu.min', 'parallaxie', 'jquery.magnific-popup.min', 'wow.min', 'main'];
 ---

@@ -1,0 +1,285 @@
+{
+  "_readme": "Homepage concept 2 (Oct 23, 2026), built from the Len Tau Website Revision Brief: one clear story in eight steps. Not linked anywhere and marked noindex. URL: /home-2/. Copy reuses approved facts from home.json, meet.json, reviews.json and Len's sponsorship guide. If Len picks this concept, move it to index.astro.",
+  "seo": {
+    "title": "Homepage concept 2",
+    "description": "Dr. Len Tau is a dentist, author and speaker known as The Reviews Doctor. Be seen, be trusted, be chosen."
+  },
+  "hero": {
+    "kicker": "Dentist, author, speaker, consultant, and key opinion leader",
+    "title_before": "The",
+    "title_bold": "Reviews",
+    "title_after": "Doctor",
+    "text": "I spent 23 years as a dentist and built a 4.9-star practice. Now I help dentists get seen, trusted and chosen by the patients searching for them.",
+    "cta": {
+      "label": "Book a Call",
+      "href": "/book-a-call/"
+    },
+    "proof": {
+      "count": "2,000",
+      "suffix": "+",
+      "label": "Patient reviews earned in the practice I built."
+    }
+  },
+  "outcomes": {
+    "kicker": "What I help you do",
+    "title": "More reviews. Better rankings. | More new patients.",
+    "intro": "Most dentists I meet are great clinicians. Online, patients cannot see that. They see your reviews, your rankings and your listings.",
+    "cards": [
+      {
+        "title": "More 5-star reviews",
+        "text": "A steady flow of fresh reviews, collected at checkout without adding work to your team's day."
+      },
+      {
+        "title": "A higher Google ranking",
+        "text": "Show up in the map pack and in AI search when patients near you look for a dentist."
+      },
+      {
+        "title": "More new patients",
+        "text": "Patients who already trust you before they call, and who choose you over the practice down the street."
+      },
+      {
+        "title": "A team that owns it",
+        "text": "The words, the habits and the ownership, so the system runs every day without depending on you."
+      }
+    ]
+  },
+  "framework": {
+    "kicker": "My framework",
+    "title": "Be Seen. Be Trusted. | Be Chosen.",
+    "intro": "Everything I teach fits into three steps. It is the system I built in my own practice, and the framework behind my new book.",
+    "steps": [
+      {
+        "title": "Be Seen",
+        "text": "Patients cannot choose a practice they cannot find. Own how you show up on Google, your listings and AI search.",
+        "items": [
+          "Own your reputation",
+          "Boost your Google rankings"
+        ]
+      },
+      {
+        "title": "Be Trusted",
+        "text": "Fresh, steady reviews tell patients your practice is active and trusted. How you answer the bad ones matters just as much.",
+        "items": [
+          "Simplified review generation",
+          "Handle negative reviews"
+        ]
+      },
+      {
+        "title": "Be Chosen",
+        "text": "Trust turns into calls, visits and accepted treatment when your whole team runs the system every day.",
+        "items": [
+          "Turn reviews into growth",
+          "Train your team for success"
+        ]
+      }
+    ],
+    "book": {
+      "text": "Raving Patients Supercharged walks through all three, updated for how patients search today.",
+      "button": {
+        "label": "Get the Book",
+        "href": "/books/"
+      }
+    }
+  },
+  "proof": {
+    "kicker": "Why trust me",
+    "title": "I am a dentist first.",
+    "lead": "I practiced dentistry for 23 years, 15 of them as a practice owner.",
+    "paragraphs": [
+      "I built this system in my own practice before I ever taught it. It took us to a 4.9-star average and more than 2,000 five-star reviews.",
+      "Today I lead the dental division at Birdeye, host the Raving Patients Podcast and Supercharge, and have given more than 600 presentations worldwide."
+    ],
+    "button": {
+      "label": "Meet Len",
+      "href": "/meet/"
+    }
+  },
+  "recognition": {
+    "_readme": "Credentials strip (Launch Brief, Part 2). Also planned for Meet.",
+    "kicker": "Recognition",
+    "items": [
+      "Top Leaders in Dental Consulting, Dentistry Today, 2017 to 2025",
+      "USA Dental Report 100, 2026",
+      "Fan Favorite Dental Podcast, Dental Podcast Directory, 2025",
+      "Nominee, Independent Dental Leader of the Year, Tower Leadership, 2026",
+      "50,000+ Instagram followers"
+    ]
+  },
+  "ways": {
+    "title": "Ways to work with me.",
+    "cards": [
+      {
+        "title": "Consulting",
+        "text": "We look at your whole online presence, then build a plan your team can run every day.",
+        "button": {
+          "label": "Book a Call",
+          "href": "/book-a-call/"
+        }
+      },
+      {
+        "title": "Remove a bad review",
+        "text": "Fake or policy-violating Google review? Pay only if it comes down.",
+        "button": {
+          "label": "Submit a Review",
+          "href": "/review-removal/"
+        }
+      },
+      {
+        "title": "Book Len to speak",
+        "text": "Bring a CE talk to your study club or meeting. Often at no cost to your group.",
+        "button": {
+          "label": "Speaking Details",
+          "href": "/speaking/"
+        }
+      },
+      {
+        "title": "Sponsor or partner",
+        "text": "Dental companies can reach my audience through the podcast, newsletter and seminars.",
+        "button": {
+          "label": "See Options",
+          "href": "/sponsorship/"
+        }
+      }
+    ]
+  },
+  "results": [
+    {
+      "value": "4.9",
+      "label": "Star average in the practice I built"
+    },
+    {
+      "value": "2,000+",
+      "label": "Five-star reviews"
+    },
+    {
+      "value": "40+",
+      "label": "New patients a month"
+    },
+    {
+      "value": "About 85%",
+      "label": "Case acceptance"
+    }
+  ],
+  "testimonials": {
+    "kicker": "Raving fans",
+    "title": "What dentists | and teams say.",
+    "items": [
+      {
+        "quote": "He is the guy that gave me the missing piece to go from 10 cases a year to 40 cases a quarter. Now, I do 30 a month.",
+        "name": "Dr. Wollock"
+      },
+      {
+        "quote": "Every time I hear him speak at one of his seminars I have something new. His knowledge base for online reputation marketing for the dental practice is impressive.",
+        "name": "Patti Williamson"
+      },
+      {
+        "quote": "Highly authoritative; Dr. Tau is a great communicator. His material is always current and extremely relevant to his audiences.",
+        "name": "Jim Richardson"
+      },
+      {
+        "quote": "Your program is awesome. Meat and potatoes with information I can use right away.",
+        "name": "Dr. Internoscia"
+      },
+      {
+        "quote": "I thought your presentation in Las Vegas was 11 on a scale of 1-10.",
+        "name": "Dr. Schwab"
+      },
+      {
+        "quote": "When it comes to 21st century dental practice marketing, Dr. Len Tau is fast becoming the industry standard.",
+        "name": "Arun K. Garg, DMD"
+      }
+    ]
+  },
+  "ecosystem_panels": {
+    "items": [
+      {
+        "id": "books",
+        "label": "New book",
+        "title": "Raving Patients Supercharged. The second edition.",
+        "text": "Everything I have learned about reviews, reputation and visibility, updated for how patients search today.",
+        "photo": "panel-book",
+        "href": "/books/",
+        "fit": "contain",
+        "buy": {
+          "_readme": "Fill in label/href/price when Len sends the buy link and price. Hidden while href is empty.",
+          "label": "Buy on Amazon",
+          "href": "https://www.amazon.com/dp/0998174416",
+          "price": "$29.99"
+        }
+      },
+      {
+        "id": "podcast",
+        "label": "Every Friday",
+        "title": "The Raving Patients Podcast.",
+        "text": "Conversations with doctors and teams about growing a practice and its revenue. Nearly 350 episodes and counting, new every Friday.",
+        "photo": "panel-podcast",
+        "href": "/podcast/",
+        "fit": "contain"
+      },
+      {
+        "id": "supercharge",
+        "label": "Annual conference",
+        "title": "Supercharge 2027.",
+        "text": "September 24 to 26, 2027. Pier Sixty-Six, Fort Lauderdale. My conference for practice owners and teams: practical systems, new connections and clarity for the year ahead.",
+        "href": "https://www.superchargeyourdentalpractice.com",
+        "video": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6ac54566c478ac55350cf056.mp4",
+        "buttons": [
+          {
+            "label": "Register Now",
+            "href": "https://whova.com/portal/registration/APPNqWqhv6TMmr7UeRzb/"
+          },
+          {
+            "label": "Learn More",
+            "href": "https://www.superchargeyourdentalpractice.com"
+          }
+        ],
+        "logo": {
+          "src": "https://assets.cdn.filesafe.space/pBEZHmcyygivv5jxOGNx/media/6a3d7443d4f4031f97b6aed0.png",
+          "alt": "Supercharge logo",
+          "width": 573,
+          "height": 287
+        }
+      }
+    ]
+  },
+  "ecosystem_cards": {
+    "intro": {
+      "kicker": "Beyond the practice",
+      "title": "More ways | I help dentists."
+    },
+    "cards": [
+      {
+        "title": "Speaking",
+        "text": "CE talks for study clubs, associations and meetings. Often at no cost to your group.",
+        "link": {
+          "label": "Speaking details",
+          "href": "/speaking/"
+        }
+      },
+      {
+        "title": "Birdeye",
+        "text": "I lead the dental division at Birdeye, the reputation platform used by more than 11,000 dental practices.",
+        "link": {
+          "label": "Meet Len",
+          "href": "/meet/"
+        }
+      },
+      {
+        "title": "Review removal",
+        "text": "Fake or policy-violating Google review? My team reports it the right way. You pay only if it comes down.",
+        "link": {
+          "label": "How it works",
+          "href": "/review-removal/"
+        }
+      }
+    ]
+  },
+  "cta": {
+    "title": "Is your online | reputation helping you?",
+    "text": "Let's look at where your practice stands today. One call. No pressure.",
+    "button": {
+      "label": "Book a Call",
+      "href": "/book-a-call/"
+    }
+  }
+}
