@@ -5,6 +5,6 @@ const { items } = Astro.props;
 ---
 <section class="dlt-proofbar">
   <div class="container">
-    <ul>{items.map((it) => <li><strong>{it.value}</strong><span>{it.label}</span></li>)}</ul>
+    <ul style={`--cols:${Math.min(items.length, 6)}`}>{items.map((it) => <li><strong>{it.value}</strong><span>{it.label}</span></li>)}</ul>
   </div>
 </section>

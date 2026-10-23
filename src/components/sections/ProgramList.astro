@@ -1,0 +1,26 @@
+---
+/** Numbered program table (title, one-line summary, format) with an optional row of notes below. Used on the Media Kit page. */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Props { data: { kicker?: string; title: string; intro?: string; items: { title: string; text: string; format: string; tag?: string }[]; notes?: { title: string; text: string }[] } }
+const { data: d } = Astro.props;
+---
+<section class="section-padding dlt-programs">
+  <div class="container">
+    <SectionTitle kicker={d.kicker} title={d.title} intro={d.intro} align="center" />
+    <div class="dlt-programs__table">
+      <div class="dlt-programs__head" aria-hidden="true"><span></span><span>Program</span><span>Format</span></div>
+      {d.items.map((it, i) => (
+        <div class:list={['dlt-program wow fadeInUp', i === 0 && 'dlt-program--featured']}>
+          <span class="dlt-program__num">{String(i + 1).padStart(2, '0')}</span>
+          <div>{it.tag && <span class="dlt-program__tag">{it.tag}</span>}<h3>{it.title}</h3><p>{it.text}</p></div>
+          <span class="dlt-program__format">{it.format}</span>
+        </div>
+      ))}
+    </div>
+    {d.notes && (
+      <div class="row g-4 mt-4">
+        {d.notes.map((n) => <div class="col-md-4"><div class="dlt-lead__col"><h3>{n.title}</h3><p>{n.text}</p></div></div>)}
+      </div>
+    )}
+  </div>
+</section>

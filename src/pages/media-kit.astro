@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/site/PageHeader.astro';
+import Lead from '../components/sections/Lead.astro';
+import MediaKit from '../components/sections/MediaKit.astro';
+import ProofBar from '../components/sections/ProofBar.astro';
+import ProseBlock from '../components/sections/ProseBlock.astro';
+import ProgramList from '../components/sections/ProgramList.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import d from '../data/media-kit.json';
+---
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <PageHeader title="Media Kit" />
+  <Lead data={d.intro} />
+  <MediaKit data={d.downloads} id="downloads" />
+  <ProofBar items={d.stats} />
+  <ProseBlock data={d.bio} />
+  <ProgramList data={d.programs} />
+  <CtaBand data={d.cta} />
+</BaseLayout>

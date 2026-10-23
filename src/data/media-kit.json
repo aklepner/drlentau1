@@ -1,0 +1,150 @@
+{
+  "_readme": "Media Kit page (/media-kit/), under More. Bio, stats and programs come from Len's 2026 speaker packet (public/docs/dr-len-tau-speaker-packet-2026.pdf). Downloads with an empty href show 'Coming soon'.",
+  "seo": {
+    "title": "Media Kit",
+    "description": "Dr. Len Tau's media kit for meeting planners and press: speaker packet, bio, headshots, resume and CV, and programs at a glance."
+  },
+  "intro": {
+    "kicker": "For meeting planners and press",
+    "title": "Everything you need | to promote my session.",
+    "paragraphs": [
+      "Download my speaker packet, bio, headshots and resume. Use them in your program, on your website and in your promotion.",
+      "Need something else? Email len@drlentau.com or call (215) 292-2100."
+    ],
+    "button": {
+      "label": "Download Speaker Packet",
+      "href": "/docs/dr-len-tau-speaker-packet-2026.pdf"
+    }
+  },
+  "downloads": {
+    "kicker": "Downloads",
+    "title": "Files for your | program.",
+    "intro": "Click to download. Headshots and the resume and CV are coming soon.",
+    "items": [
+      {
+        "title": "Speaker packet",
+        "text": "My bio, awards, programs at a glance, formats and learning objectives for every talk.",
+        "meta": "PDF, 2026",
+        "link": {
+          "label": "Download",
+          "href": "/docs/dr-len-tau-speaker-packet-2026.pdf"
+        }
+      },
+      {
+        "title": "Resume and CV",
+        "text": "My full professional background, education, speaking history and recognition.",
+        "meta": "PDF",
+        "link": {
+          "label": "Download",
+          "href": ""
+        }
+      },
+      {
+        "title": "Headshots",
+        "text": "High-resolution photos for your program, website and social posts.",
+        "meta": "JPG",
+        "link": {
+          "label": "Download",
+          "href": ""
+        }
+      }
+    ]
+  },
+  "stats": [
+    {
+      "value": "600+",
+      "label": "Presentations"
+    },
+    {
+      "value": "119+",
+      "label": "Organizations and meetings"
+    },
+    {
+      "value": "2,000+",
+      "label": "Five-star reviews in his own practice"
+    },
+    {
+      "value": "3",
+      "label": "Books"
+    },
+    {
+      "value": "8",
+      "label": "Podcast seasons"
+    },
+    {
+      "value": "50K+",
+      "label": "Instagram followers"
+    }
+  ],
+  "bio": {
+    "kicker": "Bio",
+    "title": "About Dr. Len Tau.",
+    "lead": "Dr. Len Tau, or Len, as he prefers to be called, practiced dentistry for more than two decades. He knows what it takes to fill a schedule, lead a team, and earn patient trust, because he did it himself.",
+    "paragraphs": [
+      "Dentistry runs in his family. His father ran a dental office in New City, New York. Len earned his undergraduate degree at Tulane University and his DMD from Tufts University School of Dental Medicine in 1999. He completed his Advanced Education in General Dentistry residency at UMDNJ.",
+      "Len owned the Pennsylvania Center for Dental Excellence outside Philadelphia. He sold the practice in 2021 and retired from clinical care in 2022. By then, his patients had left more than 2,000 five-star reviews.",
+      "He saw early that online reviews would change how patients choose a dentist. He built iSocial Reviews, which Birdeye acquired. Today he leads the dental division at Birdeye and runs Tau Dental Consulting. Dentists across the country know him as The Reviews Doctor.",
+      "Len hosts the Raving Patients Podcast, now in its eighth season. Listeners voted it the 2025 Fan Favorite Dental Podcast. He shares practice growth content with more than 50,000 followers on Instagram. In 2026, USA Dental Report named him one of the 100 key opinion leaders in dentistry. He has written three books and founded Supercharge, an annual conference for practice owners and their teams. He lives in Parkland, Florida."
+    ]
+  },
+  "programs": {
+    "kicker": "Programs at a glance",
+    "title": "All content. | No fluff.",
+    "intro": "Full descriptions and learning objectives for each program are in the speaker packet.",
+    "items": [
+      {
+        "title": "Dental Practice Profits Masterclass",
+        "text": "More patients, higher case acceptance, top Google rankings, and steady five-star reviews",
+        "format": "4 hours, full day, or 1.5 days",
+        "tag": "Signature program"
+      },
+      {
+        "title": "Be Seen, Be Trusted, Be Chosen",
+        "text": "Mastering online visibility for practice growth",
+        "format": "1, 2, or 3 hours"
+      },
+      {
+        "title": "The Connected Practice",
+        "text": "How reviews, search, AI, and experience work together",
+        "format": "2 to 3 hours"
+      },
+      {
+        "title": "OMG! I Got a Bad Review. What Should I Do?",
+        "text": "How to respond to negative reviews and protect your reputation",
+        "format": "1 hour"
+      },
+      {
+        "title": "Future-Ready Dentistry",
+        "text": "Technology, innovation, and team systems that drive patient experience and growth",
+        "format": "1 hour"
+      },
+      {
+        "title": "Don't Sweat the Small Stuff in Practice Ownership",
+        "text": "Focus on what moves your practice forward",
+        "format": "1 hour"
+      }
+    ],
+    "notes": [
+      {
+        "title": "Who should attend",
+        "text": "Doctors, team members, office managers, and marketing professionals"
+      },
+      {
+        "title": "CE credit",
+        "text": "Available through AGD or ADA"
+      },
+      {
+        "title": "Free books",
+        "text": "Every attendee receives a free copy of my book"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bring me to your | meeting at zero cost.",
+    "text": "Birdeye and other companies can support your session and cover my travel and honorarium. Send me your date and I will explain how it works.",
+    "button": {
+      "label": "Check My Date",
+      "href": "/speaking/#book"
+    }
+  }
+}

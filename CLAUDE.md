@@ -102,6 +102,7 @@ Full reference: the `dlt-client-skill` skill. The non-negotiables for site copy:
 | /news/ and /news/<slug>/ | news/index.astro, news/[slug].astro | src/content/news/*.md |
 | /resources/ | resources.astro | resources.json |
 | /contact/ | contact.astro | contact.json (`?topic=speaking|books|removal|consulting|podcast|supercharge` preselects the form topic) |
+| /media-kit/ (under More) | media-kit.astro | media-kit.json (downloads, bio, stats and programs from the 2026 speaker packet) |
 | /review-removal/ | review-removal.astro | review-removal.json (every button opens intake.thereviewsdoctor.com; FAQPage + Service schema) |
 
 Redirects for old URLs live in `astro.config.mjs` (`/about`→`/meet`, `/connect`→`/contact`, `/helpful-articles` and `/latest-news`→`/news`). Keep the live site's slugs where they exist.
@@ -138,7 +139,7 @@ Full list: `podcast.json > episodes.episodes` (newest first). Homepage teaser: `
 Create `src/content/news/<slug>.md` with frontmatter `title`, `category: News` (or `Article`), `date: YYYY-MM-DD`, `excerpt`, then the body in Markdown. It appears on /news/ and gets its own page at /news/<slug>/.
 
 ### Add or change a Favorite company
-Edit `favorites.json > companies`. Fields: `slug`, `name`, `category`, `description`, `website` (partner/affiliate URL), `featured`. Each company gets /favorites/<slug>/ automatically. Favorites is a revenue driver for Len: never drop companies without asking.
+Edit `favorites.json > companies`. Fields: `slug`, `name`, `category`, `description`, `website` (partner/affiliate URL), `featured`, `logo` (path in public/images/; white or light logos, shown on a navy tile). Each company gets /favorites/<slug>/ automatically. Favorites is a revenue driver for Len: never drop companies without asking.
 
 ## Hosting and preview
 
@@ -174,9 +175,10 @@ Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 20
 - [ ] Birdeye review widget: paste the embed code into `reviews.json > live.embed` (a dashed placeholder shows until then).
 - [ ] Speaking booking form, Books bulk order form and newsletter signup have no backend yet (thank-you message only). Connect to HighLevel.
 - [ ] Resources "Read" PDFs live in public/docs/ (downloaded from the Webflow CDN on Oct 15).
-- [ ] Media kit (Speaking page, `speaking.json > mediakit`): Resume and CV, and Headshots show "Coming soon" until their `link.href` is set. Put files in public/docs/ (or link a Drive/Dropbox folder for headshots). The 2026 speaker packet is live at /docs/dr-len-tau-speaker-packet-2026.pdf.
+- [ ] Media Kit page (/media-kit/, `media-kit.json > downloads`): Resume and CV, and Headshots show "Coming soon" until their `link.href` is set. Put files in public/docs/ (or link a Drive/Dropbox folder for headshots). The 2026 speaker packet is live at /docs/dr-len-tau-speaker-packet-2026.pdf.
 - [ ] Amazon lists the second book as "100+ Tips for Getting 100 Five Star Reviews in 100 Days"; the site uses Len's title "100+ Tips to Generating 100 5-Star Reviews in 100 Days". Confirm which Len wants.
-- [ ] Speaker packet (2026) lists six programs (Dental Practice Profits Masterclass, Be Seen Be Trusted Be Chosen, The Connected Practice, OMG! I Got a Bad Review, Future-Ready Dentistry, Don't Sweat the Small Stuff); the Speaking page shows the four talks from the Launch Brief. Align if Len wants.
+- [ ] Podcast season: the 2026 speaker packet (and the Media Kit bio copied from it) says eighth season; the Podcast page and CLAUDE.md say season nine. Confirm with Len.
+- [ ] Speaker packet (2026) lists six programs (shown on /media-kit/) (Dental Practice Profits Masterclass, Be Seen Be Trusted Be Chosen, The Connected Practice, OMG! I Got a Bad Review, Future-Ready Dentistry, Don't Sweat the Small Stuff); the Speaking page shows the four talks from the Launch Brief. Align if Len wants.
 - [ ] Dr. Wollock: first name, practice and city for the Home quote (Launch Brief asks for them).
 
 - [ ] Real photos for every slot in `photos.json` (see `docs/photo-shotlist.md`).

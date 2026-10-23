@@ -104,6 +104,10 @@
           "href": "/resources/"
         },
         {
+          "label": "Media Kit",
+          "href": "/media-kit/"
+        },
+        {
           "label": "Supercharge",
           "href": "https://www.superchargeyourdentalpractice.com",
           "external": true
@@ -182,6 +186,10 @@
           {
             "label": "Contact",
             "href": "/contact/"
+          },
+          {
+            "label": "Media kit",
+            "href": "/media-kit/"
           },
           {
             "label": "Be a podcast guest",

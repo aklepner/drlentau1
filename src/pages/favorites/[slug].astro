@@ -16,6 +16,7 @@ const related = d.companies.filter((x) => x.category === c.category && x.slug !=
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-8">
+          {c.logo && <div class="dlt-fav__logo dlt-fav__logo--page"><img src={c.logo} alt={`${c.name} logo`} /></div>}
           <span class="dlt-tag">{c.category}</span>
           <h2>{c.name}</h2>
           <p class="dlt-company__lead">{c.description}</p>
