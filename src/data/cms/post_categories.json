@@ -1,0 +1,17 @@
+[
+ {
+  "name": "News",
+  "slug": "news",
+  "sort": 1
+ },
+ {
+  "name": "Article",
+  "slug": "article",
+  "sort": 2
+ },
+ {
+  "name": "Blog",
+  "slug": "blog",
+  "sort": 3
+ }
+]

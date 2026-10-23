@@ -1,0 +1,7 @@
+---
+import LegalPage from '../components/site/LegalPage.astro';
+import { Content, frontmatter } from '../legal/privacy.md';
+---
+<LegalPage title="Privacy Policy" description="How Dr. Len Tau collects, uses and protects personal information, including SMS and text messaging privacy." effective={frontmatter.effective}>
+  <Content />
+</LegalPage>

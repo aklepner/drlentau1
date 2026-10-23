@@ -5,7 +5,7 @@
   "description": "Dr. Len Tau is a dentist, author and speaker known as The Reviews Doctor. He built his Philadelphia practice to 4.9 stars and 2,000+ reviews, and now helps dentists build more visible, more trusted practices.",
   "url": "https://drlentau.com",
   "links": {
-    "book_call": "https://drlentau.as.me",
+    "book_call": "/book-a-call/",
     "podcast": "/podcast/",
     "podcast_guest": "https://podcastguest.drlentau.com",
     "supercharge": "https://www.superchargeyourdentalpractice.com",
@@ -18,7 +18,8 @@
     "text_len": "https://link.textflows.io/widget/form/pb7Ae9ffWUpeD9E9YDho",
     "speaker_packet": "/docs/dr-len-tau-speaker-packet-2026.pdf",
     "speaking_calendar_csv": "",
-    "supercharge_register": "https://whova.com/portal/registration/APPNqWqhv6TMmr7UeRzb/"
+    "supercharge_register": "https://whova.com/portal/registration/APPNqWqhv6TMmr7UeRzb/",
+    "calendar": "https://drlentau.as.me/connectwithlen"
   },
   "contact": {
     "email": "len@drlentau.com",
@@ -50,7 +51,7 @@
   ],
   "primaryCta": {
     "label": "Book a Call",
-    "href": "https://drlentau.as.me"
+    "href": "/book-a-call/"
   },
   "nav": [
     {
@@ -104,6 +105,10 @@
           "href": "/resources/"
         },
         {
+          "label": "Videos",
+          "href": "/videos/"
+        },
+        {
           "label": "Media Kit",
           "href": "/media-kit/"
         },
@@ -139,7 +144,7 @@
           },
           {
             "label": "Book a call",
-            "href": "https://drlentau.as.me"
+            "href": "/book-a-call/"
           },
           {
             "label": "Supercharge conference",
@@ -157,6 +162,10 @@
           {
             "label": "Podcast",
             "href": "/podcast/"
+          },
+          {
+            "label": "Videos",
+            "href": "/videos/"
           },
           {
             "label": "News",

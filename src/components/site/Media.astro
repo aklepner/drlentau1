@@ -1,0 +1,11 @@
+---
+/** Shows one media URL from the CMS (see mediaKind in src/lib/cms.ts). `audio` sizes an iframe player as an audio bar. */
+interface Props { m: { kind: 'iframe' | 'audio' | 'video' | 'link'; src: string }; title: string; audio?: boolean }
+const { m, title, audio = false } = Astro.props;
+---
+{m.kind === 'audio' && <audio class="dlt-episode__player" controls preload="none" src={m.src}><a href={m.src}>Download the audio</a></audio>}
+{m.kind === 'video' && <div class="dlt-video__frame dlt-episode__media"><video controls preload="metadata" src={m.src}></video></div>}
+{m.kind === 'iframe' && (audio
+  ? <iframe class="dlt-episode__audio" src={m.src} title={title} loading="lazy"></iframe>
+  : <div class="dlt-video__frame dlt-episode__media"><iframe src={m.src} title={title} loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>)}
+{m.kind === 'link' && <p class="dlt-episode__listen"><a class="dlt-link" href={m.src} target="_blank" rel="noopener">{audio ? 'Listen to this episode' : 'Watch this video'}</a></p>}

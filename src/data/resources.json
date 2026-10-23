@@ -1,5 +1,5 @@
 {
-  "_readme": "Free Resources page. Watch links point at old-site video pages; migrate before cutover. Read PDFs are hosted on this site in public/docs/. The Listen group was removed (Oct 2026): every old interview link was dead.",
+  "_readme": "Free Resources page. The Watch list comes from the videos table in Supabase (Len edits it at /admin/). Read PDFs are hosted on this site in public/docs/. The Listen group was removed (Oct 2026): every old interview link was dead.",
   "seo": {
     "title": "Free Resources",
     "description": "Free tools, videos, podcast interviews and articles from Dr. Len Tau on reviews and online reputation for dental practices."
@@ -33,47 +33,8 @@
       {
         "id": "watch",
         "title": "Watch",
-        "items": [
-          {
-            "title": "Citation Inconsistency: Keys to moving up the rankings",
-            "href": "https://www.drlentau.com/videos/citation-inconsistency"
-          },
-          {
-            "title": "Importance of Reviews: Credibility and trust",
-            "href": "https://www.drlentau.com/videos/importance-of-reviews"
-          },
-          {
-            "title": "Overwhelming Negative Reviews: The best defense is more positive reviews",
-            "href": "https://www.drlentau.com/videos/overwhelming-negative-reviews"
-          },
-          {
-            "title": "Responding to Negative Reviews: Strategies for removal",
-            "href": "https://www.drlentau.com/videos/responding-to-negative-reviews"
-          },
-          {
-            "title": "Online Reputation Tips for Your Dental Office",
-            "href": "https://www.drlentau.com/videos/online-reputation-tips-for-your-dental-office-with-dr-len-tau"
-          },
-          {
-            "title": "Internet Marketing, Reviews and Reputation",
-            "source": "Dental Insiders Podcast 34",
-            "href": "https://www.drlentau.com/videos/dr-len-tau-talks-about-internet-marketing-reviews-and-reputation"
-          },
-          {
-            "title": "Online Reviews vs. Marketing",
-            "href": "https://www.drlentau.com/videos/online-reviews-vs-marketing-with-dr-len-tau"
-          },
-          {
-            "title": "Dr. Len on Birdeye",
-            "source": "Dental Marketing Guy Show",
-            "href": "https://www.drlentau.com/videos/dr-len-on-birdeye"
-          },
-          {
-            "title": "The Power of Reputation Management",
-            "source": "Webinar",
-            "href": "https://www.drlentau.com/videos/the-power-of-reputation-management"
-          }
-        ]
+        "items": [],
+        "_readme": "Filled from Supabase videos at build time (src/pages/resources.astro)."
       },
       {
         "id": "read",

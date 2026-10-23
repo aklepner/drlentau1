@@ -1,0 +1,16 @@
+---
+/** Shared layout for the Privacy Policy and Terms pages. Text lives in src/legal/*.md (Len's approved copy). */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from './PageHeader.astro';
+interface Props { title: string; description: string; effective: string }
+const { title, description, effective } = Astro.props;
+---
+<BaseLayout title={title} description={description}>
+  <PageHeader title={title} />
+  <article class="section-padding dlt-article dlt-legal">
+    <div class="container">
+      <p class="dlt-legal__meta"><strong>Dr. Len Tau</strong> · Effective date: {effective}</p>
+      <div class="dlt-article__body"><slot /></div>
+    </div>
+  </article>
+</BaseLayout>

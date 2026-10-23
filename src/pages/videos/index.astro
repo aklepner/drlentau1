@@ -1,0 +1,32 @@
+---
+/** Video library, from Supabase (src/lib/cms.ts). Len adds videos in /admin/. */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/site/PageHeader.astro';
+import SectionTitle from '../../components/site/SectionTitle.astro';
+import CtaBand from '../../components/sections/CtaBand.astro';
+import { getVideos } from '../../lib/cms';
+import home from '../../data/home.json';
+const videos = await getVideos();
+---
+<BaseLayout title="Videos" description="Interviews and presentations from Dr. Len Tau on online reviews, reputation and local search for dental practices.">
+  <PageHeader title="Videos" />
+  <section class="section-padding dlt-news">
+    <div class="container">
+      <SectionTitle kicker="Watch" title="Interviews and | presentations." intro="Share these with your team and colleagues." />
+      <div class="row g-4 mt-2">
+        {videos.map((v) => (
+          <div class="col-lg-4 col-md-6">
+            <a class="dlt-post" href={`/videos/${v.slug}/`}>
+              {v.image_url && <img class="dlt-post__img" src={v.image_url} alt={v.image_alt || ''} loading="lazy" />}
+              {v.source && <span class="dlt-tag">{v.source}</span>}
+              <h3>{v.title}</h3>
+              {v.summary && <p>{v.summary}</p>}
+              <span class="dlt-link">Watch</span>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  <CtaBand data={home.cta} />
+</BaseLayout>

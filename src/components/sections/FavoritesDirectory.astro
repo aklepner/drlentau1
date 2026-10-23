@@ -1,11 +1,12 @@
 ---
 /**
- * Len's Favorites directory. Data: src/data/favorites.json. Each company also gets a detail page
- * at /favorites/<slug>/ (src/pages/favorites/[slug].astro). Category buttons filter the grid (small inline script).
+ * Len's Favorites directory, from Supabase (src/lib/cms.ts; Len edits them in /admin/). Each company also
+ * gets a detail page at /favorites/<slug>/. Category buttons filter the grid (small inline script).
  */
-import favorites from '../../data/favorites.json';
-const cats = [...new Set(favorites.companies.map((c) => c.category))].sort();
-const featured = favorites.companies.filter((c) => c.featured);
+import { getFavorites } from '../../lib/cms';
+const companies = (await getFavorites()).map((c) => ({ ...c, cat: c.category?.name || 'Other' }));
+const cats = [...new Set(companies.map((c) => c.cat))].sort();
+const featured = companies.filter((c) => c.featured);
 ---
 <section class="section-padding dlt-favs">
   <div class="container">
@@ -13,8 +14,8 @@ const featured = favorites.companies.filter((c) => c.featured);
       {featured.map((c) => (
         <div class="col-lg-4">
           <a class="dlt-fav dlt-fav--featured" href={`/favorites/${c.slug}/`}>
-            {c.logo && <span class="dlt-fav__logo"><img src={c.logo} alt={`${c.name} logo`} loading="lazy" /></span>}
-            <span class="dlt-tag">{c.category}</span>
+            {c.logo_url && <span class="dlt-fav__logo"><img src={c.logo_url} alt={c.logo_alt || `${c.name} logo`} loading="lazy" /></span>}
+            <span class="dlt-tag">{c.cat}</span>
             <h3>{c.name}</h3>
             <p>{c.description}</p>
             <span class="dlt-link">Learn more</span>
@@ -27,11 +28,11 @@ const featured = favorites.companies.filter((c) => c.featured);
       {cats.map((c) => <button type="button" data-cat={c}>{c}</button>)}
     </div>
     <div class="row g-4 dlt-favs__grid">
-      {favorites.companies.map((c) => (
-        <div class="col-xl-3 col-lg-4 col-md-6" data-cat={c.category}>
+      {companies.map((c) => (
+        <div class="col-xl-3 col-lg-4 col-md-6" data-cat={c.cat}>
           <a class="dlt-fav" href={`/favorites/${c.slug}/`}>
-            {c.logo && <span class="dlt-fav__logo"><img src={c.logo} alt={`${c.name} logo`} loading="lazy" /></span>}
-            <span class="dlt-tag">{c.category}</span>
+            {c.logo_url && <span class="dlt-fav__logo"><img src={c.logo_url} alt={c.logo_alt || `${c.name} logo`} loading="lazy" /></span>}
+            <span class="dlt-tag">{c.cat}</span>
             <h3>{c.name}</h3>
             <p>{c.description}</p>
           </a>

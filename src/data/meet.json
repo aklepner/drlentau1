@@ -40,7 +40,7 @@
     "title": "I only teach what I know works. | No theories. | Real-world results.",
     "cta": {
       "label": "Book a Call",
-      "href": "https://drlentau.as.me"
+      "href": "/book-a-call/"
     }
   },
   "prose": {
@@ -58,7 +58,7 @@
     ],
     "button": {
       "label": "Book a Call",
-      "href": "https://drlentau.as.me"
+      "href": "/book-a-call/"
     }
   },
   "faq": {

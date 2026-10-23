@@ -1,0 +1,29 @@
+---
+/** One page per video, from Supabase (src/lib/cms.ts). Len adds videos in /admin/. */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/site/PageHeader.astro';
+import Button from '../../components/site/Button.astro';
+import { getVideos, fmtDate, mediaKind } from '../../lib/cms';
+import Media from '../../components/site/Media.astro';
+export async function getStaticPaths() {
+  return (await getVideos()).map((v) => ({ params: { slug: v.slug }, props: { v } }));
+}
+const { v } = Astro.props;
+const m = mediaKind(v.embed_url);
+---
+<BaseLayout title={v.seo_title || `${v.title} | Videos`} description={v.seo_description || v.summary || undefined} image={v.image_url || undefined}>
+  <PageHeader title="Videos" />
+  <article class="section-padding dlt-article">
+    <div class="container">
+      {v.source && <span class="dlt-tag">{v.source}</span>}{v.published_at && <time>{fmtDate(v.published_at)}</time>}
+      <h1>{v.title}</h1>
+      {m ? <Media m={m} title={v.title} />
+           : v.image_url && <img class="dlt-article__img" src={v.image_url} alt={v.image_alt || ''} />}
+      {v.summary && !(v.body_html || '').includes(v.summary.slice(0, 60)) && <p class="dlt-article__lead">{v.summary}</p>}
+      {v.body_html && <div class="dlt-article__body" set:html={v.body_html} />}
+      <div class="dlt-btn-row">
+        <Button label="All Videos" href="/videos/" variant="outline" />
+      </div>
+    </div>
+  </article>
+</BaseLayout>

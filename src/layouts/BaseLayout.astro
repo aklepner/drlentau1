@@ -11,7 +11,7 @@ import Signup from '../components/site/Signup.astro';
 // bookReview: show the Amazon review prompt in the footer (Home and Books only).
 // pageTitle: the full <title> as written, without the " | Dr. Len Tau" suffix (e.g. Review Removal).
 interface Props { title?: string; pageTitle?: string; description?: string; image?: string; bookReview?: boolean }
-const { title, pageTitle, description = site.description, bookReview = false } = Astro.props;
+const { title, pageTitle, description = site.description, image, bookReview = false } = Astro.props;
 const fullTitle = pageTitle || (title ? `${title} | ${site.name}` : `${site.name} | The Reviews Doctor`);
 const canonical = new URL(Astro.url.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, ''), '') || '/', site.url).toString();
 // Preview builds (GitHub Pages) set PUBLIC_NOINDEX=true so search engines skip the dev copy.
@@ -32,6 +32,7 @@ const js = ['jquery-3.7.1.min', 'viewport.jquery', 'bootstrap.bundle.min', 'gsap
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+    {image && <meta property="og:image" content={new URL(image, site.url).toString()} />}
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

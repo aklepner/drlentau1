@@ -10,7 +10,7 @@ verifies it, and reports back briefly. Read this whole file before changing anyt
 - Node 22.12+.
 - Visual base: the purchased **Brevon** HTML template (Gramentheme). Its CSS/JS/images live untouched in `public/assets/`.
 - Brand layer: `public/brand/tau-theme.css` re-skins Brevon to the **Dr. Len Tau design system** (navy, square, uppercase headings).
-- Supabase will be added later (see "Supabase plan").
+- **Supabase** holds posts, podcast episodes, videos and Favorites. Len edits them at `/admin/`; the build reads them (see "Supabase content" and `supabase/README.md`).
 
 ## Where things live
 
@@ -22,7 +22,10 @@ src/data/                     ALL page copy and settings (edit these for content
   meet.json speaking.json consulting.json books.json podcast.json
   favorites.json reviews.json resources.json contact.json   one file per inner page
   photos.json                 every photo slot (see "Photos")
-src/content/news/             News + articles, one Markdown file per post (schema in src/content.config.ts)
+src/data/cms/                 build fallback snapshot of the Supabase content (do not hand edit; see below)
+src/lib/cms.ts                reads posts, episodes, videos, favorites from Supabase at build time
+public/admin/                 Len's content admin (plain HTML/JS, Supabase login)
+supabase/README.md            tables, security, accounts, automatic publishing
 src/pages/                    one file per URL; each is a short list of sections
 src/components/sections/      one component per section type (ported from Brevon markup)
 src/components/site/          Header, Footer, Button, SectionTitle, PageHeader
@@ -96,18 +99,22 @@ Full reference: the `dlt-client-skill` skill. The non-negotiables for site copy:
 | /speaking/ | speaking.astro | speaking.json |
 | /consulting/ | consulting.astro | consulting.json |
 | /books/ | books.astro | books.json |
-| /podcast/ | podcast.astro | podcast.json |
-| /favorites/ and /favorites/<slug>/ | favorites/index.astro, favorites/[slug].astro | favorites.json |
+| /podcast/ and /podcast/<slug>/ | podcast.astro, podcast/[slug].astro | podcast.json (headings) + Supabase `podcast_episodes` |
+| /videos/ and /videos/<slug>/ | videos/index.astro, videos/[slug].astro | Supabase `videos` (also fills the Resources "Watch" list) |
+| /favorites/ and /favorites/<slug>/ | favorites/index.astro, favorites/[slug].astro | favorites.json (intro) + Supabase `favorites` |
 | /reviews/ (Raving Fans) | reviews.astro | reviews.json |
-| /news/ and /news/<slug>/ | news/index.astro, news/[slug].astro | src/content/news/*.md |
+| /news/ and /news/<slug>/ | news/index.astro, news/[slug].astro | Supabase `posts` (News list = category News; Helpful articles = every other category) |
+| /admin/ | public/admin/ | Len's content admin (noindex, not linked) |
 | /resources/ | resources.astro | resources.json |
 | /contact/ | contact.astro | contact.json (`?topic=speaking|books|removal|consulting|podcast|supercharge` preselects the form topic) |
+| /privacy/ and /terms/ | privacy.astro, terms.astro | src/legal/privacy.md, src/legal/terms.md (Len's approved legal text; edit the Markdown) |
+| /book-a-call/ | book-a-call.astro | book-a-call.json (Len's Acuity calendar, drlentau.as.me/connectwithlen, embedded; every Book a Call button links here) |
 | /media-kit/ (under More) | media-kit.astro | media-kit.json (downloads, bio, stats and programs from the 2026 speaker packet) |
 | /review-removal/ | review-removal.astro | review-removal.json (every button opens intake.thereviewsdoctor.com; FAQPage + Service schema) |
 
-Redirects for old URLs live in `astro.config.mjs` (`/about`→`/meet`, `/connect`→`/contact`, `/helpful-articles` and `/latest-news`→`/news`). Keep the live site's slugs where they exist.
+Redirects for old URLs live in `astro.config.mjs` (`/about`→`/meet`, `/connect`→`/contact`, `/helpful-articles` and `/latest-news`→`/news`, `/blog-articles/<slug>`→`/news/<slug>/`). Keep the live site's slugs where they exist.
 
-Content sources (Oct 2026): copied from the live drlentau.com pages and the Aug 27, 2026 "Meet Andy & Len" call (Fireflies). Testimonials, episodes, companies, articles and resource links are real. Book descriptions and the two News posts are mock copy for Len to review.
+Content sources (Oct 2026): copied from the live drlentau.com pages and the Aug 27, 2026 "Meet Andy & Len" call (Fireflies). Testimonials, episodes, companies, articles and resource links are real. Articles, episodes, videos and Favorites moved into Supabase on Oct 23, 2026. Book descriptions and the two News posts are mock copy for Len to review.
 
 ## Recipes
 
@@ -132,14 +139,13 @@ Edit the page in `src/pages/`. Each page is a list of `<Section data={...} />` l
 ### Add a page
 Create `src/pages/<slug>.astro` using `BaseLayout` + `PageHeader` + sections, with copy in `src/data/<slug>.json`. Add it to `site.json` nav/footer if it should be linked.
 
-### Podcast episodes
-Full list: `podcast.json > episodes.episodes` (newest first). Homepage teaser: `home.json > episodes.items` (latest three). Use real episodes only. Planned: read the podcast RSS feed at build time so both update automatically (discussed on the Aug 27 call).
-
-### Add a news post or book update
-Create `src/content/news/<slug>.md` with frontmatter `title`, `category: News` (or `Article`), `date: YYYY-MM-DD`, `excerpt`, then the body in Markdown. It appears on /news/ and gets its own page at /news/<slug>/.
-
-### Add or change a Favorite company
-Edit `favorites.json > companies`. Fields: `slug`, `name`, `category`, `description`, `website` (partner/affiliate URL), `featured`, `logo` (path in public/images/; white or light logos, shown on a navy tile). Each company gets /favorites/<slug>/ automatically. Favorites is a revenue driver for Len: never drop companies without asking.
+### Posts, podcast episodes, videos, Favorites (Supabase content)
+Len adds and edits these himself at `/admin/` (email and password). Saving rebuilds the site automatically (about two minutes) once the GitHub token is in Supabase Vault (`supabase/README.md`).
+- To change how they look: edit the page or component (`src/pages/news/`, `podcast/`, `videos/`, `favorites/`, `NewsList.astro`, `EpisodeList.astro`, `FavoritesDirectory.astro`). Data comes from `src/lib/cms.ts`.
+- To change content for Len: use the Supabase MCP (`execute_sql`) or /admin/, never `src/data/cms/` (that is only the build fallback; refresh it with `node scripts/cms-snapshot.mjs`).
+- New field: migration first, then `TYPES` in `public/admin/admin.js`, then the page.
+- Guest posts and show notes are written by others, so `npm run check` skips `src/data/cms/`.
+- Favorites is a revenue driver for Len: never drop companies without asking.
 
 ## Hosting and preview
 
@@ -156,20 +162,21 @@ Edit `favorites.json > companies`. Fields: `slug`, `name`, `category`, `descript
 - `integrations/rounds-dev.mjs` makes `npm run dev` serve round folders; built sites and GitHub Pages serve them natively.
 - first-round = commit 6e2fb7c (Oct 7 2026 build, before Practice Playbook and "Coming soon" were removed).
 
-## Supabase plan (not built yet)
+## Supabase content
 
-When Andy is ready:
-1. `npm i @supabase/supabase-js` and an adapter for the host (`@astrojs/netlify`, `@astrojs/vercel` or `@astrojs/node`); add it in `astro.config.mjs`. Keep `output: 'static'`; opt individual routes into the server with `export const prerender = false`.
-2. Env vars in `.env` (gitignored): `PUBLIC_SUPABASE_URL`, `PUBLIC_SUPABASE_ANON_KEY`, and server-only `SUPABASE_SERVICE_ROLE_KEY`. Never expose the service key to the browser. Commit a `.env.example` with names only.
-3. First use: the contact form. Create `src/pages/api/contact.ts` (prerender = false) that validates and inserts into a `contact_messages` table with RLS on. Set `contact.json > form.action` to `/api/contact`.
-4. Use migrations for schema changes; never change production tables by hand.
+Built Oct 23, 2026. Details, accounts and security: `supabase/README.md`.
+- Static site still (`output: 'static'`, no adapter): the build fetches published rows with the publishable key; GitHub Actions rebuilds on every admin save (`workflow_dispatch` from a Supabase trigger), on every push, and daily.
+- Later, for forms: the contact form could insert into a `contact_messages` table with RLS (insert-only for anon). Not built.
+- Use migrations for schema changes; never change production tables by hand.
 
 ## Open items (update as they close)
 
 Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 2026): Part 1 is the fix list, Part 2 the approved copy. Text in [brackets] there waits on Len.
 
-- [ ] Migrate the /videos/ pages and the podcast episode pages off the old site before cutover; links point there today. (The 21 articles are migrated into src/content/news.)
-- [ ] Guest posts: 20 of the 21 migrated articles were written by vendors (My Social Practice, The DocSites) and carry an `author` byline. They contain vendor pitches and words outside Len's voice rules (the copy check skips src/content). Andy/Len to decide whether they stay.
+- [ ] Supabase accounts: create Len's and Andy's users, turn off public sign-ups, set the redirect URL, and add the GitHub token for automatic publishing (steps in `supabase/README.md`).
+- [ ] Old podcast pages had copy errors (found during the Oct 23 migration): ep 329 intro is copied from ep 328; eps 332 and 333 point to the same audio file; ep 323's "Connect with" section is from ep 322; ep 321 links to a Libsyn page, not an audio file. Len can fix them in /admin/.
+- [ ] Videos have no thumbnails or summaries, and episodes have no images (the old site had none). Add in /admin/ if wanted.
+- [ ] Guest posts: 20 of the 21 migrated articles were written by vendors (My Social Practice, The DocSites) and carry an `author` byline. They contain vendor pitches and words outside Len's voice rules (the copy check skips Supabase content). Andy/Len to decide whether they stay.
 - [ ] Article images still load from Webflow's CDN (cdn.prod.website-files.com); copy them into public/ before the Webflow site goes away.
 - [ ] Speaking calendar: create the "Len Speaking Calendar" Google Sheet, publish it as CSV and paste the URL into `site.json > links.speaking_calendar_csv`. Until then the calendar shows its empty state. Then add "Catch me live" (next 3, `limit={3}`) to Home.
 - [ ] Birdeye review widget: paste the embed code into `reviews.json > live.embed` (a dashed placeholder shows until then).
@@ -178,6 +185,7 @@ Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 20
 - [ ] Media Kit page (/media-kit/, `media-kit.json > downloads`): Resume and CV, and Headshots show "Coming soon" until their `link.href` is set. Put files in public/docs/ (or link a Drive/Dropbox folder for headshots). The 2026 speaker packet is live at /docs/dr-len-tau-speaker-packet-2026.pdf.
 - [ ] Amazon lists the second book as "100+ Tips for Getting 100 Five Star Reviews in 100 Days"; the site uses Len's title "100+ Tips to Generating 100 5-Star Reviews in 100 Days". Confirm which Len wants.
 - [ ] Podcast season: the 2026 speaker packet (and the Media Kit bio copied from it) says eighth season; the Podcast page and CLAUDE.md say season nine. Confirm with Len.
+- [ ] Terms section 17 (Governing Law) still contains the drafting note "Any specific governing-law or jurisdiction provision should be confirmed before publication." Len to confirm the state, then replace that line.
 - [ ] Speaker packet (2026) lists six programs (shown on /media-kit/) (Dental Practice Profits Masterclass, Be Seen Be Trusted Be Chosen, The Connected Practice, OMG! I Got a Bad Review, Future-Ready Dentistry, Don't Sweat the Small Stuff); the Speaking page shows the four talks from the Launch Brief. Align if Len wants.
 - [ ] Dr. Wollock: first name, practice and city for the Home quote (Launch Brief asks for them).
 
@@ -186,7 +194,7 @@ Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 20
 - [ ] Book descriptions and the two News posts are mock copy: Len to review.
 - [ ] Book covers load from Len's HighLevel media library (assets.cdn.filesafe.space). Fine for launch; download and self-host later if preferred.
 - [ ] Consulting package prices ($4,000 / $7,500 / $12,000) are copied from the live site: confirm still current.
-- [ ] Partner/affiliate URLs for every Favorite (`favorites.json > website`), currently empty.
+- [ ] Partner/affiliate URLs for every Favorite (Supabase `favorites.website_url`, editable in /admin/), currently empty.
 - [ ] Speaker reel video and Meet Len intro video IDs (`speaking.json > reel.youtube`, `meet.json > video.vimeo`).
 - [ ] Confirm current podcast sponsors (CloudDentistry, DocSites, Dental Intel).
 - [ ] Contact form backend (Supabase or GHL). The form does not submit anywhere yet.
@@ -194,6 +202,5 @@ Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 20
 - [ ] /review-removal/ page: linked from the nav and footer (Oct 15) but not built yet, so it 404s. Needs copy from Len.
 - [ ] Public email/phone for the footer and contact page, if Len wants them shown.
 - [ ] Real testimonials (with permission) for the quote slider, or keep Len's own quotes.
-- [ ] Privacy and Terms pages (footer links point to /privacy/ and /terms/, which do not exist yet).
 - [ ] Production hosting and drlentau.com cutover plan (preview runs on GitHub Pages).
 - [ ] Confirm Birdeye GM title should appear in the credential strip.

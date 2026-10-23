@@ -28,7 +28,7 @@ const ext = (href: string) => (/^https?:\/\//.test(href) ? { target: '_blank', r
               <div class="footer-content">
                 <p>{site.footer.blurb}</p>
                 <p class="dlt-footer-contact"><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a><br /><a href={site.contact.phone_href}>{site.contact.phone}</a></p>
-                <a href={site.primaryCta.href} class="dlt-btn dlt-btn--on-navy" target="_blank" rel="noopener">{site.primaryCta.label}</a>
+                <a href={site.primaryCta.href} class="dlt-btn dlt-btn--on-navy" {...ext(site.primaryCta.href)}>{site.primaryCta.label}</a>
               </div>
             </div>
           </div>

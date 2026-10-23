@@ -12,7 +12,7 @@
     "text": "Patients choose a dentist before they ever call. I help you become the practice they trust online.",
     "cta": {
       "label": "Book a Call",
-      "href": "https://drlentau.as.me"
+      "href": "/book-a-call/"
     },
     "proof": {
       "count": "2,000",
@@ -36,7 +36,7 @@
         "text": "More 5-star reviews, a higher Google ranking, and more new patients who choose you.",
         "button": {
           "label": "Book a Call",
-          "href": "https://drlentau.as.me"
+          "href": "/book-a-call/"
         }
       },
       {
@@ -342,7 +342,7 @@
     "text": "Let's look at where your practice stands today. One call. No pressure.",
     "button": {
       "label": "Book a Call",
-      "href": "https://drlentau.as.me"
+      "href": "/book-a-call/"
     }
   }
 }

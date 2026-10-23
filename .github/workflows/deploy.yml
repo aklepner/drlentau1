@@ -1,4 +1,5 @@
 # Builds the site and publishes a development preview to GitHub Pages on every push to main.
+# Also runs when Len saves in /admin/ (Supabase calls workflow_dispatch; see supabase/README.md) and once a day as a safety net.
 # Preview URL: https://aklepner.github.io/drlentau1/
 # One-time setup: repo Settings > Pages > Build and deployment > Source: "GitHub Actions".
 name: Deploy preview to GitHub Pages
@@ -7,6 +8,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '17 9 * * *'
 
 permissions:
   contents: read

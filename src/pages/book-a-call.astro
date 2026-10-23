@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/site/PageHeader.astro';
+import CalendarEmbed from '../components/sections/CalendarEmbed.astro';
+import d from '../data/book-a-call.json';
+---
+<BaseLayout title={d.seo.title} description={d.seo.description}>
+  <PageHeader title="Book a Call" />
+  <CalendarEmbed intro={d.intro} calendar={d.calendar} fallback={d.fallback} />
+</BaseLayout>

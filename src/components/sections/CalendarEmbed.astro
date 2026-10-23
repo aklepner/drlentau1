@@ -1,0 +1,19 @@
+---
+/**
+ * Embedded scheduling calendar (Len's Acuity calendar). Acuity's embed script resizes the iframe
+ * to fit its content; the min-height keeps the space reserved while it loads.
+ */
+import SectionTitle from '../site/SectionTitle.astro';
+interface Props { intro: { kicker?: string; title: string; text?: string }; calendar: { src: string; title: string }; fallback?: { text: string; link: { label: string; href: string } } }
+const { intro, calendar, fallback } = Astro.props;
+---
+<section class="section-padding dlt-calendar-embed">
+  <div class="container">
+    <SectionTitle kicker={intro.kicker} title={intro.title} intro={intro.text} align="center" />
+    <div class="dlt-calendar-embed__frame">
+      <iframe src={calendar.src} title={calendar.title} width="100%" height="900" frameborder="0" loading="lazy" allow="payment"></iframe>
+    </div>
+    {fallback && <p class="dlt-calendar-embed__fallback">{fallback.text} <a href={fallback.link.href} target="_blank" rel="noopener">{fallback.link.label}</a>.</p>}
+  </div>
+</section>
+<script is:inline src="https://embed.acuityscheduling.com/js/embed.js"></script>

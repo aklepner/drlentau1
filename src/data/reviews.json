@@ -48,7 +48,7 @@
     "text": "Bring me to your meeting, or let's look at your practice together.",
     "button": {
       "label": "Book a Call",
-      "href": "https://drlentau.as.me"
+      "href": "/book-a-call/"
     }
   },
   "live": {

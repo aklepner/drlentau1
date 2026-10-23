@@ -1,34 +1,38 @@
 ---
-/** One page per favorite company, generated from src/data/favorites.json. */
+/** One page per favorite company, from Supabase (src/lib/cms.ts). Len edits them in /admin/. */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/site/PageHeader.astro';
 import Button from '../../components/site/Button.astro';
-import d from '../../data/favorites.json';
-export function getStaticPaths() {
-  return d.companies.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+import { getFavorites } from '../../lib/cms';
+export async function getStaticPaths() {
+  const all = await getFavorites();
+  return all.map((c) => ({ params: { slug: c.slug }, props: { c, all } }));
 }
-const { c } = Astro.props;
-const related = d.companies.filter((x) => x.category === c.category && x.slug !== c.slug).slice(0, 3);
+const { c, all } = Astro.props;
+const cat = c.category?.name;
+const related = all.filter((x) => cat && x.category?.name === cat && x.slug !== c.slug).slice(0, 3);
 ---
-<BaseLayout title={`${c.name} | Len's Favorites`} description={c.description}>
+<BaseLayout title={c.seo_title || `${c.name} | Len's Favorites`} description={c.seo_description || c.description || undefined}>
   <PageHeader title={c.name} />
   <section class="section-padding dlt-company">
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-8">
-          {c.logo && <div class="dlt-fav__logo dlt-fav__logo--page"><img src={c.logo} alt={`${c.name} logo`} /></div>}
-          <span class="dlt-tag">{c.category}</span>
+          {c.logo_url && <div class="dlt-fav__logo dlt-fav__logo--page"><img src={c.logo_url} alt={c.logo_alt || `${c.name} logo`} /></div>}
+          {cat && <span class="dlt-tag">{cat}</span>}
           <h2>{c.name}</h2>
-          <p class="dlt-company__lead">{c.description}</p>
-          <p>This is one of the companies I trust most after 20 years in the dental industry. Questions? Email me at len@drlentau.com or call my cell at 215‑292‑2100.</p>
+          {c.description && <p class="dlt-company__lead">{c.description}</p>}
+          {c.body_html
+            ? <div class="dlt-article__body" set:html={c.body_html} />
+            : <p>This is one of the companies I trust most after 20 years in the dental industry. Questions? Email me at len@drlentau.com or call my cell at 215‑292‑2100.</p>}
           <div class="dlt-btn-row">
-            {c.website ? <Button label={`Visit ${c.name}`} href={c.website} /> : <Button label="Ask Len for an Intro" href="/contact/" />}
+            {c.website_url ? <Button label={`Visit ${c.name}`} href={c.website_url} /> : <Button label="Ask Len for an Intro" href="/contact/" />}
             <Button label="All Favorites" href="/favorites/" variant="outline" />
           </div>
         </div>
         {related.length > 0 && (
           <aside class="col-lg-4">
-            <h3 class="dlt-aside-title">More in {c.category}</h3>
+            <h3 class="dlt-aside-title">More in {cat}</h3>
             <ul class="dlt-aside-list">{related.map((r) => <li><a href={`/favorites/${r.slug}/`}>{r.name}</a><span>{r.description}</span></li>)}</ul>
           </aside>
         )}

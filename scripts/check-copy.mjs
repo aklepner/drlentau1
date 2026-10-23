@@ -6,7 +6,9 @@ import { join } from 'node:path';
 const BANNED = ['leverage', 'game-changer', 'game changer', 'journey', 'passionate', 'transformative', 'cutting-edge', 'cutting edge', 'revolutionary', 'hustle', 'amazing', 'incredible', 'excited to share', 'great connecting', 'practicing dentist', 'still practice'];
 const roots = ['src/data', 'src/pages', 'src/components'];
 const files = [];
-const walk = (d) => readdirSync(d).forEach((f) => { const p = join(d, f); statSync(p).isDirectory() ? walk(p) : /\.(json|astro|md)$/.test(f) && files.push(p); });
+// src/data/cms is the Supabase snapshot (Len's and guest authors' posts, edited in /admin/), so it is not checked here.
+const skip = new Set(['src/data/cms']);
+const walk = (d) => skip.has(d) ? null : readdirSync(d).forEach((f) => { const p = join(d, f); statSync(p).isDirectory() ? walk(p) : /\.(json|astro|md)$/.test(f) && files.push(p); });
 roots.forEach(walk);
 
 let problems = 0;

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Site Admin | Dr. Len Tau</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <!--
+    Content admin for drlentau.com. Len signs in with email and password (Supabase Auth).
+    Only emails listed in the Supabase table public.admin_users can change anything (Row Level Security).
+    Saving asks GitHub to rebuild the site, so changes go live in about two minutes.
+    Code: admin.js in this folder. No build step; edit and push.
+  -->
+  <header class="bar">
+    <div class="bar__brand"><img src="../brand/tau-logo-white.png" alt="Dr. Len Tau" /><span>Site admin</span></div>
+    <div class="bar__user" id="userbox" hidden>
+      <span id="useremail"></span>
+      <a id="sitelink" href="../" target="_blank" rel="noopener">View site</a>
+      <button type="button" id="signout" class="btn btn--ghost">Sign out</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="login" class="card login" hidden>
+      <h1>Sign in</h1>
+      <form id="loginform">
+        <label>Email<input type="email" name="email" autocomplete="username" required /></label>
+        <label>Password<input type="password" name="password" autocomplete="current-password" required /></label>
+        <button class="btn" type="submit">Sign in</button>
+        <button class="linkbtn" type="button" id="forgot">Forgot your password?</button>
+      </form>
+      <p class="msg" id="loginmsg" role="status"></p>
+    </section>
+
+    <section id="reset" class="card login" hidden>
+      <h1>Choose a new password</h1>
+      <form id="resetform">
+        <label>New password<input type="password" name="password" autocomplete="new-password" minlength="8" required /></label>
+        <button class="btn" type="submit">Save password</button>
+      </form>
+      <p class="msg" id="resetmsg" role="status"></p>
+    </section>
+
+    <section id="denied" class="card login" hidden>
+      <h1>No access</h1>
+      <p>You are signed in, but this account is not on the admin list. Ask Andy to add your email.</p>
+    </section>
+
+    <section id="workspace" hidden>
+      <nav class="tabs" id="tabs" aria-label="Content types"></nav>
+      <div class="publish" id="publishnote"></div>
+      <div id="view"></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.50.0/dist/umd/supabase.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tinymce@7.3.0/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

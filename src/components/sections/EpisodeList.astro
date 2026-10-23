@@ -1,22 +1,23 @@
 ---
 /**
- * Podcast episode list. Data: src/data/podcast.json > episodes (newest first).
- * Later: replace the JSON with the podcast RSS feed at build time so new episodes appear automatically.
+ * Podcast episode list. Heading copy: src/data/podcast.json > episodes. Episodes come from Supabase
+ * (src/lib/cms.ts; Len adds them in /admin/), newest first, each opening /podcast/<slug>/.
  */
 import SectionTitle from '../site/SectionTitle.astro';
-interface Ep { number: number; season: number; title: string; date: string; href: string }
-interface Props { data: { kicker?: string; title: string; intro?: string; episodes: Ep[]; more?: { label: string; href: string } } }
+import { getEpisodes, fmtDate } from '../../lib/cms';
+interface Props { data: { kicker?: string; title: string; intro?: string; more?: { label: string; href: string } } }
 const { data: d } = Astro.props;
+const episodes = await getEpisodes();
 ---
 <section class="section-padding dlt-episodes" id="episodes">
   <div class="container">
     <SectionTitle kicker={d.kicker} title={d.title} intro={d.intro} />
     <ol class="dlt-eplist">
-      {d.episodes.map((e) => (
+      {episodes.map((e) => (
         <li>
-          <span class="dlt-eplist__num">{e.number}</span>
-          <a class="dlt-eplist__title" href={e.href} target="_blank" rel="noopener">{e.title}</a>
-          <span class="dlt-eplist__meta">Season {e.season} · {e.date}</span>
+          <span class="dlt-eplist__num">{e.number ?? ''}</span>
+          <a class="dlt-eplist__title" href={`/podcast/${e.slug}/`}>{e.title}</a>
+          <span class="dlt-eplist__meta">{[e.season && `Season ${e.season}`, fmtDate(e.published_at)].filter(Boolean).join(' · ')}</span>
         </li>
       ))}
     </ol>

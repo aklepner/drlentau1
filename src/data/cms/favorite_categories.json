@@ -1,0 +1,67 @@
+[
+ {
+  "name": "Artificial Intelligence",
+  "slug": "artificial-intelligence",
+  "sort": 1
+ },
+ {
+  "name": "Call Tracking",
+  "slug": "call-tracking",
+  "sort": 2
+ },
+ {
+  "name": "Coaching",
+  "slug": "coaching",
+  "sort": 3
+ },
+ {
+  "name": "Digital Marketing",
+  "slug": "digital-marketing",
+  "sort": 4
+ },
+ {
+  "name": "Finance",
+  "slug": "finance",
+  "sort": 5
+ },
+ {
+  "name": "Membership Plans",
+  "slug": "membership-plans",
+  "sort": 6
+ },
+ {
+  "name": "Merchant Services",
+  "slug": "merchant-services",
+  "sort": 7
+ },
+ {
+  "name": "Patient Communication",
+  "slug": "patient-communication",
+  "sort": 8
+ },
+ {
+  "name": "Podcast Marketing",
+  "slug": "podcast-marketing",
+  "sort": 9
+ },
+ {
+  "name": "Practice Enhancement",
+  "slug": "practice-enhancement",
+  "sort": 10
+ },
+ {
+  "name": "Remote Staffing",
+  "slug": "remote-staffing",
+  "sort": 11
+ },
+ {
+  "name": "Reputation Marketing",
+  "slug": "reputation-marketing",
+  "sort": 12
+ },
+ {
+  "name": "Software",
+  "slug": "software",
+  "sort": 13
+ }
+]

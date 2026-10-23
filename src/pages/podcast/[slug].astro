@@ -1,0 +1,40 @@
+---
+/** One page per podcast episode, from Supabase (src/lib/cms.ts). Len adds episodes in /admin/. */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/site/PageHeader.astro';
+import Button from '../../components/site/Button.astro';
+import { getEpisodes, fmtDate, mediaKind } from '../../lib/cms';
+import Media from '../../components/site/Media.astro';
+export async function getStaticPaths() {
+  const all = await getEpisodes();
+  return all.map((ep, i) => ({ params: { slug: ep.slug }, props: { ep, newer: all[i - 1], older: all[i + 1] } }));
+}
+const { ep, newer, older } = Astro.props;
+const video = mediaKind(ep.video_embed_url);
+const audio = mediaKind(ep.audio_embed_url);
+const meta = [ep.number && `Episode ${ep.number}`, ep.season && `Season ${ep.season}`].filter(Boolean).join(' · ');
+---
+<BaseLayout title={ep.seo_title || `${ep.title} | Raving Patients Podcast`} description={ep.seo_description || ep.summary || undefined} image={ep.image_url || undefined}>
+  <PageHeader title="Podcast" />
+  <article class="section-padding dlt-article dlt-episode">
+    <div class="container">
+      {meta && <span class="dlt-tag">{meta}</span>}{ep.published_at && <time>{fmtDate(ep.published_at)}</time>}
+      <h1>{ep.title}</h1>
+      {ep.guest && <p class="dlt-article__byline">With {ep.guest}</p>}
+      {video && <Media m={video} title={ep.title} />}
+      {audio && <Media m={audio} title={`${ep.title} (audio)`} audio />}
+      {!video && !audio && ep.image_url && <img class="dlt-article__img" src={ep.image_url} alt={ep.image_alt || ''} />}
+      {ep.summary && !(ep.body_html || '').includes(ep.summary.slice(0, 60)) && <p class="dlt-article__lead">{ep.summary}</p>}
+      {ep.body_html && <div class="dlt-article__body" set:html={ep.body_html} />}
+      <div class="dlt-btn-row">
+        <Button label="All Episodes" href="/podcast/" variant="outline" />
+      </div>
+      {(newer || older) && (
+        <nav class="dlt-pager" aria-label="More episodes">
+          {older ? <a href={`/podcast/${older.slug}/`}><span>Previous episode</span>{older.title}</a> : <span />}
+          {newer ? <a class="is-next" href={`/podcast/${newer.slug}/`}><span>Next episode</span>{newer.title}</a> : <span />}
+        </nav>
+      )}
+    </div>
+  </article>
+</BaseLayout>

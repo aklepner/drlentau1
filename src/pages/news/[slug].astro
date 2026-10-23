@@ -1,25 +1,23 @@
 ---
-/** A single news post rendered from src/content/news/<slug>.md (posts with `external` link out instead). */
-import { getCollection, render } from 'astro:content';
+/** A single post from Supabase (src/lib/cms.ts). Len writes these in the admin area. */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/site/PageHeader.astro';
 import Button from '../../components/site/Button.astro';
+import { getPosts, fmtDate } from '../../lib/cms';
 export async function getStaticPaths() {
-  const posts = await getCollection('news', (p) => !p.data.draft && !p.data.external);
-  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+  return (await getPosts()).map((post) => ({ params: { slug: post.slug }, props: { post } }));
 }
 const { post } = Astro.props;
-const { Content } = await render(post);
-const date = post.data.date?.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 ---
-<BaseLayout title={post.data.title} description={post.data.excerpt}>
+<BaseLayout title={post.seo_title || post.title} description={post.seo_description || post.excerpt || undefined} image={post.og_image_url || post.image_url || undefined}>
   <PageHeader title="News" />
   <article class="section-padding dlt-article">
     <div class="container">
-      <span class="dlt-tag">{post.data.category}</span>{date && <time>{date}</time>}
-      <h1>{post.data.title}</h1>
-      {post.data.author && <p class="dlt-article__byline">By {post.data.author}</p>}
-      <div class="dlt-article__body"><Content /></div>
+      {post.category && <span class="dlt-tag">{post.category.name}</span>}{post.published_at && <time>{fmtDate(post.published_at)}</time>}
+      <h1>{post.title}</h1>
+      {post.author && <p class="dlt-article__byline">By {post.author}</p>}
+      {post.image_url && <img class="dlt-article__img" src={post.image_url} alt={post.image_alt || ''} />}
+      <div class="dlt-article__body" set:html={post.content_html || ''} />
       <Button label="All News" href="/news/" variant="outline" />
     </div>
   </article>

@@ -6,10 +6,14 @@ import ResourceList from '../components/sections/ResourceList.astro';
 import CtaBand from '../components/sections/CtaBand.astro';
 import d from '../data/resources.json';
 import home from '../data/home.json';
+import { getVideos } from '../lib/cms';
+// The Watch group lists the videos from Supabase (Len adds them in /admin/), each opening /videos/<slug>/.
+const videos = await getVideos();
+const library = { ...d.library, groups: d.library.groups.map((g: any) => g.id === 'watch' ? { ...g, items: videos.map((v) => ({ title: v.title, source: v.source || undefined, href: `/videos/${v.slug}/` })) } : g) };
 ---
 <BaseLayout title={d.seo.title} description={d.seo.description}>
   <PageHeader title="Free Resources" />
   <InfoCards intro={d.tools.intro} cards={d.tools.cards} />
-  <ResourceList data={d.library} />
+  <ResourceList data={library} />
   <CtaBand data={home.cta} />
 </BaseLayout>

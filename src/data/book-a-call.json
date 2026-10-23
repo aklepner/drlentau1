@@ -1,0 +1,23 @@
+{
+  "_readme": "Book a Call page (/book-a-call/). Every Book a Call button on the site links here. The calendar is Len's Acuity scheduler, embedded from `src`.",
+  "seo": {
+    "title": "Book a Call",
+    "description": "Book a call with Dr. Len Tau, The Reviews Doctor. Pick a time to talk about your practice's reviews, Google ranking and online reputation."
+  },
+  "intro": {
+    "kicker": "Book a call",
+    "title": "Pick a time | that works for you.",
+    "text": "A short call about where your practice stands online. One call. No pressure."
+  },
+  "calendar": {
+    "src": "https://drlentau.as.me/connectwithlen",
+    "title": "Schedule a call with Dr. Len Tau"
+  },
+  "fallback": {
+    "text": "Calendar not loading?",
+    "link": {
+      "label": "Open it in a new tab",
+      "href": "https://drlentau.as.me/connectwithlen"
+    }
+  }
+}

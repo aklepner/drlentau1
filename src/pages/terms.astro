@@ -1,0 +1,7 @@
+---
+import LegalPage from '../components/site/LegalPage.astro';
+import { Content, frontmatter } from '../legal/terms.md';
+---
+<LegalPage title="Terms and Conditions" description="Terms and conditions for using drlentau.com, including SMS messaging terms." effective={frontmatter.effective}>
+  <Content />
+</LegalPage>

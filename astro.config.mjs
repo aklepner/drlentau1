@@ -22,5 +22,7 @@ export default defineConfig({
     '/connect': '/contact',
     '/helpful-articles': '/news',
     '/latest-news': '/news',
+    // Old Webflow article URLs: drlentau.com/blog-articles/<slug> now lives at /news/<slug>/.
+    '/blog-articles/[slug]': '/news/[slug]',
   },
 });

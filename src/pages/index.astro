@@ -15,9 +15,9 @@ import PathCards from '../components/sections/PathCards.astro';
 import Recognition from '../components/sections/Recognition.astro';
 import PromoSplit from '../components/sections/PromoSplit.astro';
 import home from '../data/home.json';
-import podcast from '../data/podcast.json';
-// Latest three episodes, each linking to its own episode page (from podcast.json).
-const episodes = { ...home.episodes, items: podcast.episodes.episodes.slice(0, 3).map((e: any) => ({ title: e.title, href: e.href, date: e.date, tag: `Episode ${e.number}` })) };
+import { getEpisodes, fmtDate } from '../lib/cms';
+// Latest three episodes from Supabase, each linking to its own /podcast/<slug>/ page.
+const episodes = { ...home.episodes, items: (await getEpisodes()).slice(0, 3).map((e) => ({ title: e.title, href: `/podcast/${e.slug}/`, date: fmtDate(e.published_at), tag: e.number ? `Episode ${e.number}` : 'Episode' })) };
 ---
 <BaseLayout title={home.seo.title} description={home.seo.description} bookReview>
   <Hero data={home.hero} />
