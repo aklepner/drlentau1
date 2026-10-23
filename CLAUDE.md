@@ -175,9 +175,8 @@ Len's master list is the "drlentau.com Launch Brief for Andy" Google Doc (Oct 20
 
 - [ ] Supabase accounts: create Len's and Andy's users, turn off public sign-ups, set the redirect URL, and add the GitHub token for automatic publishing (steps in `supabase/README.md`).
 - [ ] Old podcast pages had copy errors (found during the Oct 23 migration): ep 329 intro is copied from ep 328; eps 332 and 333 point to the same audio file; ep 323's "Connect with" section is from ep 322; ep 321 links to a Libsyn page, not an audio file. Len can fix them in /admin/.
-- [ ] Videos have no thumbnails or summaries, and episodes have no images (the old site had none). Add in /admin/ if wanted.
+- [ ] Videos have no summaries, and episodes have no images (the old site had none). Add in /admin/ if wanted. (Oct 23: every post has a featured image and every video a thumbnail, stored in the Supabase `media` bucket along with the in-article images copied off Webflow. The two News posts use the book cover on navy and a screenshot of the review calculator.)
 - [ ] Guest posts: 20 of the 21 migrated articles were written by vendors (My Social Practice, The DocSites) and carry an `author` byline. They contain vendor pitches and words outside Len's voice rules (the copy check skips Supabase content). Andy/Len to decide whether they stay.
-- [ ] Article images still load from Webflow's CDN (cdn.prod.website-files.com); copy them into public/ before the Webflow site goes away.
 - [ ] Speaking calendar: create the "Len Speaking Calendar" Google Sheet, publish it as CSV and paste the URL into `site.json > links.speaking_calendar_csv`. Until then the calendar shows its empty state. Then add "Catch me live" (next 3, `limit={3}`) to Home.
 - [ ] Birdeye review widget: paste the embed code into `reviews.json > live.embed` (a dashed placeholder shows until then).
 - [ ] Speaking booking form, Books bulk order form and newsletter signup have no backend yet (thank-you message only). Connect to HighLevel.
